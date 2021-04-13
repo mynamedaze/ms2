@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style-type: none;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: $links-color;
+  font-family: $font-main;
+  transition: $animate;
+}
+main {
+  overflow: hidden;
+}
+strong {
+  font-weight: 700;
+}
+div,
+article,
+section,
+header,
+footer {
+  box-sizing: border-box;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  margin: 0px;
+  color: $text-main-color;
+  background-color: $main-bg;
+  transition: $animate;
+}
+input,
+textarea,
+select {
+  font-family: $font-main;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    border-radius: 4px;
+  }
+  @media #{$min-tablet-width} {
+    border-radius: 4px;
+  }
+  @media #{$min-desktop-width} {
+    border-radius: 4px;
+  }
+}
+input[type="submit"] {
+  cursor: pointer;
+  border: 0 solid transparent;
+}
+input[type="number"],
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea,
+select {
+  @media #{$max-mobile-width} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input:focus {
+  outline-width: 0;
+  outline: none;
+}
+button {
+  font-family: $font-main;
+  border-width: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+button:focus {
+  outline-width: 0;
+  outline: none;
+}
+label {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.clearfix::after { 
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}
+.disable {
+  display: none !important;
+}

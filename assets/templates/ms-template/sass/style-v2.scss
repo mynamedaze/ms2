@@ -1,0 +1,28 @@
+//global
+@import "normalize.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "scaffolding.scss";
+
+//blocks
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+
+//components
+@import "components/overlay.scss";
+@import "components/main-nav.scss";
+
+//libs
+@import "libs/owl.carousel/owl.carousel.scss";
+@import "libs/owl.carousel/owl.theme.default.scss";
+@import "libs/jquery.fancybox.min.scss";
+
+/*pages*/
+//context
+@import "pages/context/scroll-context.scss";
+@import "pages/context/first.scss";
+@import "pages/context/second.scss";
+@import "pages/context/third.scss";
+
+/*/pages*/

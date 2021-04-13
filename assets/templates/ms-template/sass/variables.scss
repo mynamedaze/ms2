@@ -1,0 +1,30 @@
+$max-mobile-width: "(max-width: 767px)";
+$max-mobile-wrapper: 500px;
+
+$min-tablet-width: "(min-width: 768px)";
+$max-tablet-width: "(max-width: 1365px)";
+
+$tablet-width-only: "(min-width: 768px) & (max-width: 1365px)";
+
+$min-desktop-width: "(min-width: 1366px)";
+$max-desktop-wrapper: 1150px;
+
+$font-main: "museosanscyrl", "Arial", sans-serif;
+
+$padding--mobile: 16px;
+$padding--tablet: 14px;
+$padding--desktop: 20px;
+
+$text-main-color: #000;
+$text-alt-color: #fff;
+$main-bg: #ffffff;
+
+$title-color: #000;
+
+$links-color: #fff;
+$alt-links-color: #24619D;
+$links-color--hover: #ffd543;
+
+$popup-bg: #073f65;
+
+$animate: all 0.1s ease;

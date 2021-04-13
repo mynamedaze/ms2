@@ -1,0 +1,122 @@
+@mixin section-width() {
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$min-desktop-width} {
+    max-width: $max-desktop-wrapper;
+  }
+}
+
+@mixin paddings() {
+  @media #{$max-mobile-width} {
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
+  }
+}
+
+@mixin centers {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin main-btn {
+
+}
+@mixin main-input {
+
+}
+
+@mixin close-btn {
+  position: absolute;
+  z-index: 14;
+  @media #{$max-mobile-width} {
+    width: 35px;
+    height: 35px;
+    top: -45px;
+    right: 13px;
+    background-color: transparent;
+  }
+  @media #{$min-tablet-width} {
+    width: 35px;
+    height: 35px;
+    top: -35px;
+    right: -35px;
+    background-color: transparent;
+  }
+  &::before {
+    position: absolute;
+    transition: $animate;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15px, -1px) rotate(45deg);
+  }
+  &:hover::before {
+    background-color: #ffd543;
+  }
+  &::after {
+    position: absolute;
+    transition: $animate;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15px, -1px) rotate(-45deg);
+  }
+  &:hover::after {
+    background-color: #ffd543;
+  }
+}
+
+@mixin main-title {
+
+}
+
+@mixin owl-nav {
+  & .owl-nav {
+    @media #{$max-mobile-width} {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 8;
+    }
+  }
+  & .owl-nav .owl-prev,
+  & .owl-nav .owl-next {
+    @media #{$max-mobile-width} {
+      font-size: 0;
+      width: 20px;
+      height: 37px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  & .owl-nav .owl-prev {
+    @media #{$max-mobile-width} {
+      position: absolute;
+      left: 30%;
+      background-image: url("/assets/templates/ms-template/img/prev.png");
+    }
+  }
+  & .owl-nav .owl-next {
+    @media #{$max-mobile-width} {
+      position: absolute;
+      right: 30%;
+      background-image: url("/assets/templates/ms-template/img/next.png");
+    }
+  }
+}
