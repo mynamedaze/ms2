@@ -1,0 +1,9 @@
+#canvas-space-context {
+  background: radial-gradient(ellipse at center, hsl(210, 68%, 10%) 0%, #000 100%);
+  display: block;
+  margin: 0 auto;
+}
+.canvas-space-context-container {
+  position: absolute;
+  z-index: 1;
+}

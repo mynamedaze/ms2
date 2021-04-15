@@ -1,4 +1,6 @@
-.intro {
+.intro.intro--context {
+  overflow: hidden;
+  position: relative;
   &.fixed {
     @media #{$min-tablet-width} {
       position: fixed;
@@ -7,18 +9,114 @@
       top: 0;
     }
   }
-}
-.intro__cards-container {
-  width: 488px;
-  height: 100%;
-  .cardslider {
-    height: 100%;
+  .intro__wrapper {
+    position: relative;
+    z-index: 2;
+    @include section-width;
+    @include paddings;
+    @media #{$min-tablet-width} {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+    }
   }
-  .cardslider__cards {
-    width: 100%;
-    height: 273px;
+  .intro__title {
+    margin-top: 0;
+    color: $text-color-alt;
+    @media #{$max-mobile-width} {
+      font-size: 27px;
+      font-weight: 700;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 33px;
+      font-weight: 500;
+    }
   }
-  .cardslider__card {
-    border-radius: 0;
+  .intro__poisk-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    width: 288px;
+    @media #{$min-desktop-width} {
+      width: 412px;
+    }
+  }
+  .intro__poisk-item {
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 56px;
+    @media #{$min-desktop-width} {
+      width: 200px;
+      height: 76px;
+    }
+  }
+  .intro__poisk-img--yandex {
+    @media #{$max-mobile-width} {
+      width: 67px;
+      height: auto;
+    }
+    @media #{$min-desktop-width} {
+      width: 90px;
+      height: auto;
+    }
+  }
+  .intro__poisk-img--google {
+    @media #{$max-mobile-width} {
+      width: 84px;
+      height: auto;
+    }
+    @media #{$min-desktop-width} {
+      width: 113px;
+      height: auto;
+    }
+  }
+  .intro__notice {
+    display: block;
+  }
+  .intro__description {
+    display: block;
+    @media #{$max-mobile-width} {
+      color: rgba(125, 129, 164, 1);
+      font-size: 13px;
+      line-height: 19px;
+    }
+    @media #{$min-tablet-width} {
+      color: $text-color-alt;
+      font-size: 13px;
+      line-height: 19px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .intro__cards-container {
+    @media #{$min-tablet-width} {
+      flex-shrink: 0;
+      width: 341px;
+      height: 100%;
+    }
+    @media #{$min-desktop-width} {
+      width: 488px;
+    }
+    .cardslider {
+      height: 100%;
+    }
+    .cardslider__cards {
+      width: 100%;
+      @media #{$min-tablet-width} {
+        height: 191px;
+      }
+      @media #{$min-desktop-width} {
+        height: 273px;
+      }
+    }
+    .cardslider__card {
+      border-radius: 0;
+    }
   }
 }
