@@ -5,6 +5,9 @@ $(document).ready(function () {
     let firstYMarker = 1 / 4 * $('#scroll-context').outerHeight();
     let secondYMarker = 2 / 4 * $('#scroll-context').outerHeight();
 
+    let introItems = document.getElementsByClassName('intro__item');
+    introItems = Array.prototype.slice.call(introItems);
+
     var cardslider = $('.my-cardslider').cardslider({
         nav: false,
         loop: false,
@@ -23,10 +26,19 @@ $(document).ready(function () {
 
         if (window.pageYOffset <= firstYMarker) {
             cardslider.changeCardTo(0);
+            $(introItems[1]).hide();
+            $(introItems[2]).hide();
+            $(introItems[0]).fadeIn(300);
         } else if (window.pageYOffset > firstYMarker && window.pageYOffset <= secondYMarker) {
             cardslider.changeCardTo(1);
+            $(introItems[0]).hide();
+            $(introItems[2]).hide();
+            $(introItems[1]).fadeIn(300);
         } else if (window.pageYOffset > secondYMarker) {
             cardslider.changeCardTo(2);
+            $(introItems[0]).hide();
+            $(introItems[1]).hide();
+            $(introItems[2]).fadeIn(300);
         }
     });
 });

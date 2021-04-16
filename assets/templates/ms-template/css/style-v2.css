@@ -456,6 +456,9 @@ label {
 .disable {
   display: none !important; }
 
+.disable-soft {
+  display: none; }
+
 .page-header {
   position: fixed;
   left: 0;
@@ -1467,6 +1470,7 @@ body.compensate-for-scrollbar {
       left: 0;
       top: 0; } }
   .intro.intro--context .intro__wrapper {
+    color: #fff;
     position: relative;
     z-index: 2;
     margin-left: auto;
@@ -1491,13 +1495,21 @@ body.compensate-for-scrollbar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
         height: 100%; } }
+  .intro.intro--context .intro__list {
+    padding-left: 0; }
+    @media (min-width: 768px) {
+      .intro.intro--context .intro__list {
+        padding-right: 30px; } }
   .intro.intro--context .intro__title {
     margin-top: 0;
-    color: #fff; }
+    margin-bottom: 0; }
     @media (max-width: 767px) {
       .intro.intro--context .intro__title {
         font-size: 27px;
@@ -1515,6 +1527,9 @@ body.compensate-for-scrollbar {
     justify-content: space-between;
     padding-left: 0;
     width: 288px; }
+    @media (min-width: 768px) {
+      .intro.intro--context .intro__poisk-list {
+        margin-top: 16px; } }
     @media (min-width: 1366px) {
       .intro.intro--context .intro__poisk-list {
         width: 412px; } }
@@ -1553,9 +1568,28 @@ body.compensate-for-scrollbar {
       width: 113px;
       height: auto; } }
   .intro.intro--context .intro__notice {
-    display: block; }
+    display: block;
+    position: relative; }
+    @media (min-width: 768px) {
+      .intro.intro--context .intro__notice {
+        padding-left: 25px;
+        margin-top: 17px;
+        font-size: 14px; } }
+    @media (min-width: 1366px) {
+      .intro.intro--context .intro__notice {
+        margin-top: 24px;
+        font-size: 18px; } }
+    .intro.intro--context .intro__notice::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      width: 18px;
+      height: 1px;
+      background-color: #fff; }
   .intro.intro--context .intro__description {
-    display: block; }
+    display: block;
+    position: relative; }
     @media (max-width: 767px) {
       .intro.intro--context .intro__description {
         color: #7d81a4;
@@ -1563,13 +1597,37 @@ body.compensate-for-scrollbar {
         line-height: 19px; } }
     @media (min-width: 768px) {
       .intro.intro--context .intro__description {
-        color: #fff;
         font-size: 13px;
-        line-height: 19px; } }
+        line-height: 19px;
+        padding-left: 25px;
+        margin-top: 17px; } }
     @media (min-width: 1366px) {
       .intro.intro--context .intro__description {
         font-size: 16px;
-        line-height: 24px; } }
+        line-height: 24px;
+        margin-top: 24px; } }
+    .intro.intro--context .intro__description::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+      @media (max-width: 767px) {
+        .intro.intro--context .intro__description::before {
+          width: 24px;
+          height: 32px; } }
+      @media (min-width: 768px) {
+        .intro.intro--context .intro__description::before {
+          width: 18px;
+          height: 24px; } }
+  .intro.intro--context .intro__description--1::before {
+    background-image: url("/assets/templates/ms-template/images/icon-fire.png"); }
+  .intro.intro--context .intro__description--2::before {
+    background-image: url("/assets/templates/ms-template/images/icon-money.png"); }
+  .intro.intro--context .intro__description--3::before {
+    background-image: url("/assets/templates/ms-template/images/icon-ok.png"); }
   @media (min-width: 768px) {
     .intro.intro--context .intro__cards-container {
       -ms-flex-negative: 0;
@@ -1590,7 +1648,16 @@ body.compensate-for-scrollbar {
       .intro.intro--context .intro__cards-container .cardslider__cards {
         height: 273px; } }
   .intro.intro--context .intro__cards-container .cardslider__card {
-    border-radius: 0; }
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    .intro.intro--context .intro__cards-container .cardslider__card:nth-child(1) {
+      background-image: url("/assets/templates/ms-template/images/card-1.jpg"); }
+    .intro.intro--context .intro__cards-container .cardslider__card:nth-child(2) {
+      background-image: url("/assets/templates/ms-template/images/card-2.jpg"); }
+    .intro.intro--context .intro__cards-container .cardslider__card:nth-child(3) {
+      background-image: url("/assets/templates/ms-template/images/card-3.jpg"); }
 
 #canvas-space-context {
   background: radial-gradient(ellipse at center, #081a2b 0%, #000 100%);
