@@ -1,5 +1,6 @@
 #scroll-context {
   position: relative;
+  display: none !important;
   @media #{$min-tablet-width} {
     height: 4000px;
     background-color: #000;

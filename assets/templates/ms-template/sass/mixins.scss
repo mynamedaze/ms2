@@ -83,7 +83,6 @@
   font-size: 27px;
   line-height: 32px;
   display: block;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
   @media #{$max-mobile-width} {
@@ -91,6 +90,7 @@
   }
   @media #{$min-tablet-width} {
     font-weight: 600;
+    text-align: center;
   }
   @media #{$min-desktop-width} {
     font-size: 48px;

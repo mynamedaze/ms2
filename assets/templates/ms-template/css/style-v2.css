@@ -466,9 +466,6 @@ label {
   width: 100%;
   display: none; }
 
-.page-footer__wrapper {
-  height: 2000px; }
-
 .overlay {
   position: fixed;
   left: 0;
@@ -1440,7 +1437,8 @@ body.compensate-for-scrollbar {
 
 /*pages*/
 #scroll-context {
-  position: relative; }
+  position: relative;
+  display: none !important; }
   @media (min-width: 768px) {
     #scroll-context {
       height: 4000px;
@@ -1685,12 +1683,20 @@ body.compensate-for-scrollbar {
     .steps.steps--context .steps__wrapper {
       padding-left: 20px;
       padding-right: 20px; } }
+  @media (max-width: 767px) {
+    .steps.steps--context .steps__wrapper {
+      padding-top: 55px; } }
+  @media (min-width: 768px) {
+    .steps.steps--context .steps__wrapper {
+      padding-top: 70px; } }
+  @media (min-width: 1366px) {
+    .steps.steps--context .steps__wrapper {
+      padding-top: 100px; } }
 
 .steps.steps--context .steps__title {
   font-size: 27px;
   line-height: 32px;
   display: block;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 0; }
   @media (max-width: 767px) {
@@ -1698,7 +1704,8 @@ body.compensate-for-scrollbar {
       font-weight: 700; } }
   @media (min-width: 768px) {
     .steps.steps--context .steps__title {
-      font-weight: 600; } }
+      font-weight: 600;
+      text-align: center; } }
   @media (min-width: 1366px) {
     .steps.steps--context .steps__title {
       font-size: 48px;
@@ -1706,11 +1713,20 @@ body.compensate-for-scrollbar {
 
 .steps.steps--context .steps__description {
   font-size: 15px;
-  line-height: 22px; }
+  line-height: 22px;
+  display: block; }
+  @media (max-width: 767px) {
+    .steps.steps--context .steps__description {
+      margin-top: 15px; } }
+  @media (min-width: 768px) {
+    .steps.steps--context .steps__description {
+      text-align: center;
+      margin-top: 17px; } }
   @media (min-width: 1366px) {
     .steps.steps--context .steps__description {
       font-size: 18px;
-      line-height: 28px; } }
+      line-height: 28px;
+      margin-top: 25px; } }
 
 .steps.steps--context .steps__banner {
   background-repeat: no-repeat;
@@ -1723,14 +1739,17 @@ body.compensate-for-scrollbar {
       max-width: 328px;
       margin-left: auto;
       margin-right: auto;
-      padding: 40px 24px; } }
+      padding: 40px 24px;
+      margin-top: 32px; } }
   @media (min-width: 768px) {
     .steps.steps--context .steps__banner {
       background-image: url("/assets/templates/ms-template/images/step-banner-bg-desktop.jpg");
-      padding: 25px 38px; } }
+      padding: 25px 38px;
+      margin-top: 28px; } }
   @media (min-width: 1366px) {
     .steps.steps--context .steps__banner {
-      padding: 36px 54px; } }
+      padding: 36px 54px;
+      margin-top: 40px; } }
 
 .steps.steps--context .steps__banner-text {
   font-size: 15px;
@@ -1749,10 +1768,19 @@ body.compensate-for-scrollbar {
   padding: 0;
   font-size: 15px;
   line-height: 22px; }
+  @media (max-width: 767px) {
+    .steps.steps--context .steps__banner-callback-btn {
+      display: block;
+      margin-top: 8px; } }
   @media (min-width: 768px) {
     .steps.steps--context .steps__banner-callback-btn {
       font-size: 18px;
       line-height: 28px; } }
+
+@media (max-width: 767px) {
+  .steps.steps--context .steps__list {
+    padding-left: 0;
+    margin-top: 30px; } }
 
 @media (min-width: 768px) {
   .steps.steps--context .steps__list {
@@ -1764,20 +1792,25 @@ body.compensate-for-scrollbar {
 
 .steps.steps--context .steps__item {
   position: relative;
-  border-bottom: 1px solid rgba(125, 129, 164, 0.4);
   margin-top: 20px; }
+  .steps.steps--context .steps__item:not(:last-child) {
+    border-bottom: 1px solid rgba(125, 129, 164, 0.4); }
   @media (max-width: 767px) {
     .steps.steps--context .steps__item {
-      padding-top: 32px; } }
+      padding-top: 32px;
+      padding-bottom: 20px; } }
   @media (min-width: 768px) {
     .steps.steps--context .steps__item {
       padding-right: 80px;
       background-repeat: no-repeat;
       background-position: right top;
-      background-size: 64px 64px; } }
+      background-size: 64px 64px;
+      padding-bottom: 29px;
+      margin-top: 28px; } }
   @media (min-width: 1366px) {
     .steps.steps--context .steps__item {
-      margin-top: 40px; } }
+      margin-top: 40px;
+      padding-bottom: 42px; } }
   .steps.steps--context .steps__item::before {
     font-weight: 700;
     color: #423fd9;
@@ -1870,5 +1903,108 @@ body.compensate-for-scrollbar {
     .steps.steps--context .steps__item-description {
       font-size: 16px;
       line-height: 27px; } }
+
+.report.report--context {
+  background-color: #f5f8fe; }
+  .report.report--context .report__wrapper {
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 767px) {
+      .report.report--context .report__wrapper {
+        padding-left: 16px;
+        padding-right: 16px; } }
+    @media (min-width: 768px) {
+      .report.report--context .report__wrapper {
+        padding-left: 14px;
+        padding-right: 14px; } }
+    @media (min-width: 1366px) {
+      .report.report--context .report__wrapper {
+        padding-left: 20px;
+        padding-right: 20px; } }
+    @media (min-width: 1366px) {
+      .report.report--context .report__wrapper {
+        max-width: 1150px; } }
+    @media (max-width: 767px) {
+      .report.report--context .report__wrapper {
+        padding-top: 56px;
+        padding-bottom: 56px; } }
+    @media (min-width: 768px) {
+      .report.report--context .report__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media (min-width: 768px) {
+    .report.report--context .report__text-container {
+      width: 55%;
+      padding-right: 50px; } }
+  @media (min-width: 1366px) {
+    .report.report--context .report__text-container {
+      padding-right: 70px; } }
+  .report.report--context .report__title {
+    font-size: 27px;
+    line-height: 32px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .report.report--context .report__title {
+        font-weight: 700; } }
+    @media (min-width: 768px) {
+      .report.report--context .report__title {
+        font-weight: 600;
+        text-align: center; } }
+    @media (min-width: 1366px) {
+      .report.report--context .report__title {
+        font-size: 48px;
+        line-height: 56px; } }
+    @media (min-width: 768px) {
+      .report.report--context .report__title {
+        text-align: left; } }
+  .report.report--context .report__paragraph {
+    font-size: 15px;
+    line-height: 22px; }
+    @media (min-width: 1366px) {
+      .report.report--context .report__paragraph {
+        font-size: 18px;
+        line-height: 28px; } }
+  .report.report--context .report__analytic-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 0; }
+    @media (max-width: 767px) {
+      .report.report--context .report__analytic-list {
+        max-width: 325px;
+        margin-left: auto;
+        margin-right: auto; } }
+  .report.report--context .report__analytic-item {
+    border-radius: 4px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108px 43px; }
+    @media (max-width: 767px) {
+      .report.report--context .report__analytic-item {
+        width: 158px;
+        height: 64px; } }
+    .report.report--context .report__analytic-item:first-child {
+      background-color: #F2C811;
+      background-image: url("/assets/templates/ms-template/images/bi.svg"); }
+    .report.report--context .report__analytic-item:last-child {
+      background-color: #fff;
+      background-image: url("/assets/templates/ms-template/images/bigquery.svg"); }
+  .report.report--context .report__img-list {
+    padding-left: 0;
+    font-size: 0; }
+    @media (min-width: 768px) {
+      .report.report--context .report__img-list {
+        width: 45%; } }
+  .report.report--context .report__img-item:first-child {
+    margin-bottom: 16px; }
+  .report.report--context .report__img-item:last-child {
+    margin-top: 16px; }
 
 /*/pages*/

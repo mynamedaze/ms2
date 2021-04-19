@@ -1,0 +1,80 @@
+.report.report--context {
+  background-color: $alt-bg;
+  .report__wrapper {
+    @include paddings;
+    @include section-width;
+    @media #{$max-mobile-width} {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+    @media #{$min-tablet-width} {
+      display: flex;
+    }
+  }
+  .report__text-container {
+    @media #{$min-tablet-width} {
+      width: 55%;
+      padding-right: 50px;
+    }
+    @media #{$min-desktop-width} {
+      padding-right: 70px;
+    }
+  }
+  .report__title {
+    @include common-title;
+    @media #{$min-tablet-width} {
+      text-align: left;
+    }
+  }
+  .report__paragraph {
+    font-size: 15px;
+    line-height: 22px;
+    @media #{$min-desktop-width} {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  .report__analytic-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    @media #{$max-mobile-width} {
+      max-width: 325px;
+      @include centers;
+    }
+  }
+  .report__analytic-item {
+    border-radius: 4px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108px 43px;
+    @media #{$max-mobile-width} {
+      width: 158px;
+      height: 64px;
+    }
+    &:first-child {
+      background-color: #F2C811;
+      background-image: url("/assets/templates/ms-template/images/bi.svg");
+    }
+    &:last-child {
+      background-color: #fff;
+      background-image: url("/assets/templates/ms-template/images/bigquery.svg");
+    }
+  }
+  .report__img-list {
+    padding-left: 0;
+    font-size: 0;
+    @media #{$min-tablet-width} {
+      width: 45%;
+    }
+  }
+  .report__img-item {
+    &:first-child {
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      margin-top: 16px;
+    }
+  }
+}
