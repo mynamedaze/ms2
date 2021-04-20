@@ -1,0 +1,11 @@
+.support.support--context {
+  .support__wrapper {
+
+  }
+  .support__container {
+    background-color: $main-bg;
+  }
+  .support__title {
+    @include common-title;
+  }
+}

@@ -87,9 +87,11 @@
     }
     @media #{$min-tablet-width} {
       padding-left: 140px;
+      margin-top: 45px;
     }
     @media #{$min-desktop-width} {
       padding-left: 200px;
+      margin-top: 65px;
     }
   }
   .steps__item {
