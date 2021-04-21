@@ -2042,26 +2042,95 @@ body.compensate-for-scrollbar {
       -webkit-box-shadow: 0 20px 50px 0 rgba(125, 129, 164, 0.2);
       box-shadow: 0 20px 50px 0 rgba(125, 129, 164, 0.2); } }
 
-.support.support--context .support__container {
-  background-color: #ffffff; }
-
-.support.support--context .support__title {
-  font-size: 27px;
-  line-height: 32px;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0; }
-  @media (max-width: 767px) {
-    .support.support--context .support__title {
-      font-weight: 700; } }
-  @media (min-width: 768px) {
-    .support.support--context .support__title {
-      font-weight: 600;
-      text-align: center;
-      font-size: 34px; } }
-  @media (min-width: 1366px) {
-    .support.support--context .support__title {
-      font-size: 48px;
-      line-height: 56px; } }
+.support.support--context {
+  background-color: #9445FB; }
+  .support.support--context .support__wrapper {
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 1366px) {
+      .support.support--context .support__wrapper {
+        max-width: 1150px; } }
+    @media (max-width: 767px) {
+      .support.support--context .support__wrapper {
+        padding-left: 16px;
+        padding-right: 16px; } }
+    @media (min-width: 768px) {
+      .support.support--context .support__wrapper {
+        padding-left: 14px;
+        padding-right: 14px; } }
+    @media (min-width: 1366px) {
+      .support.support--context .support__wrapper {
+        padding-left: 20px;
+        padding-right: 20px; } }
+    @media (max-width: 767px) {
+      .support.support--context .support__wrapper {
+        padding-top: 144px;
+        padding-bottom: 56px; } }
+    @media (min-width: 768px) {
+      .support.support--context .support__wrapper {
+        padding-top: 50px;
+        padding-bottom: 39px; } }
+    @media (min-width: 1366px) {
+      .support.support--context .support__wrapper {
+        padding-top: 72px;
+        padding-bottom: 56px; } }
+  .support.support--context .support__container {
+    background-color: #fff;
+    position: relative; }
+  .support.support--context .support__sputnik {
+    position: absolute; }
+    @media (max-width: 767px) {
+      .support.support--context .support__sputnik {
+        width: 280px;
+        height: auto; } }
+    @media (min-width: 768px) {
+      .support.support--context .support__sputnik {
+        right: 96px;
+        top: -32px;
+        width: 290px;
+        height: auto; } }
+  .support.support--context .support__title {
+    font-size: 27px;
+    line-height: 32px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .support.support--context .support__title {
+        font-weight: 700; } }
+    @media (min-width: 768px) {
+      .support.support--context .support__title {
+        font-weight: 600;
+        text-align: center;
+        font-size: 34px; } }
+    @media (min-width: 1366px) {
+      .support.support--context .support__title {
+        font-size: 48px;
+        line-height: 56px; } }
+    @media (min-width: 768px) {
+      .support.support--context .support__title {
+        text-align: left; } }
+  .support.support--context .support__description {
+    font-size: 15px;
+    line-height: 25px; }
+    @media (min-width: 1366px) {
+      .support.support--context .support__description {
+        font-size: 18px;
+        line-height: 28px; } }
+  .support.support--context .support__submit {
+    min-height: 56px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #423FD9;
+    border-radius: 60px;
+    border: 0 solid transparent;
+    color: #fff;
+    font-size: 16px; }
+    .support.support--context .support__submit:hover {
+      background-color: #4E4AFF; }
+    .support.support--context .support__submit:active {
+      background-color: #3A38BF; }
 
 /*/pages*/

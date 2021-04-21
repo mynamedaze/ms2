@@ -1,11 +1,53 @@
 .support.support--context {
+  background-color: $alt2-bg;
   .support__wrapper {
-
+    @include section-width;
+    @include paddings;
+    @media #{$max-mobile-width} {
+      padding-top: 144px;
+      padding-bottom: 56px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 50px;
+      padding-bottom: 39px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 72px;
+      padding-bottom: 56px;
+    }
   }
   .support__container {
-    background-color: $main-bg;
+    background-color: #fff;
+    position: relative;
+  }
+  .support__sputnik {
+    position: absolute;
+    @media #{$max-mobile-width} {
+      width: 280px;
+      height: auto;
+    }
+    @media #{$min-tablet-width} {
+      right: 96px;
+      top: -32px;
+      width: 290px;
+      height: auto;
+    }
   }
   .support__title {
     @include common-title;
+    @media #{$min-tablet-width} {
+      text-align: left;
+    }
+  }
+  .support__description {
+    font-size: 15px;
+    line-height: 25px;
+    @media #{$min-desktop-width} {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  .support__submit {
+    @include main-btn;
   }
 }
