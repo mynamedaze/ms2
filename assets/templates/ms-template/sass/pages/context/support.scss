@@ -19,6 +19,18 @@
   .support__container {
     background-color: #fff;
     position: relative;
+    @media #{$min-tablet-width} {
+      padding-left: 72px;
+      padding-right: 72px;
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+    @media #{$min-desktop-width} {
+      padding-left: 96px;
+      padding-right: 96px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
   }
   .support__sputnik {
     position: absolute;
@@ -42,12 +54,43 @@
   .support__description {
     font-size: 15px;
     line-height: 25px;
+    @media #{$min-tablet-width} {
+      max-width: 672px;
+    }
     @media #{$min-desktop-width} {
       font-size: 18px;
       line-height: 28px;
     }
   }
+  .support__form {
+    @media #{$min-tablet-width} {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  .support__input-container {
+    display: flex;
+    flex-direction: column;
+    @media #{$min-tablet-width} {
+      width: 30%;
+    }
+  }
+  .support__input {
+    @include common-input;
+    order: 2;
+  }
+  .support__submit-container {
+    @media #{$min-tablet-width} {
+      width: 30%;
+    }
+  }
   .support__submit {
     @include main-btn;
+    width: 100%;
+  }
+  .support__confid-container {
+    width: 100%;
   }
 }

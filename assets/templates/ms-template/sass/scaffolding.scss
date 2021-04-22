@@ -1,6 +1,7 @@
 *,
 input {
   box-sizing: border-box;
+  font-family: $font-main;
 }
 img {
   width: 100%;
@@ -32,7 +33,6 @@ strong {
   overflow: hidden;
 }
 body {
-  font-family: $font-main;
   font-weight: 500;
   margin: 0;
   color: $text-color-main;

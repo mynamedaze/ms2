@@ -378,7 +378,8 @@ template {
 *,
 input {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
 
 img {
   width: 100%;
@@ -411,7 +412,6 @@ strong {
   overflow: hidden; }
 
 body {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin: 0;
   color: #000;
@@ -2077,6 +2077,18 @@ body.compensate-for-scrollbar {
   .support.support--context .support__container {
     background-color: #fff;
     position: relative; }
+    @media (min-width: 768px) {
+      .support.support--context .support__container {
+        padding-left: 72px;
+        padding-right: 72px;
+        padding-top: 34px;
+        padding-bottom: 34px; } }
+    @media (min-width: 1366px) {
+      .support.support--context .support__container {
+        padding-left: 96px;
+        padding-right: 96px;
+        padding-top: 48px;
+        padding-bottom: 48px; } }
   .support.support--context .support__sputnik {
     position: absolute; }
     @media (max-width: 767px) {
@@ -2113,10 +2125,69 @@ body.compensate-for-scrollbar {
   .support.support--context .support__description {
     font-size: 15px;
     line-height: 25px; }
+    @media (min-width: 768px) {
+      .support.support--context .support__description {
+        max-width: 672px; } }
     @media (min-width: 1366px) {
       .support.support--context .support__description {
         font-size: 18px;
         line-height: 28px; } }
+  @media (min-width: 768px) {
+    .support.support--context .support__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
+  .support.support--context .support__input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      .support.support--context .support__input-container {
+        width: 30%; } }
+  .support.support--context .support__input {
+    background-color: transparent;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #7D81A4;
+    font-size: 16px;
+    height: 56px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+    .support.support--context .support__input::-webkit-input-placeholder {
+      /* Chrome */
+      color: #7d81a4; }
+    .support.support--context .support__input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #7d81a4; }
+    .support.support--context .support__input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #7d81a4;
+      opacity: 1; }
+    .support.support--context .support__input:-moz-placeholder {
+      /* Firefox 4 - 18 */
+      color: #7d81a4;
+      opacity: 1; }
+    .support.support--context .support__input:focus {
+      border-bottom: 1px solid #000; }
+    .support.support--context .support__input:invalid {
+      border-bottom: 1px solid #ee2d5b; }
+    .support.support--context .support__input:invalid ~ .support__label {
+      color: #ee2d5b; }
+  @media (min-width: 768px) {
+    .support.support--context .support__submit-container {
+      width: 30%; } }
   .support.support--context .support__submit {
     min-height: 56px;
     padding-top: 5px;
@@ -2127,10 +2198,13 @@ body.compensate-for-scrollbar {
     border-radius: 60px;
     border: 0 solid transparent;
     color: #fff;
-    font-size: 16px; }
+    font-size: 16px;
+    width: 100%; }
     .support.support--context .support__submit:hover {
       background-color: #4E4AFF; }
     .support.support--context .support__submit:active {
       background-color: #3A38BF; }
+  .support.support--context .support__confid-container {
+    width: 100%; }
 
 /*/pages*/
