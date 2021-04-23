@@ -1,9 +1,7 @@
 @mixin section-width() {
   margin-left: auto;
   margin-right: auto;
-  @media #{$min-desktop-width} {
-    max-width: $max-desktop-wrapper;
-  }
+  max-width: $max-desktop-wrapper;
 }
 
 @mixin paddings() {
@@ -69,7 +67,11 @@
   &:invalid {
     border-bottom: 1px solid $invalid-color;
   }
-  &:invalid ~ .support__label {
+  & ~ label {
+    color: rgba(66, 63, 217, 1);
+    font-size: 14px;
+  }
+  &:invalid ~ label {
     color: $invalid-color;
   }
 }

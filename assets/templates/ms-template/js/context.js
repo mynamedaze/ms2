@@ -43,4 +43,12 @@ $(document).ready(function () {
             }
         });
     }
+
+    if ($('.feedback__list')) {
+        let contextFeedbackCarousel = $('.feedback__list').owlCarousel();
+        $('.some-some').click(function () {
+            $('.feedback__item').removeClass('disable');
+            contextFeedbackCarousel.trigger('refreshed.owl.carousel');
+        });
+    }
 });
