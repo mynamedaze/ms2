@@ -45,7 +45,23 @@ $(document).ready(function () {
     }
 
     if ($('.feedback__list')) {
-        let contextFeedbackCarousel = $('.feedback__list').owlCarousel();
+        let contextFeedbackCarousel = $('.feedback__list').owlCarousel(
+            {
+                loop:false,
+                dots: false,
+                margin:10,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        autoWidth: true,
+                        items: 4
+                    }
+                }
+            }
+        );
         $('.some-some').click(function () {
             $('.feedback__item').removeClass('disable');
             contextFeedbackCarousel.trigger('refreshed.owl.carousel');
