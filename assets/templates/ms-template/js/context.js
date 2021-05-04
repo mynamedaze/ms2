@@ -1,5 +1,16 @@
 'use strict';
 $(document).ready(function () {
+
+    let overlay = document.getElementsByClassName('overlay');
+    let popup = document.getElementsByClassName('popup');
+
+    $(overlay).click(function () {
+       $(popup).fadeOut(300);
+       setTimeout(function () {
+           $(overlay).fadeOut(300);
+       }, 300);
+    });
+
     if (document.documentElement.clientWidth > 767) {
         $('#first').css('height', document.documentElement.clientHeight);
 
@@ -49,8 +60,9 @@ $(document).ready(function () {
             {
                 loop:false,
                 dots: false,
-                margin:10,
+                margin:16,
                 responsiveClass:true,
+                nav: true,
                 responsive:{
                     0:{
                         items:1
@@ -67,4 +79,59 @@ $(document).ready(function () {
             contextFeedbackCarousel.trigger('refreshed.owl.carousel');
         });
     }
+
+    /*feedback*/
+    if ($('.feedback')) {
+        let feedbackPopup = document.getElementsByClassName('feedback__popup');
+
+        let feedbackMoreButton = document.getElementsByClassName('feedback__more-button');
+        feedbackMoreButton = Array.prototype.slice.call(feedbackMoreButton);
+
+        let feedbackItemPopup = document.getElementsByClassName('feedback__item--popup');
+        feedbackItemPopup = Array.prototype.slice.call(feedbackItemPopup);
+
+        feedbackMoreButton.forEach(function (item,index) {
+           $(item).click(function () {
+               $(feedbackItemPopup).hide();
+               $(feedbackItemPopup[index]).show();
+               $(overlay).fadeIn(300);
+               setTimeout(function () {
+                   $(feedbackPopup).fadeIn(300);
+               }, 300);
+           });
+        });
+    }
+    /*/feedback*/
+    /*team*/
+    let contextTeamCarousel;
+    if (document.documentElement.clientWidth < 768) {
+        contextTeamCarousel = $('.team__list').owlCarousel(
+            {
+                loop:false,
+                dots: false,
+                nav: true,
+                autoWidth: true,
+                items: 4,
+                responsiveClass:true
+            }
+        );
+    }
+
+    $( window ).resize(function() {
+        if (document.documentElement.clientWidth < 768) {
+            contextTeamCarousel = $('.team__list').owlCarousel(
+                {
+                    loop:false,
+                    dots: false,
+                    nav: true,
+                    autoWidth: true,
+                    items: 4,
+                    responsiveClass:true
+                }
+            );
+        } else {
+            contextTeamCarousel.trigger('destroy.owl.carousel');
+        }
+    });
+    /*/team*/
 });
