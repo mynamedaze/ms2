@@ -1,0 +1,11 @@
+.calculator--context {
+  .stage1 {
+    @media #{$min-tablet-width} {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .stage1__title {
+    @include calculator-titles;
+  }
+}

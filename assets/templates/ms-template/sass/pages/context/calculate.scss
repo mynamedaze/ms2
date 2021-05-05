@@ -1,0 +1,16 @@
+.calculate--context {
+  background-color: $alt-bg;
+  .calculate__wrapper {
+    @include section-width;
+    @include paddings;
+    @media #{$max-mobile-width} {
+      padding-bottom: 56px;
+    }
+    @media #{$min-tablet-width} {
+      padding-bottom: 70px;
+    }
+    @media #{$min-desktop-width} {
+      padding-bottom: 100px;
+    }
+  }
+}

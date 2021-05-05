@@ -98,6 +98,68 @@
         </div>
       </div>
     </section>
+    <section class="calculate  calculate--context">
+      <div class="calculate__wrapper">
+        <h2 class="calculate__title">Рассчитайте стоимость рекламной кампании</h2>
+        <span class="calculate__description">Эти простые вопросы позволят нам подготовить для Вас более предметную обратную связь</span>
+        <article class="calculator  calculator--context">
+          <div class="calculator__head">
+            <ul class="calculator__head-list">
+              <li class="calculator__head-item">Шаг <span>1</span></li>
+              <li class="calculator__head-item">Шаг <span>2</span></li>
+              <li class="calculator__head-item">Шаг <span>3</span></li>
+              <li class="calculator__head-item">Персональная <span>консультация</span></li>
+            </ul>
+          </div>
+          <div class="calculator__stages">
+            <div class="stage1">
+              <div class="stage1__left-side">
+                <span class="stage1__title">Какие услуги вам необходимы</span>
+                <ul class="stage1__left-list">
+                  <li class="stage1__left-item">
+                    <input type="checkbox" id="stage1-checkbox-1" name="services" class="stage1__left-checkbox" value="Яндекс Директ">
+                    <label for="stage1-checkbox-1" class="stage1__left-label">Яндекс Директ</label>
+                  </li>
+                  <li class="stage1__left-item">
+                    <input type="checkbox" id="stage1-checkbox-2" name="services" class="stage1__left-checkbox" value="Google Ads">
+                    <label for="stage1-checkbox-2" class="stage1__left-label">Google Ads</label>
+                  </li>
+                  <li class="stage1__left-item">
+                    <input type="checkbox" id="stage1-checkbox-3" name="services" class="stage1__left-checkbox" value="Пока не знаю">
+                    <label for="stage1-checkbox-3" class="stage1__left-label">Пока не знаю</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="stage1__right-side">
+                <span class="stage1__title">Запускали ранее контекстную рекламу?</span>
+                <ul class="stage1__right-list">
+                  <li class="stage1__right-item">
+                    <input type="radio" id="stage1-radio-1" name="self" class="stage1__right-radio" value="Да, самостоятельная настройка">
+                    <label for="stage1-radio-1" class="stage1__right-label  stage1__right-label--checkbox">Да, самостоятельная настройка</label>
+                  </li>
+                  <li class="stage1__right-item">
+                    <input type="radio" id="stage1-radio-2" name="self" class="stage1__right-radio" value="Да, заказывал услуги">
+                    <label for="stage1-radio-2" class="stage1__right-label  stage1__right-label--checkbox">Да, заказывал услуги</label>
+                  </li>
+                  <li class="stage1__right-item">
+                    <input type="radio" id="stage1-radio-3" name="self" class="stage1__right-radio" value="Рекламы ещё не было">
+                    <label for="stage1-radio-3" class="stage1__right-label  stage1__right-label--checkbox">Рекламы ещё не было</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="stage  stage--context">
+                <div class="stage__btn-container  stage__btn-container--prev">
+                  <button class="stage__btn  stage__btn--prev">Назад</button>
+                </div>
+                <div class="stage__btn-container  stage__btn-container--next">
+                  <button class="stage__btn  stage__btn--next">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
     <section class="steps  steps--context">
       <div class="steps__wrapper">
         <h2 class="steps__title">Как мы будем настраивать<br>вашу рекламу</h2>
@@ -660,30 +722,56 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <ul class="page-footer__nav-list  page-footer__nav-list--services">
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Контекстная реклама</a>
-        </li>
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Таргетированная реклама</a>
-        </li>
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Реклама в Avito</a>
-        </li>
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Отчеты сквозной аналитики</a>
-        </li>
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Создание лендингов</a>
-        </li>
-        <li class="page-footer__nav-item">
-          <a href="#" class="page-footer__nav-link">Создание многостраничных сайтов</a>
-        </li>
-      </ul>
+      <div class="page-footer__nav">
+        <div class="page-footer__nav-title-container">
+          <span class="page-footer__nav-title">Услуги</span>
+        </div>
+        <ul class="page-footer__nav-list  page-footer__nav-list--services">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Контекстная реклама</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Таргетированная реклама</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Реклама в Avito</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Отчеты сквозной аналитики</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Создание лендингов</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Создание многостраничных сайтов</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__nav">
+        <div class="page-footer__nav-title-container">
+          <span class="page-footer__nav-title">О нас</span>
+        </div>
+        <ul class="page-footer__nav-list  page-footer__nav-list--about">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Проекты</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Кейсы</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Команда</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Контакты</a>
+          </li>
+        </ul>
+      </div>
       <div class="page-footer__map"></div>
-      <a href="tel:+79184222357" class="page-hooter__phone-link">+7(918) 422-23-57</a>
-      <a href="/index.html" class="page-footer__company-link">ms-group.online</a>
-      <a href="#" target="_blank" class="page-footer__confid-link">Политика конфиденциальности</a>
+      <div class="page-footer__sub">
+        <a href="tel:+79184222357" class="page-hooter__phone-link">+7(918) 422-23-57</a>
+        <a href="/index.html" class="page-footer__company-link">ms-group.online</a>
+        <a href="#" target="_blank" class="page-footer__confid-link">политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
   <div class="overlay"></div>

@@ -81,6 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
   }
   .lets__text-container {
     @media #{$min-tablet-width} {

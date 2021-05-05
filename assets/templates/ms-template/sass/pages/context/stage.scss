@@ -1,0 +1,66 @@
+.stage--context{
+  display: flex;
+  width: 100%;
+  .stage__btn-container--prev {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .stage__btn-container--next {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .stage__btn-container {
+    @media #{$min-tablet-width} {
+      min-width: 141px;
+    }
+  }
+  .stage__btn-container--next {
+    @media #{$max-mobile-width} {
+      min-width: 117px;
+    }
+  }
+  .stage__btn {
+    width: 100%;
+  }
+  .stage__btn--prev {
+    @include alt-btn;
+    @media #{$max-mobile-width} {
+      font-size: 0;
+      border-radius: 50%;
+      width: 56px;
+      position: relative;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 2px;
+        height: 10px;
+        background-color: $btn-bg;
+        transform: rotate(45deg);
+      }
+      &::before {
+        transform: translate(-2px, -8px) rotate(45deg);
+      }
+      &::after {
+        transform: translate(-2px, -1px) rotate(-45deg);
+      }
+      &:hover {
+        &::before,
+        &::after {
+          background-color: #fff;
+        }
+      }
+      &:active {
+        &::before,
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .stage__btn--next {
+    @include main-btn;
+  }
+}
