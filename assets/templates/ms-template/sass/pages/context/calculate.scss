@@ -1,16 +1,71 @@
 .calculate--context {
   background-color: $alt-bg;
+  position: relative;
+  overflow: hidden;
+  @media #{$min-tablet-width} {
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      width: 1490px;
+      height: 1606px;
+      bottom: -1130px;
+      left: -375px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms-template/images/calculator-bg1.svg");
+    }
+  }
+  @media #{$min-tablet-width} {
+    &::after {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      width: 1490px;
+      height: 1490px;
+      top: -1120px;
+      right: -510px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms-template/images/calculator-bg2.svg");
+    }
+  }
   .calculate__wrapper {
     @include section-width;
     @include paddings;
     @media #{$max-mobile-width} {
       padding-bottom: 56px;
+      padding-top: 55px;
     }
     @media #{$min-tablet-width} {
       padding-bottom: 70px;
+      padding-top: 70px;
     }
     @media #{$min-desktop-width} {
       padding-bottom: 100px;
+      padding-top: 100px;
+    }
+  }
+  .calculate__title {
+    @include common-title;
+  }
+  .calculate__description {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 18px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 18px;
+      line-height: 28px;
+      margin-top: 25px;
     }
   }
 }

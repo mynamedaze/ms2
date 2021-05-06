@@ -1,11 +1,124 @@
 .calculator--context {
   .stage1 {
+    display: none;
+  }
+  .stage1__sides {
     @media #{$min-tablet-width} {
       display: flex;
-      flex-wrap: wrap;
+    }
+  }
+  .stage1__side--left {
+    @media #{$min-tablet-width} {
+      max-width: 210px;
+      margin-right: 160px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        right: -80px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(125, 129, 164, .4);
+      }
+    }
+  }
+  .stage1__side--right {
+    @media #{$max-mobile-width} {
+      margin-top: 32px;
+    }
+    @media #{$min-tablet-width} {
+      max-width: 310px;
     }
   }
   .stage1__title {
     @include calculator-titles;
+  }
+  .stage1__list {
+    padding-left: 0;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      margin-top: 20px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 30px;
+    }
+  }
+  .stage1__item:not(:first-child) {
+    margin-top: 15px;
+  }
+  .stage1__checkbox {
+    display: none;
+  }
+  .stage1__label--checkbox,
+  .stage1__label--radio {
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 32px;
+    position: relative;
+  }
+  .stage1__label--checkbox {
+    &::before,
+    &::after {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+    }
+    &::before {
+      border: 2px solid $radiocheck-color;
+    }
+    &::after {
+      background-repeat: no-repeat;
+      background-size: 0 auto;
+      background-position: 45% center;
+      background-image: url("/assets/templates/ms-template/images/check.svg");
+    }
+  }
+  #stage1-checkbox-1:checked ~ .stage1__label--checkbox,
+  #stage1-checkbox-2:checked ~ .stage1__label--checkbox,
+  #stage1-checkbox-3:checked ~ .stage1__label--checkbox {
+    &::after {
+      background-color: $radiocheck-color;
+      background-size: 11px auto;
+    }
+  }
+  .stage1__radio {
+    display: none;
+  }
+  .stage1__label--radio {
+    &::before,
+    &::after {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+    &::before {
+      border: 2px solid $radiocheck-color;
+    }
+  }
+  #stage1-radio-1:checked ~ .stage1__label--radio,
+  #stage1-radio-2:checked ~ .stage1__label--radio,
+  #stage1-radio-3:checked ~ .stage1__label--radio {
+    &::before {
+      background-color: $radiocheck-color;
+    }
+    &::after {
+      background-color: #fff;
+      left: 9px;
+      top: 9px;
+      transform: translate(-50%, -50%);
+      width: 9px;
+      height: 9px;
+    }
   }
 }

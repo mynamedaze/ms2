@@ -1,0 +1,43 @@
+.calculator--context {
+  .stage2 {
+    .stage2__title {
+
+    }
+  }
+  /*scroll*/
+  .ui-widget.ui-widget-content {
+    height: 2px;
+    background-color: $radiocheck-color;
+    border-radius: 0;
+    border: 0 solid transparent;
+  }
+  #custom-handle {
+    transform: translate(-45px, -30px) !important;
+    width: 140px;
+    text-align: center;
+    border: 0 solid transparent;
+    background-color: transparent;
+    color: $radiocheck-color;
+    font-size: 40px;
+    line-height: 48px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    outline: none;
+    &:hover {
+      color: $radiocheck-color;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $radiocheck-color;
+    }
+  }
+  /*/scroll*/
+}

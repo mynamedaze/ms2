@@ -1,10 +1,17 @@
 .calculator--context {
   background-color: $main-bg;
+  position: relative;
+  z-index: 3;
   @media #{$max-mobile-width} {
-    box-shadow: 0 0 8px rgba(125, 129, 164, 0.15)
+    box-shadow: 0 0 8px rgba(125, 129, 164, 0.15);
+    margin-top: 30px;
   }
   @media #{$min-tablet-width} {
     box-shadow: 0 20px 50px rgba(125, 129, 164, 0.2);
+    margin-top: 28px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 40px;
   }
   .calculator__head {
     background-color: $calculator-bg;
@@ -67,6 +74,7 @@
   }
   .calculator__stages {
     @media #{$max-mobile-width} {
+      padding-top: 32px;
       padding-left: 24px;
       padding-right: 24px;
       padding-bottom: 32px;
@@ -74,7 +82,8 @@
     @media #{$min-tablet-width} {
       padding-left: 96px;
       padding-right: 96px;
-      padding-bottom: 40px;
+      padding-bottom: 48px;
+      padding-top: 48px;
     }
   }
 }

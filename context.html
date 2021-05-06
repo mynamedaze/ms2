@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/templates/ms-template/css/style-v2.css" />
   <link rel="stylesheet" type="text/css" href="/assets/templates/ms-template/css/cardslider.css" />
   <link rel="stylesheet" type="text/css" href="/assets/templates/ms-template/css/fm.revealator.jquery.min.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta property="og:title" content="MS Group - контекстная реклама" />
@@ -113,39 +114,82 @@
           </div>
           <div class="calculator__stages">
             <div class="stage1">
-              <div class="stage1__left-side">
-                <span class="stage1__title">Какие услуги вам необходимы</span>
-                <ul class="stage1__left-list">
-                  <li class="stage1__left-item">
-                    <input type="checkbox" id="stage1-checkbox-1" name="services" class="stage1__left-checkbox" value="Яндекс Директ">
-                    <label for="stage1-checkbox-1" class="stage1__left-label">Яндекс Директ</label>
-                  </li>
-                  <li class="stage1__left-item">
-                    <input type="checkbox" id="stage1-checkbox-2" name="services" class="stage1__left-checkbox" value="Google Ads">
-                    <label for="stage1-checkbox-2" class="stage1__left-label">Google Ads</label>
-                  </li>
-                  <li class="stage1__left-item">
-                    <input type="checkbox" id="stage1-checkbox-3" name="services" class="stage1__left-checkbox" value="Пока не знаю">
-                    <label for="stage1-checkbox-3" class="stage1__left-label">Пока не знаю</label>
-                  </li>
-                </ul>
+              <div class="stage1__sides">
+                <div class="stage1__side  stage1__side--left">
+                  <span class="stage1__title">Какие услуги вам необходимы</span>
+                  <ul class="stage1__list  stage1__list--left">
+                    <li class="stage1__item">
+                      <input type="checkbox" id="stage1-checkbox-1" name="services" class="stage1__checkbox" value="Яндекс Директ">
+                      <label for="stage1-checkbox-1" class="stage1__label  stage1__label--checkbox">Яндекс Директ</label>
+                    </li>
+                    <li class="stage1__item">
+                      <input type="checkbox" id="stage1-checkbox-2" name="services" class="stage1__checkbox" value="Google Ads">
+                      <label for="stage1-checkbox-2" class="stage1__label  stage1__label--checkbox">Google Ads</label>
+                    </li>
+                    <li class="stage1__item">
+                      <input type="checkbox" id="stage1-checkbox-3" name="services" class="stage1__checkbox" value="Пока не знаю">
+                      <label for="stage1-checkbox-3" class="stage1__label  stage1__label--checkbox">Пока не знаю</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="stage1__side  stage1__side--right">
+                  <span class="stage1__title">Запускали ранее контекстную рекламу?</span>
+                  <ul class="stage1__list  stage1__list--right">
+                    <li class="stage1__item">
+                      <input type="radio" id="stage1-radio-1" name="self" class="stage1__radio" value="Да, самостоятельная настройка">
+                      <label for="stage1-radio-1" class="stage1__label  stage1__label--radio">Да, самостоятельная настройка</label>
+                    </li>
+                    <li class="stage1__item">
+                      <input type="radio" id="stage1-radio-2" name="self" class="stage1__radio" value="Да, заказывал услуги">
+                      <label for="stage1-radio-2" class="stage1__label  stage1__label--radio">Да, заказывал услуги</label>
+                    </li>
+                    <li class="stage1__item">
+                      <input type="radio" id="stage1-radio-3" name="self" class="stage1__radio" value="Рекламы ещё не было">
+                      <label for="stage1-radio-3" class="stage1__label  stage1__label--radio">Рекламы ещё не было</label>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="stage1__right-side">
-                <span class="stage1__title">Запускали ранее контекстную рекламу?</span>
-                <ul class="stage1__right-list">
-                  <li class="stage1__right-item">
-                    <input type="radio" id="stage1-radio-1" name="self" class="stage1__right-radio" value="Да, самостоятельная настройка">
-                    <label for="stage1-radio-1" class="stage1__right-label  stage1__right-label--checkbox">Да, самостоятельная настройка</label>
-                  </li>
-                  <li class="stage1__right-item">
-                    <input type="radio" id="stage1-radio-2" name="self" class="stage1__right-radio" value="Да, заказывал услуги">
-                    <label for="stage1-radio-2" class="stage1__right-label  stage1__right-label--checkbox">Да, заказывал услуги</label>
-                  </li>
-                  <li class="stage1__right-item">
-                    <input type="radio" id="stage1-radio-3" name="self" class="stage1__right-radio" value="Рекламы ещё не было">
-                    <label for="stage1-radio-3" class="stage1__right-label  stage1__right-label--checkbox">Рекламы ещё не было</label>
-                  </li>
-                </ul>
+              <div class="stage  stage--context">
+                <div class="stage__btn-container  stage__btn-container--prev">
+                  <button class="stage__btn  stage__btn--prev">Назад</button>
+                </div>
+                <div class="stage__btn-container  stage__btn-container--next">
+                  <button class="stage__btn  stage__btn--next">Далее</button>
+                </div>
+              </div>
+            </div>
+            <div class="stage2">
+              <span class="stage2__title">Информация о вашем бизнесе</span>
+              <div class="stage2__inputs">
+                <div class="stage2__input-container">
+                  <input type="text" id="stage-input-city" class="stage__input" placeholder="город или область" required>
+                  <label for="stage-input-city" class="stage2__label">Регион(-ы), в котором работаете</label>
+                </div>
+                <div class="stage2__input-container">
+                  <input type="text" id="stage-input-activity" class="stage__input" placeholder="введите нишу" required>
+                  <label for="stage-input-activity" class="stage2__label">Ваша ниша</label>
+                </div>
+                <div class="stage2__input-container">
+                  <input type="text" id="stage-input-site" class="stage__input" placeholder="введите сайт" required>
+                  <label for="stage-input-site" class="stage2__label">Ссылка на ваш сайт</label>
+                </div>
+              </div>
+              <span class="stage2__title">Примерный бюджет на рекламу</span>
+              <div class="stage2__inputs">
+                <div class="stage2__input-container">
+                  <input type="radio" id="stage-radio-ready" class="stage__radio" checked>
+                  <label for="stage-radio-ready" class="stage2__label">Готов указать</label>
+                </div>
+                <div class="stage2__input-container">
+                  <input type="radio" id="stage-input-not-ready" class="stage__radio">
+                  <label for="stage-input-not-ready" class="stage2__label">Пока не знаю</label>
+                </div>
+              </div>
+              <div class="stage2__scroll-block">
+                <div id="slider">
+                  <div id="custom-handle" class="ui-slider-handle"></div>
+                </div>
               </div>
               <div class="stage  stage--context">
                 <div class="stage__btn-container  stage__btn-container--prev">
@@ -776,6 +820,7 @@
   </footer>
   <div class="overlay"></div>
   <script src="/assets/templates/ms-template/js/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/assets/templates/ms-template/js/fm.revealator.jquery.min.js"></script>
   <script src="/assets/templates/ms-template/js/owl.carousel.min.js"></script>
   <script src="/assets/templates/ms-template/js/jquery.inputmask.bundle.js"></script>
