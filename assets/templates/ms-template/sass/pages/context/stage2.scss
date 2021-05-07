@@ -5,6 +5,12 @@
     }
   }
   /*scroll*/
+  #slider {
+    @media #{$min-tablet-width} {
+      max-width: 558px;
+      @include centers;
+    }
+  }
   .ui-widget.ui-widget-content {
     height: 2px;
     background-color: $radiocheck-color;
@@ -12,7 +18,7 @@
     border: 0 solid transparent;
   }
   #custom-handle {
-    transform: translate(-45px, -30px) !important;
+    transform: translate(-45px, -45px) !important;
     width: 140px;
     text-align: center;
     border: 0 solid transparent;
@@ -31,12 +37,75 @@
       position: absolute;
       content: "";
       left: 50%;
-      bottom: -8px;
+      bottom: -18px;
       transform: translateX(-50%);
       width: 16px;
       height: 16px;
       border-radius: 50%;
       background-color: $radiocheck-color;
+    }
+  }
+  .stage2__scroll-block {
+    @media #{$min-tablet-width} {
+      padding-top: 82px;
+      padding-bottom: 59px;
+      background-color: #F5F8FE;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .stage2__limits {
+    padding-left: 0;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(20, 42, 70, .5);
+    @media #{$min-tablet-width} {
+      max-width: 558px;
+      @include centers;
+    }
+  }
+  .stage2__limit {
+    position: absolute;
+    bottom: -22px;
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 15%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(3) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 25%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(4) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(5) {
+      @media #{$max-mobile-width} {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+      @media #{$min-tablet-width} {
+        display: none;
+      }
     }
   }
   /*/scroll*/
