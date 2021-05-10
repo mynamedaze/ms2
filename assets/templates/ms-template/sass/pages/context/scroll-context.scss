@@ -1,8 +1,7 @@
 #scroll-context {
   position: relative;
-  display: none !important;
   @media #{$min-tablet-width} {
-    height: 4000px;
+    height: 2000px;
     background-color: #000;
     display: flex;
     flex-direction: column;

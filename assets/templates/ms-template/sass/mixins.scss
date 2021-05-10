@@ -99,49 +99,25 @@
 }
 
 @mixin close-btn {
+  @include main-btn;
+  background-image: url("/assets/templates/ms-template/images/cross-close.svg");
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px auto;
   position: absolute;
-  z-index: 14;
   @media #{$max-mobile-width} {
-    width: 35px;
-    height: 35px;
-    top: -45px;
-    right: 13px;
-    background-color: transparent;
+    width: 52px;
+    height: 52px;
+    right: 0;
+    top: 0;
   }
   @media #{$min-tablet-width} {
-    width: 35px;
-    height: 35px;
-    top: -35px;
-    right: -35px;
+    width: 56px;
+    height: 56px;
+    right: -56px;
+    top: -56px;
     background-color: transparent;
-  }
-  &::before {
-    position: absolute;
-    transition: $animate;
-    content: "";
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-15px, -1px) rotate(45deg);
-  }
-  &:hover::before {
-    background-color: #ffd543;
-  }
-  &::after {
-    position: absolute;
-    transition: $animate;
-    content: "";
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-15px, -1px) rotate(-45deg);
-  }
-  &:hover::after {
-    background-color: #ffd543;
   }
 }
 

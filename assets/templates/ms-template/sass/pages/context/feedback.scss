@@ -217,9 +217,9 @@
   .feedback__popup {
     position: fixed;
     display: none;
-    z-index: 11;
+    z-index: 10001;
     top: 50%;
-    overflow-y: auto;
+    max-height: 100%;
     @media #{$max-mobile-width} {
       left: 0;
       width: 100%;
@@ -229,6 +229,13 @@
       left: 50%;
       width: 700px;
       transform: translate(-50%, -50%);
+      padding: 56px;
+    }
+    @media #{$min-desktop-width} {
+      width: 800px;
+    }
+    .feedback-container {
+      overflow-y: auto;
     }
     .feedback__popup-list {
       padding-left: 0;
@@ -237,6 +244,18 @@
     }
     .feedback__item-container {
       width: 100%;
+    }
+  }
+  .feedback__item--popup {
+    @media #{$max-mobile-width} {
+      padding: 0;
+    }
+  }
+  .feedback__close-btn {
+    @include close-btn;
+    @media #{$min-tablet-width} {
+      right: 0;
+      top: 0;
     }
   }
   .owl-nav {

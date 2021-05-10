@@ -1,0 +1,122 @@
+.callback-popup {
+  position: fixed;
+  z-index: 10001;
+  top: 50%;
+  background-color: $main-bg;
+  display: none;
+  @media #{$max-mobile-width} {
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    padding-top: 62px;
+  }
+  @media #{$min-tablet-width} {
+    left: 50%;
+    width: 434px;
+    transform: translate(-50%, -50%);
+    padding-top: 32px;
+  }
+}
+.callback-popup__close-btn {
+  @include close-btn;
+}
+.callback-popup__title {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  @media #{$max-mobile-width} {
+    max-width: 358px;
+    @include centers;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.callback-popup__description {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  color: $grey-text-color;
+  margin-top: 12px;
+  @media #{$max-mobile-width} {
+    max-width: 358px;
+    @include centers;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.callback-popup__inputs {
+  padding-bottom: 29px;
+  @media #{$max-mobile-width} {
+    max-width: 358px;
+    @include centers;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media #{$min-tablet-width} {
+    @include centers;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.callback-popup__input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.callback-popup__input {
+  @include common-input;
+  order: 2;
+  height: 48px;
+  @media #{$max-mobile-width} {
+    margin-top: 12px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 10px;
+  }
+}
+.callback-popup__gray-block {
+  background-color: $alt-bg;
+  padding-top: 24px;
+  @media #{$max-mobile-width} {
+    padding-bottom: 30px;
+  }
+  @media #{$min-tablet-width} {
+    padding-bottom: 24px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.callback-popup__submit-container {
+  @media #{$max-mobile-width} {
+    max-width: 358px;
+    @include centers;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.callback-popup__submit {
+  @include main-btn;
+  width: 100%;
+}
+.callback-popup__confid {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(125, 129, 164, 1);
+  @media #{$max-mobile-width} {
+    max-width: 358px;
+    @include centers;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

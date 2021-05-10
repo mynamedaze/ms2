@@ -2,37 +2,57 @@
   @media #{$max-mobile-width} {
     position: fixed;
     z-index: 1001;
-    right: 0;
+    right: -800px;
     top: 0;
     width: 90%;
     height: 100%;
-    background-color: green;
+    background-color: $main-bg;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 84px;
+    padding-bottom: 40px;
+    transition: all .5s ease 0s;
   }
   @media #{$min-tablet-width} {
-    display: flex;
-    align-items: center;
     flex-grow: 1;
-    background-color: orange;
+  }
+  &.active {
+    right: 0;
+  }
+}
+.main-nav__container {
+  display: flex;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+    height: 100%;
+  }
+  @media #{$min-tablet-width} {
+    align-items: center;
   }
 }
 .main-nav__list {
   padding-left: 0;
   @media #{$min-tablet-width} {
     display: flex;
-    margin-right: auto;
-    margin-left: 30px;
+    @include centers;
   }
   @media #{$min-desktop-width} {
     transform: translateX(100px);
   }
 }
-.main-nav__link {
-  color: $text-color-main;
+.main-nav__item {
   @media #{$max-mobile-width} {
+    margin-bottom: 24px;
+  }
+}
+.main-nav__link {
+  @media #{$max-mobile-width} {
+    color: $text-color-main;
     font-size: 16px;
     line-height: 24px;
   }
   @media #{$min-tablet-width} {
+    color: $text-color-alt;
     font-size: 14px;
     line-height: 20px;
     padding-left: 10px;
@@ -44,19 +64,47 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  &:hover {
+    color: rgba(66, 63, 217, 1);
+  }
 }
 .main-nav__phone-link {
+  @media #{$max-mobile-width} {
+    align-self: center;
+    margin-top: auto;
+    color: $text-color-main;
+    font-weight: 700;
+  }
   @media #{$min-tablet-width} {
     margin-left: 0;
     margin-right: 0;
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-    color: $text-color-main;
+    color: $text-color-alt;
   }
   @media #{$min-desktop-width} {
     font-size: 22px;
     line-height: 32px;
+  }
+  &:hover {
+    color: rgba(66, 63, 217, 1);
+  }
+}
+.page-header.white {
+  .main-nav__link {
+    @media #{$min-tablet-width} {
+      color: $text-color-main;
+      &:hover {
+        color: rgba(66, 63, 217, 1);
+      }
+    }
+  }
+  .main-nav__phone-link {
+    color: $text-color-main;
+    &:hover {
+      color: rgba(66, 63, 217, 1);
+    }
   }
 }
 .main-nav__close-btn {
@@ -79,6 +127,12 @@
 }
 .main-nav__callback-btn {
   @include main-btn;
+  @media #{$max-mobile-width} {
+    align-self: center;
+    width: 224px;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
   @media #{$min-tablet-width} {
     width: 40px;
     height: 40px;
@@ -86,6 +140,10 @@
     font-size: 0;
     flex-shrink: 0;
     margin-left: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px auto;
+    background-image: url("/assets/templates/ms-template/images/phone-icon.svg");
   }
   @media #{$min-desktop-width} {
     margin-left: 20px;

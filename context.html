@@ -26,26 +26,28 @@
         <img src="/assets/templates/ms-template/images/ms-dark.svg" alt="" class="page-header__logo">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__close-btn"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="/context.html" class="main-nav__link">Контекстная реклама</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="/smm.html" class="main-nav__link">Таргетинговая реклама</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="/site.html" class="main-nav__link">Создание сайтов</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="/portfolio.html" class="main-nav__link">Портфолио</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="/blog.html" class="main-nav__link">Блог</a>
-          </li>
-        </ul>
-        <a href="tel:+79184222357" class="main-nav__phone-link">+7 (918) 422-23-57</a>
-        <button class="main-nav__callback-btn">Заказать звонок</button>
+        <div class="main-nav__container">
+          <button class="main-nav__close-btn  close-btn"></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="/context.html" class="main-nav__link">Контекстная реклама</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/smm.html" class="main-nav__link">Таргетинговая реклама</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/site.html" class="main-nav__link">Создание сайтов</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/portfolio.html" class="main-nav__link">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/blog.html" class="main-nav__link">Блог</a>
+            </li>
+          </ul>
+          <a href="tel:+79184222357" class="main-nav__phone-link">+7 (918) 422-23-57</a>
+          <button class="main-nav__callback-btn  callback-btn">Заказать звонок</button>
+        </div>
       </nav>
       <button class="page-header__nav-burger"></button>
     </div>
@@ -68,6 +70,13 @@
                   <img src="/assets/templates/ms-template/images/google.svg" alt="Логотип Гугл" class="intro__poisk-img  intro__poisk-img--google">
                 </li>
               </ul>
+              <div class="intro__mobile-block">
+                <div class="intro__mobile-sublist">
+                  <span class="intro__mobile-subitem">Покажем вашу рекламу на первых позициях поисковой выдачи</span>
+                  <span class="intro__mobile-subitem">Сети: охватим дополнительную аудиторию</span>
+                  <span class="intro__mobile-description">— объявления на сайтах партнёров Яндекса</span>
+                </div>
+              </div>
               <span class="intro__description  intro__description--1">Руководитель входит в топ 50 специалистов Яндекс по настройке Яндекс Директ</span>
             </li>
             <li class="intro__item  disable-soft">
@@ -213,25 +222,27 @@
                 <span class="stage3__description">Оставьте свои данные и мы свяжемся с вами, чтобы уточнить все детали и дать более конкретную оценку</span>
               </div>
               <span class="stage3__title">Данные для связи</span>
-              <div class="stage3__inputs">
-                <div class="stage3__input-container">
-                  <input type="text" id="stage-input-name" class="stage3__input" placeholder="Иван Иванов">
-                  <label for="stage-input-name" class="stage3__label">Ваше имя</label>
+              <form action="" class="stage3__form">
+                <div class="stage3__inputs">
+                  <div class="stage3__input-container">
+                    <input type="text" id="stage-input-name" class="stage3__input" name="name" placeholder="Иван Иванов">
+                    <label for="stage-input-name" class="stage3__label">Ваше имя</label>
+                  </div>
+                  <div class="stage3__input-container">
+                    <input type="tel" id="stage-input-phone" class="stage3__input" name="phone" placeholder="+7 (001) 002-03-04" required>
+                    <label for="stage-input-phone" class="stage3__label">Номер телефона</label>
+                  </div>
+                  <span class="stage3__confid">Оставляя заявку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
                 </div>
-                <div class="stage3__input-container">
-                  <input type="tel" id="stage-input-phone" class="stage3__input" placeholder="+7 (001) 002-03-04" required>
-                  <label for="stage-input-phone" class="stage3__label">Номер телефона</label>
+                <div class="stage  stage--context">
+                  <div class="stage__btn-container  stage__btn-container--prev">
+                    <button class="stage__btn  stage__btn--prev">Назад</button>
+                  </div>
+                  <div class="stage__btn-container  stage__btn-container--consult">
+                    <button type="submit" class="stage__btn  stage__btn--consult">Получить консультацию</button>
+                  </div>
                 </div>
-                <span class="stage3__confid">Оставляя заявку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
-              </div>
-              <div class="stage  stage--context">
-                <div class="stage__btn-container  stage__btn-container--prev">
-                  <button class="stage__btn  stage__btn--prev">Назад</button>
-                </div>
-                <div class="stage__btn-container  stage__btn-container--consult">
-                  <button class="stage__btn  stage__btn--consult">Получить консультацию</button>
-                </div>
-              </div>
+              </form>
             </div>
             <div class="stage-final">
               <div class="stage-final__img-container">
@@ -250,7 +261,7 @@
         <span class="steps__description">Каждый бизнес уникален. Одна и таже реклама может по-разному работать в разных городах.<br>Поэтому мы плотно погружаемся в каждый бизнес даже если у вас уже есть опыт в подобных нишах.</span>
         <div class="steps__banner">
           <span class="steps__banner-text">Нужно ведение для уже работающей рекламы? </span>
-          <button class="steps__banner-callback-btn">Оставьте заявку</button>
+          <button class="steps__banner-callback-btn  callback-btn">Оставьте заявку</button>
         </div>
         <ul class="steps__list">
           <li class="steps__item  revealator-slideleft  revealator-once">
@@ -325,11 +336,11 @@
           <p class="support__description">Оставьте заявку, мы проведем аудит рекламных кампаний. Определим точки роста и совместно с вами составим план действий.</p>
           <form action="" class="support__form">
             <div class="support__input-container">
-              <input type="text" id="support-input-name" class="support__input" placeholder="Иван Иванов">
+              <input type="text" id="support-input-name" name="name" class="support__input" placeholder="Иван Иванов">
               <label for="support-input-name" class="support__label">Ваше имя</label>
             </div>
             <div class="support__input-container">
-              <input type="tel" id="support-input-phone" class="support__input" placeholder="+7 (100) 002-03-04" required>
+              <input type="tel" id="support-input-phone" name="phone" class="support__input" placeholder="+7 (100) 002-03-04" required>
               <label for="support-input-phone" class="support__label">Номер телефона</label>
             </div>
             <div class="support__submit-container">
@@ -609,6 +620,7 @@
         </ul>
       </div>
       <div class="feedback__popup  popup">
+        <button class="feedback__close-btn  close-btn"></button>
         <div class="feedback-container">
           <ul class="feedback__popup-list">
             <li class="feedback__item  feedback__item--popup">
@@ -797,7 +809,7 @@
               <span class="lets__description">Оставьте заявку и мы ответим на все ваши вопросы</span>
             </div>
             <div class="lets__button-container">
-              <button class="lets__button">Заказать звонок</button>
+              <button class="lets__button  callback-btn">Заказать звонок</button>
             </div>
           </li>
         </ul>
@@ -859,6 +871,29 @@
     </div>
   </footer>
   <div class="overlay"></div>
+  <div class="callback-popup  popup">
+    <button class="callback-popup__close-btn  close-btn"></button>
+    <span class="callback-popup__title">Заказать звонок</span>
+    <span class="callback-popup__description">Наш менеджер перезвонит Вам в течении 20 минут</span>
+    <form action="#" class="callback-popup__form">
+      <div class="callback-popup__inputs">
+        <div class="callback-popup__input-container">
+          <input type="text" id="callback-popup-input-name" name="name" class="callback-popup__input" placeholder="Иван Иванов">
+          <label for="callback-popup-input-name" class="callback-popup__label">Ваше имя</label>
+        </div>
+        <div class="callback-popup__input-container">
+          <input type="tel" id="callback-popup-input-phone" name="phone" class="callback-popup__input" placeholder="+7 (001) 002-03-04" required>
+          <label for="callback-popup-input-phone" class="callback-popup__label">Номер телефона</label>
+        </div>
+      </div>
+      <div class="callback-popup__gray-block">
+        <div class="callback-popup__submit-container">
+          <button type="submit" class="callback-popup__submit">Заказать звонок</button>
+        </div>
+        <span class="callback-popup__confid">Отправляя эту форму Вы соглашаетесь с <a href="/confid.html" target="_blank" class="callback-popup__confid-link">политикой конфиденциальности</a></span>
+      </div>
+    </form>
+  </div>
   <script src="/assets/templates/ms-template/js/jquery-3.2.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/assets/templates/ms-template/js/fm.revealator.jquery.min.js"></script>

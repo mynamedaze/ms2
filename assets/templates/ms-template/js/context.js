@@ -3,19 +3,55 @@ $(document).ready(function () {
 
     let overlay = document.getElementsByClassName('overlay');
     let popup = document.getElementsByClassName('popup');
+    let closeBtn = document.getElementsByClassName('close-btn');
+
+    let navBurger = document.getElementsByClassName('page-header__nav-burger');
+    let mainNav = document.getElementsByClassName('main-nav');
+
+    let pageHeader = document.getElementsByClassName('page-header');
+
+    let callbackBtn = document.getElementsByClassName('callback-btn');
+    let popupCallback = document.getElementsByClassName('callback-popup');
+
+    $(callbackBtn).click(function () {
+        $(overlay).fadeIn(300);
+        setTimeout(function () {
+            $(popupCallback).fadeIn(300);
+        }, 300);
+    });
+    $('.main-nav__callback-btn').click(function () {
+        $(mainNav).removeClass('active');
+    });
 
     $(overlay).click(function () {
        $(popup).fadeOut(300);
+       $(mainNav).removeClass('active');
        setTimeout(function () {
            $(overlay).fadeOut(300);
        }, 300);
     });
 
+    $(closeBtn).click(function () {
+        $(popup).fadeOut(300);
+        $(mainNav).removeClass('active');
+        setTimeout(function () {
+            $(overlay).fadeOut(300);
+        }, 100);
+    });
+
+    /*nav burger mobile*/
+
+    $(navBurger).click(function () {
+        $(overlay).fadeIn(300);
+        $(mainNav).addClass('active');
+    });
+    /*/nav burger mobile*/
+
     if (document.documentElement.clientWidth > 767) {
         $('#first').css('height', document.documentElement.clientHeight);
 
-        let firstYMarker = 1 / 4 * $('#scroll-context').outerHeight();
-        let secondYMarker = 2 / 4 * $('#scroll-context').outerHeight();
+        let firstYMarker = 1 / 5 * $('#scroll-context').outerHeight();
+        let secondYMarker = 2 / 5 * $('#scroll-context').outerHeight();
 
         let introItems = document.getElementsByClassName('intro__item');
         introItems = Array.prototype.slice.call(introItems);
@@ -34,6 +70,12 @@ $(document).ready(function () {
             } else {
                 console.log('less');
                 $('#first').addClass('fixed');
+            }
+
+            if ((window.pageYOffset) + 50 >= $('#scroll-context').outerHeight()) {
+                $(pageHeader).addClass('white');
+            } else {
+                $(pageHeader).removeClass('white');
             }
 
             if (window.pageYOffset <= firstYMarker) {
@@ -79,7 +121,6 @@ $(document).ready(function () {
             contextFeedbackCarousel.trigger('refreshed.owl.carousel');
         });
     }
-
     /*feedback*/
     if ($('.feedback')) {
         let feedbackPopup = document.getElementsByClassName('feedback__popup');
@@ -94,6 +135,9 @@ $(document).ready(function () {
            $(item).click(function () {
                $(feedbackItemPopup).hide();
                $(feedbackItemPopup[index]).show();
+               $(feedbackPopup).css("display", "flex")
+                   .hide()
+                   .fadeIn();
                $(overlay).fadeIn(300);
                setTimeout(function () {
                    $(feedbackPopup).fadeIn(300);
