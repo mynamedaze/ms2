@@ -1,3 +1,93 @@
 .main-nav {
-
+  @media #{$max-mobile-width} {
+    position: fixed;
+    z-index: 1001;
+    right: 0;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background-color: green;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: orange;
+  }
+}
+.main-nav__list {
+  padding-left: 0;
+  @media #{$min-tablet-width} {
+    display: flex;
+    margin-right: auto;
+    margin-left: 30px;
+  }
+  @media #{$min-desktop-width} {
+    transform: translateX(100px);
+  }
+}
+.main-nav__link {
+  color: $text-color-main;
+  @media #{$max-mobile-width} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.main-nav__phone-link {
+  @media #{$min-tablet-width} {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $text-color-main;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+.main-nav__close-btn {
+  @media #{$max-mobile-width} {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include main-btn;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px auto;
+    background-image: url("/assets/templates/ms-template/images/cross-close.svg");
+  }
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+}
+.main-nav__callback-btn {
+  @include main-btn;
+  @media #{$min-tablet-width} {
+    width: 40px;
+    height: 40px;
+    min-height: auto;
+    font-size: 0;
+    flex-shrink: 0;
+    margin-left: 14px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 20px;
+  }
 }

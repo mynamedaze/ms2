@@ -1,0 +1,102 @@
+.calculator--context {
+  .stage3__price-block {
+    background-color: $alt2-bg;
+    color: $text-color-alt;
+    @media #{$max-mobile-width} {
+      padding: 20px 24px;
+    }
+    @media #{$min-tablet-width} {
+      padding: 40px 40px 30px 40px;
+    }
+  }
+  .stage3__price-title {
+    display: block;
+    font-weight: 700;
+    @media #{$max-mobile-width} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .stage3__price {
+    display: block;
+    @media #{$max-mobile-width} {
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: 5px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 40px;
+      line-height: 48px;
+      margin-top: 10px;
+    }
+  }
+  .stage3__description {
+    display: block;
+    color: rgba(255, 255, 255, .6);
+    @media #{$max-mobile-width} {
+      font-size: 12px;
+      line-height: 17px;
+      margin-top: 22px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 15px;
+    }
+  }
+  .stage3__title {
+    display: block;
+    @include calculator-titles;
+    @media #{$max-mobile-width} {
+      margin-top: 33px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 42px;
+    }
+  }
+  .stage3__inputs {
+    @media #{$min-tablet-width} {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 27px;
+    }
+  }
+  .stage3__input-container {
+    display: flex;
+    flex-direction: column;
+    @media #{$max-mobile-width} {
+      margin-top: 25px;
+    }
+    @media #{$min-tablet-width} {
+      width: 31.5%;
+    }
+  }
+  .stage3__input {
+    @include common-input;
+    height: 48px;
+    order: 2;
+    @media #{$max-mobile-width} {
+      margin-top: 7px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 10px;
+    }
+  }
+  .stage3__confid {
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey-text-color;
+    @media #{$max-mobile-width} {
+      display: block;
+      margin-top: 25px;
+    }
+    @media #{$min-tablet-width} {
+      width: 31.5%;
+    }
+  }
+}

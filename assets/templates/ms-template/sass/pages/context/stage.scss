@@ -21,8 +21,15 @@
     }
   }
   .stage__btn-container--next {
+    margin-left: 20px;
     @media #{$max-mobile-width} {
       min-width: 117px;
+    }
+  }
+  .stage__btn-container--consult {
+    margin-left: 20px;
+    @media #{$min-tablet-width} {
+      min-width: 294px;
     }
   }
   .stage__btn {
@@ -66,7 +73,8 @@
       }
     }
   }
-  .stage__btn--next {
+  .stage__btn--next,
+  .stage__btn--consult {
     @include main-btn;
   }
 }

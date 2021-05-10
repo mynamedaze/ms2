@@ -2,6 +2,30 @@
   background-color: $alt-bg;
   position: relative;
   overflow: hidden;
+  @media #{$max-mobile-width} {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms-template/images/calculate-star-1.svg");
+    }
+    &::before {
+      width: 64px;
+      height: 64px;
+      right: 24px;
+      top: 16px;
+    }
+    &::after {
+      width: 40px;
+      height: 40px;
+      left: 40px;
+      bottom: 24px;
+    }
+  }
   @media #{$min-tablet-width} {
     &::before {
       position: absolute;

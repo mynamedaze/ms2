@@ -23,37 +23,30 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a href="/index.html" class="page-header__logo-link">
-
+        <img src="/assets/templates/ms-template/images/ms-dark.svg" alt="" class="page-header__logo">
       </a>
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__close-btn"></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="/context.html" class="main-nav__link">Контекст</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/smm.html" class="main-nav__link">SMM</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/seo.html" class="main-nav__link">SEO</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/develop.html" class="main-nav__link">Web разработка</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/about.html" class="main-nav__link">О нас</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/blog.html" class="main-nav__link">Блог</a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__close-btn"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="/context.html" class="main-nav__link">Контекстная реклама</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/smm.html" class="main-nav__link">Таргетинговая реклама</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/site.html" class="main-nav__link">Создание сайтов</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/portfolio.html" class="main-nav__link">Портфолио</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/blog.html" class="main-nav__link">Блог</a>
+          </li>
+        </ul>
+        <a href="tel:+79184222357" class="main-nav__phone-link">+7 (918) 422-23-57</a>
+        <button class="main-nav__callback-btn">Заказать звонок</button>
       </nav>
-      <a href="tel:+79184222357" class="page-header__phone-link">+7 (918) 422-23-57</a>
-      <button class="page-header__callback-btn">
-        <span class="page-header__callback-btn-txt">Обратный звонок</span>
-      </button>
       <button class="page-header__nav-burger"></button>
     </div>
   </header>
@@ -99,7 +92,7 @@
         </div>
       </div>
     </section>
-    <section class="calculate  calculate--context">
+    <section class="calculate  calculate--context" id="calculate-y">
       <div class="calculate__wrapper">
         <h2 class="calculate__title">Рассчитайте стоимость рекламной кампании</h2>
         <span class="calculate__description">Эти простые вопросы позволят нам подготовить для Вас более предметную обратную связь</span>
@@ -163,27 +156,27 @@
               <span class="stage2__title">Информация о вашем бизнесе</span>
               <div class="stage2__inputs">
                 <div class="stage2__input-container">
-                  <input type="text" id="stage-input-city" class="stage__input" placeholder="город или область" required>
+                  <input type="text" id="stage-input-city" class="stage2__input" placeholder="город или область" required>
                   <label for="stage-input-city" class="stage2__label">Регион(-ы), в котором работаете</label>
                 </div>
                 <div class="stage2__input-container">
-                  <input type="text" id="stage-input-activity" class="stage__input" placeholder="введите нишу" required>
+                  <input type="text" id="stage-input-activity" class="stage2__input" placeholder="введите нишу" required>
                   <label for="stage-input-activity" class="stage2__label">Ваша ниша</label>
                 </div>
                 <div class="stage2__input-container">
-                  <input type="text" id="stage-input-site" class="stage__input" placeholder="введите сайт" required>
+                  <input type="text" id="stage-input-site" class="stage2__input" placeholder="введите сайт">
                   <label for="stage-input-site" class="stage2__label">Ссылка на ваш сайт</label>
                 </div>
               </div>
-              <span class="stage2__title">Примерный бюджет на рекламу</span>
+              <span class="stage2__title  stage2__title--budget">Примерный бюджет на рекламу</span>
               <div class="stage2__inputs">
-                <div class="stage2__input-container">
-                  <input type="radio" id="stage-radio-ready" class="stage__radio" checked>
-                  <label for="stage-radio-ready" class="stage2__label">Готов указать</label>
+                <div class="stage2__radio-container">
+                  <input type="radio" id="stage-radio-ready" name="budget-ready" class="stage2__radio" checked>
+                  <label for="stage-radio-ready" class="stage2__label  stage2__label--radio">Готов указать</label>
                 </div>
-                <div class="stage2__input-container">
-                  <input type="radio" id="stage-input-not-ready" class="stage__radio">
-                  <label for="stage-input-not-ready" class="stage2__label">Пока не знаю</label>
+                <div class="stage2__radio-container">
+                  <input type="radio" id="stage-radio-not-ready" name="budget-ready" class="stage2__radio">
+                  <label for="stage-radio-not-ready" class="stage2__label  stage2__label--radio">Пока не знаю</label>
                 </div>
               </div>
               <div class="stage2__scroll-block">
@@ -199,7 +192,7 @@
                 </ul>
                 <div class="stage2__discount-block">
                   <div class="stage2__discount-sticker">
-                    <span class="stage2__discount">-<span class="stage2__discount-percent">20</span>% на услуги <span class="stage2__discount-notice">*</span></span>
+                    <span class="stage2__discount">-<span class="stage2__discount-percent">20</span>% <br>на услуги <span class="stage2__discount-notice">*</span></span>
                   </div>
                   <span class="stage2__discount-description"><span class="stage2__discount-notice">*</span> Чем больше бюджет на рекламу, тем больше скидка на наши услуги</span>
                 </div>
@@ -212,6 +205,40 @@
                   <button class="stage__btn  stage__btn--next">Далее</button>
                 </div>
               </div>
+            </div>
+            <div class="stage3">
+              <div class="stage3__price-block">
+                <span class="stage3__price-title">Примерная стоимость оказания услуги:</span>
+                <span class="stage3__price">20 000 <span class="rub">Р</span> - 30 000 <span class="rub">Р</span></span>
+                <span class="stage3__description">Оставьте свои данные и мы свяжемся с вами, чтобы уточнить все детали и дать более конкретную оценку</span>
+              </div>
+              <span class="stage3__title">Данные для связи</span>
+              <div class="stage3__inputs">
+                <div class="stage3__input-container">
+                  <input type="text" id="stage-input-name" class="stage3__input" placeholder="Иван Иванов">
+                  <label for="stage-input-name" class="stage3__label">Ваше имя</label>
+                </div>
+                <div class="stage3__input-container">
+                  <input type="tel" id="stage-input-phone" class="stage3__input" placeholder="+7 (001) 002-03-04" required>
+                  <label for="stage-input-phone" class="stage3__label">Номер телефона</label>
+                </div>
+                <span class="stage3__confid">Оставляя заявку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+              </div>
+              <div class="stage  stage--context">
+                <div class="stage__btn-container  stage__btn-container--prev">
+                  <button class="stage__btn  stage__btn--prev">Назад</button>
+                </div>
+                <div class="stage__btn-container  stage__btn-container--consult">
+                  <button class="stage__btn  stage__btn--consult">Получить консультацию</button>
+                </div>
+              </div>
+            </div>
+            <div class="stage-final">
+              <div class="stage-final__img-container">
+                <img src="/assets/templates/ms-template/images/calculator-kirill.jpg" alt="Гущин Кирилл" class="stage-final__img">
+              </div>
+              <span class="stage-final__thanks">Спасибо за заявку!</span>
+              <span class="stage-final__description">Наш менеджер перезвонит Вам в течении 20 минут и персонально проконсультирует Вас по всем вопросам</span>
             </div>
           </div>
         </article>
@@ -761,7 +788,7 @@
               <span class="lets__description">Воспользуйтесь нашим удобным калькулятором</span>
             </div>
             <div class="lets__link-container">
-              <a href="#" class="lets__link">Рассчитать стоимость</a>
+              <a href="#calculate-y" class="lets__link">Рассчитать стоимость</a>
             </div>
           </li>
           <li class="lets__item">

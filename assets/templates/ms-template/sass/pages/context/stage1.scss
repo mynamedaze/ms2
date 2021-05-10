@@ -1,6 +1,6 @@
 .calculator--context {
   .stage1 {
-    display: none;
+
   }
   .stage1__sides {
     @media #{$min-tablet-width} {
@@ -54,7 +54,7 @@
   .stage1__label--radio {
     font-size: 15px;
     line-height: 24px;
-    padding-left: 32px;
+    padding-left: 30px;
     position: relative;
   }
   .stage1__label--checkbox {
@@ -97,7 +97,7 @@
       position: absolute;
       content: "";
       left: 0;
-      top: 0;
+      top: 2px;
       width: 18px;
       height: 18px;
       border-radius: 50%;
@@ -115,10 +115,10 @@
     &::after {
       background-color: #fff;
       left: 9px;
-      top: 9px;
+      top: 11px;
       transform: translate(-50%, -50%);
-      width: 9px;
-      height: 9px;
+      width: 6px;
+      height: 6px;
     }
   }
 }

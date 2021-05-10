@@ -219,11 +219,10 @@
     display: none;
     z-index: 11;
     top: 50%;
-    max-height: 90%;
     overflow-y: auto;
     @media #{$max-mobile-width} {
-      left: 5%;
-      width: 90%;
+      left: 0;
+      width: 100%;
       transform: translateY(-50%);
     }
     @media #{$min-tablet-width} {

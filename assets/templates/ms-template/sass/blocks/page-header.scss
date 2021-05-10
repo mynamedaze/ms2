@@ -1,10 +1,46 @@
 .page-header {
   position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
-  display: none;
+  background-color: red;
+  @media #{$min-tablet-width} {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 .page-header__wrapper {
-
+  @include paddings;
+  display: flex;
+  align-items: center;
+}
+.page-header__logo-link {
+  @media #{$max-mobile-width} {
+    width: 29px;
+  }
+  @media #{$min-tablet-width} {
+    width: 43px;
+  }
+}
+.page-header__nav-burger {
+  @media #{$max-mobile-width} {
+    margin-left: auto;
+    margin-right: 0;
+    background-color: transparent;
+    border: 0 solid transparent;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px auto;
+    background-image: url("/assets/templates/ms-template/images/burger.svg");
+  }
+  @media #{$min-tablet-width} {
+    display: none;
+  }
 }
