@@ -108,7 +108,7 @@
         <article class="calculator  calculator--context">
           <div class="calculator__head">
             <ul class="calculator__head-list">
-              <li class="calculator__head-item">Шаг <span>1</span></li>
+              <li class="calculator__head-item  active">Шаг <span>1</span></li>
               <li class="calculator__head-item">Шаг <span>2</span></li>
               <li class="calculator__head-item">Шаг <span>3</span></li>
               <li class="calculator__head-item">Персональная <span>консультация</span></li>
@@ -154,14 +154,14 @@
               </div>
               <div class="stage  stage--context">
                 <div class="stage__btn-container  stage__btn-container--prev">
-                  <button class="stage__btn  stage__btn--prev">Назад</button>
+                  <button class="stage__btn  stage__btn--prev  stage__btn--prev-1">Назад</button>
                 </div>
                 <div class="stage__btn-container  stage__btn-container--next">
-                  <button class="stage__btn  stage__btn--next">Далее</button>
+                  <button class="stage__btn  stage__btn--next  stage__btn--next-1">Далее</button>
                 </div>
               </div>
             </div>
-            <div class="stage2">
+            <div class="stage2  visually-hidden">
               <span class="stage2__title">Информация о вашем бизнесе</span>
               <div class="stage2__inputs">
                 <div class="stage2__input-container">
@@ -180,11 +180,11 @@
               <span class="stage2__title  stage2__title--budget">Примерный бюджет на рекламу</span>
               <div class="stage2__inputs">
                 <div class="stage2__radio-container">
-                  <input type="radio" id="stage-radio-ready" name="budget-ready" class="stage2__radio" checked>
+                  <input type="radio" id="stage-radio-ready" name="budget-ready" class="stage2__radio" value="Готов указать" checked>
                   <label for="stage-radio-ready" class="stage2__label  stage2__label--radio">Готов указать</label>
                 </div>
                 <div class="stage2__radio-container">
-                  <input type="radio" id="stage-radio-not-ready" name="budget-ready" class="stage2__radio">
+                  <input type="radio" id="stage-radio-not-ready" name="budget-ready" class="stage2__radio" value="Пока не знаю">
                   <label for="stage-radio-not-ready" class="stage2__label  stage2__label--radio">Пока не знаю</label>
                 </div>
               </div>
@@ -208,35 +208,43 @@
               </div>
               <div class="stage  stage--context">
                 <div class="stage__btn-container  stage__btn-container--prev">
-                  <button class="stage__btn  stage__btn--prev">Назад</button>
+                  <button class="stage__btn  stage__btn--prev  stage__btn--prev-2">Назад</button>
                 </div>
                 <div class="stage__btn-container  stage__btn-container--next">
-                  <button class="stage__btn  stage__btn--next">Далее</button>
+                  <button class="stage__btn  stage__btn--next stage__btn--next-2">Далее</button>
                 </div>
               </div>
             </div>
-            <div class="stage3">
+            <div class="stage3  visually-hidden">
               <div class="stage3__price-block">
                 <span class="stage3__price-title">Примерная стоимость оказания услуги:</span>
-                <span class="stage3__price">20 000 <span class="rub">Р</span> - 30 000 <span class="rub">Р</span></span>
+                <span class="stage3__price" id="stage3-price">30 000 <span class="rub">Р</span> - 35 000 <span class="rub">Р</span></span>
                 <span class="stage3__description">Оставьте свои данные и мы свяжемся с вами, чтобы уточнить все детали и дать более конкретную оценку</span>
               </div>
               <span class="stage3__title">Данные для связи</span>
-              <form action="" class="stage3__form">
+              <form id="stage3-form" class="stage3__form">
                 <div class="stage3__inputs">
                   <div class="stage3__input-container">
                     <input type="text" id="stage-input-name" class="stage3__input" name="name" placeholder="Иван Иванов">
                     <label for="stage-input-name" class="stage3__label">Ваше имя</label>
                   </div>
                   <div class="stage3__input-container">
-                    <input type="tel" id="stage-input-phone" class="stage3__input" name="phone" placeholder="+7 (001) 002-03-04" required>
+                    <input type="tel" id="stage-input-phone" class="stage3__input  validate-phone" name="phone" placeholder="+7 (001) 002-03-04" required>
                     <label for="stage-input-phone" class="stage3__label">Номер телефона</label>
                   </div>
                   <span class="stage3__confid">Оставляя заявку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
                 </div>
+                <input type="hidden" name="d-direct" id="hidden-input-direct">
+                <input type="hidden" name="d-adwords" id="hidden-input-adwords">
+                <input type="hidden" name="d-nothing" id="hidden-input-nothing">
+                <input type="hidden" name="d-city" id="hidden-input-city">
+                <input type="hidden" name="d-activity" id="hidden-input-activity">
+                <input type="hidden" name="d-site" id="hidden-input-site">
+                <input type="hidden" name="d-budget" id="hidden-input-budget">
+                <input type="hidden" name="d-limit" id="hidden-input-budget-limit">
                 <div class="stage  stage--context">
-                  <div class="stage__btn-container  stage__btn-container--prev">
-                    <button class="stage__btn  stage__btn--prev">Назад</button>
+                  <div class="stage__btn-container  stage__btn-container--prev  stage__btn-container--prev-3">
+                    <button type="button" class="stage__btn  stage__btn--prev  stage__btn--prev-3">Назад</button>
                   </div>
                   <div class="stage__btn-container  stage__btn-container--consult">
                     <button type="submit" class="stage__btn  stage__btn--consult">Получить консультацию</button>
@@ -244,7 +252,7 @@
                 </div>
               </form>
             </div>
-            <div class="stage-final">
+            <div class="stage-final  visually-hidden">
               <div class="stage-final__img-container">
                 <img src="/assets/templates/ms-template/images/calculator-kirill.jpg" alt="Гущин Кирилл" class="stage-final__img">
               </div>
@@ -334,13 +342,13 @@
           <img src="/assets/templates/ms-template/images/sputnik.jpg" alt="спутник" class="support__sputnik">
           <span class="support__title">Нужно только<br>ведение?</span>
           <p class="support__description">Оставьте заявку, мы проведем аудит рекламных кампаний. Определим точки роста и совместно с вами составим план действий.</p>
-          <form action="" class="support__form">
+          <form id="support-form" class="support__form">
             <div class="support__input-container">
               <input type="text" id="support-input-name" name="name" class="support__input" placeholder="Иван Иванов">
               <label for="support-input-name" class="support__label">Ваше имя</label>
             </div>
             <div class="support__input-container">
-              <input type="tel" id="support-input-phone" name="phone" class="support__input" placeholder="+7 (100) 002-03-04" required>
+              <input type="tel" id="support-input-phone" name="phone" class="support__input  validate-phone" placeholder="+7 (100) 002-03-04" required>
               <label for="support-input-phone" class="support__label">Номер телефона</label>
             </div>
             <div class="support__submit-container">
@@ -875,14 +883,14 @@
     <button class="callback-popup__close-btn  close-btn"></button>
     <span class="callback-popup__title">Заказать звонок</span>
     <span class="callback-popup__description">Наш менеджер перезвонит Вам в течении 20 минут</span>
-    <form action="#" class="callback-popup__form">
+    <form class="callback-popup__form" id="callback-popup-form">
       <div class="callback-popup__inputs">
         <div class="callback-popup__input-container">
           <input type="text" id="callback-popup-input-name" name="name" class="callback-popup__input" placeholder="Иван Иванов">
           <label for="callback-popup-input-name" class="callback-popup__label">Ваше имя</label>
         </div>
         <div class="callback-popup__input-container">
-          <input type="tel" id="callback-popup-input-phone" name="phone" class="callback-popup__input" placeholder="+7 (001) 002-03-04" required>
+          <input type="tel" id="callback-popup-input-phone" name="phone" class="callback-popup__input  validate-phone" placeholder="+7 (001) 002-03-04" required>
           <label for="callback-popup-input-phone" class="callback-popup__label">Номер телефона</label>
         </div>
       </div>
@@ -893,6 +901,14 @@
         <span class="callback-popup__confid">Отправляя эту форму Вы соглашаетесь с <a href="/confid.html" target="_blank" class="callback-popup__confid-link">политикой конфиденциальности</a></span>
       </div>
     </form>
+  </div>
+  <div class="success-popup popup">
+    <button class="success-popup__close-btn  close-btn"></button>
+    <div class="success-popup__img-container">
+      <img src="/assets/templates/ms-template/images/calculator-kirill.jpg" alt="Гущин Кирилл" class="success-popup__img">
+    </div>
+    <span class="success-popup__thanks">Спасибо за заявку!</span>
+    <span class="success-popup__description">Наш менеджер перезвонит Вам в течении 20 минут и персонально проконсультирует Вас по всем вопросам</span>
   </div>
   <script src="/assets/templates/ms-template/js/jquery-3.2.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

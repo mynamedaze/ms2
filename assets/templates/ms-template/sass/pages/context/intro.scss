@@ -17,6 +17,7 @@
     @include paddings;
     @media #{$max-mobile-width} {
       padding-top: 78px;
+      padding-bottom: 40px;
     }
     @media #{$min-tablet-width} {
       display: flex;
@@ -58,6 +59,12 @@
     line-height: 26px;
     font-weight: 700;
     text-align: center;
+    padding-top: 55px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 36px auto;
+    background-image: url("/assets/templates/ms-template/images/first-star.svg");
+    margin-top: 33px;
   }
   .intro__mobile-description {
     display: block;
@@ -65,6 +72,7 @@
     line-height: 19px;
     color: rgba(125, 129, 164, 1);
     text-align: center;
+    margin-top: 7px;
   }
   .intro__title {
     margin-top: 0;
@@ -113,7 +121,7 @@
       width: 67px;
       height: auto;
     }
-    @media #{$min-desktop-width} {
+    @media #{$min-tablet-width} {
       width: 90px;
       height: auto;
     }
@@ -123,7 +131,7 @@
       width: 84px;
       height: auto;
     }
-    @media #{$min-desktop-width} {
+    @media #{$min-tablet-width} {
       width: 113px;
       height: auto;
     }
@@ -161,6 +169,7 @@
       font-size: 13px;
       line-height: 19px;
       padding-left: 40px;
+      margin-top: 25px;
     }
     @media #{$min-tablet-width} {
       font-size: 13px;
@@ -192,6 +201,9 @@
     }
   }
   .intro__description--1 {
+    @media #{$max-mobile-width} {
+      margin-top: 55px;
+    }
     &::before {
       background-image: url("/assets/templates/ms-template/images/icon-fire.png");
     }

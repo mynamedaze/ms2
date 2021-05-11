@@ -1,8 +1,25 @@
 'use strict';
 $(document).ready(function () {
+    /*validate phone*/
+    let validatePhone = document.getElementsByClassName('validate-phone');
+    validatePhone = Array.prototype.slice.call(validatePhone);
+    validatePhone.forEach(function (item, index) {
+        $(item).inputmask("+X (999) 999-9999", {
+            definitions: {
+                "X": {
+                    validator: "[7-9]",
+                }
+            },
+            oncomplete: function(){
+                $(this).val('+7' + $(this).val().substring(2));
+            }
+        });
+    });
+    /*/validate phone*/
 
     let overlay = document.getElementsByClassName('overlay');
     let popup = document.getElementsByClassName('popup');
+    let popupSuccess = document.getElementsByClassName('success-popup');
     let closeBtn = document.getElementsByClassName('close-btn');
 
     let navBurger = document.getElementsByClassName('page-header__nav-burger');
@@ -178,7 +195,17 @@ $(document).ready(function () {
         }
     });
     /*/team*/
+
     /*calculator*/
+    let calculatorHeadItem = document.getElementsByClassName('calculator__head-item');
+    calculatorHeadItem = Array.prototype.slice.call(calculatorHeadItem);
+
+    let stage1 = document.getElementsByClassName('stage1');
+    let stage2 = document.getElementsByClassName('stage2');
+    let stage3 = document.getElementsByClassName('stage3');
+
+    let budgetLimit;
+
     //scroll
     $( function() {
         var handle = $( "#custom-handle" );
@@ -190,8 +217,197 @@ $(document).ready(function () {
             },
             slide: function( event, ui ) {
                 handle.text( ui.value );
+                budgetLimit = ui.value;
             }
         });
     } );
+
+    //stage1
+    let stage1Checkbox1 = document.getElementById('stage1-checkbox-1');
+    let stage1Checkbox2 = document.getElementById('stage1-checkbox-2');
+    let stage1Checkbox3 = document.getElementById('stage1-checkbox-3');
+
+    let stage1Radio = document.getElementsByClassName('stage1__radio');
+    stage1Radio = Array.prototype.slice.call(stage1Radio);
+
+    let services = {
+        direct: {
+            name: 'Яндекс Директ',
+            status: 'нет'
+        },
+        adwords: {
+            name: 'Google Adwords',
+            status: 'нет'
+        },
+        nothing: {
+            name: 'Пока не знаю',
+            status: 'нет'
+        }
+    };
+
+    let self = "Не выбрано";
+
+    stage1Radio.forEach(function (item, i) {
+       $(item).click(function () {
+           self = item.value;
+           console.log(self);
+       });
+    });
+
+    $(stage1Checkbox1).click(function () {
+        $(stage1Checkbox3).prop('checked', false);
+        services.direct.status = 'да';
+        services.nothing.status = 'нет';
+        console.log(services);
+    });
+
+    $(stage1Checkbox2).click(function () {
+        $(stage1Checkbox3).prop('checked', false);
+        services.adwords.status = 'да';
+        services.nothing.status = 'нет';
+        console.log(services);
+    });
+
+    $(stage1Checkbox3).click(function () {
+        $(stage1Checkbox1).prop('checked', false);
+        $(stage1Checkbox2).prop('checked', false);
+        services.direct.status = 'нет';
+        services.adwords.status = 'нет';
+        services.nothing.status = 'да';
+        console.log(services);
+    });
+
+    $('.stage__btn--next-1').click(function () {
+        $(stage1).addClass('visually-hidden');
+        $(stage2).removeClass('visually-hidden');
+        setTimeout(function () {
+            $(calculatorHeadItem).removeClass('active');
+            $(calculatorHeadItem[1]).addClass('active');
+        }, 300);
+    });
+
+    //stage2
+    let stageInputCity;
+    let stageInputActivity;
+    let stageInputSite;
+
+    let budget = 'Готов указать';
+
+    let stage2Radio = document.getElementsByClassName('stage2__radio');
+    stage2Radio = Array.prototype.slice.call(stage2Radio);
+
+    stage2Radio.forEach(function(item, i) {
+        $(item).click(function () {
+           budget = item.value;
+           console.log(budget);
+           if (!i) {
+               $('.stage2__scroll-block').show();
+           } else {
+               $('.stage2__scroll-block').hide();
+           }
+        });
+    });
+
+    $('.stage__btn--next-2').click(function () {
+        $(stage2).addClass('visually-hidden');
+        $(stage3).removeClass('visually-hidden');
+        stageInputCity = $('#stage-input-city').val();
+        stageInputActivity = $('#stage-input-activity').val();
+        stageInputSite = $('#stage-input-site').val();
+        console.log('limit ' + budgetLimit);
+        console.log(stageInputCity + ' ' + stageInputActivity + ' ' + stageInputSite);
+        if (services.direct.status === 'да') {
+            document.getElementById('stage3-price').innerHTML = '20 000 <span class="rub">Р</span> - 25 000 <span class="rub">Р</span>';
+        }
+        if (services.adwords.status === 'да' || services.nothing.status === 'да') {
+            document.getElementById('stage3-price').innerHTML = '30 000 <span class="rub">Р</span> - 35 000 <span class="rub">Р</span>';
+        }
+
+        $('#hidden-input-direct').val(services.direct.name + ': ' + services.direct.status);
+        $('#hidden-input-adwords').val(services.adwords.name + ': ' + services.adwords.status);
+        $('#hidden-input-nothing').val(services.nothing.name + ': ' + services.nothing.status);
+        $('#hidden-input-city').val('Регион(ы), в котором вы работаете' + ': ' + stageInputCity);
+        $('#hidden-input-activity').val('Ваша ниша' + ': ' + stageInputActivity);
+        $('#hidden-input-site').val('Ссылка на ваш сайт' + ': ' + stageInputSite);
+        $('#hidden-input-budget').val('Примерный бюджет на рекламу' + ': ' + budget);
+        $('#hidden-input-budget-limit').val('Лимит на бюджет' + ': ' + budgetLimit);
+
+        setTimeout(function () {
+            $(calculatorHeadItem).removeClass('active');
+            $(calculatorHeadItem[2]).addClass('active');
+        }, 300);
+    });
+
+    $('.stage__btn--prev-2').click(function () {
+        $(stage2).addClass('visually-hidden');
+        $(stage1).removeClass('visually-hidden');
+        setTimeout(function () {
+            $(calculatorHeadItem).removeClass('active');
+            $(calculatorHeadItem[0]).addClass('active');
+        }, 300);
+    });
+
+    //stage3
+
+    $('.stage__btn--prev-3').click(function () {
+        $(stage3).addClass('visually-hidden');
+        $(stage2).removeClass('visually-hidden');
+        setTimeout(function () {
+            $(calculatorHeadItem).removeClass('active');
+            $(calculatorHeadItem[1]).addClass('active');
+        }, 300);
+    });
     /*/calculator*/
+
+    /* popupCallbackForm */
+    let popupCallbackForm = $('#callback-popup-form');
+
+    let callbackPopupInputName = document.getElementById('callback-popup-input-name');
+    let callbackPopupInputPhone = document.getElementById('callback-popup-input-phone');
+
+    popupCallbackForm.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/context/mail.php',
+            data: popupCallbackForm.serialize(),
+            success: function (data) {
+                $(callbackPopupInputName).val('');
+                $(callbackPopupInputPhone).val('');
+                $(popupCallbackForm).fadeOut(300);
+                setTimeout(function () {
+                    $(popupSuccess).fadeIn(300);
+                }, 290);
+                yaCounter49417246.reachGoal('context_callback');
+                yaCounter49417246.reachGoal('common');
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
+
+    /* supportForm */
+    let supportForm = $('#support-form');
+
+    let supportInputName = document.getElementById('support-input-name');
+    let supportInputPhone = document.getElementById('support-input-phone');
+
+    supportForm.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/context/mail.php',
+            data: supportForm.serialize(),
+            success: function (data) {
+                $(supportInputName).val('');
+                $(supportInputPhone).val('');
+                $(overlay).fadeIn(300);
+                setTimeout(function () {
+                    $(popupSuccess).fadeIn(300);
+                }, 290);
+                yaCounter49417246.reachGoal('context_callback');
+                yaCounter49417246.reachGoal('common');
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
 });
