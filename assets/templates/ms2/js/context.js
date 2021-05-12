@@ -30,6 +30,8 @@ $(document).ready(function () {
     let callbackBtn = document.getElementsByClassName('callback-btn');
     let popupCallback = document.getElementsByClassName('callback-popup');
 
+    let stage2DiscountPercent = document.getElementById('stage2-discount-percent');
+
     $(callbackBtn).click(function () {
         $(overlay).fadeIn(300);
         setTimeout(function () {
@@ -203,6 +205,7 @@ $(document).ready(function () {
     let stage1 = document.getElementsByClassName('stage1');
     let stage2 = document.getElementsByClassName('stage2');
     let stage3 = document.getElementsByClassName('stage3');
+    let stageFinal = document.getElementsByClassName('stage-final');
 
     let budgetLimit;
 
@@ -218,6 +221,21 @@ $(document).ready(function () {
             slide: function( event, ui ) {
                 handle.text( ui.value );
                 budgetLimit = ui.value;
+                if (ui.value < 70000) {
+                    $('.stage2__discount-sticker').addClass('disable');
+                }
+                if (ui.value >= 70000 && ui.value < 100000) {
+                    $('.stage2__discount-sticker').removeClass('disable');
+                    stage2DiscountPercent.textContent = '10';
+                }
+                if (ui.value >= 100000 && ui.value < 150000) {
+                    $('.stage2__discount-sticker').removeClass('disable');
+                    stage2DiscountPercent.textContent = '15';
+                }
+                if (ui.value >= 150000) {
+                    $('.stage2__discount-sticker').removeClass('disable');
+                    stage2DiscountPercent.textContent = '20';
+                }
             }
         });
     } );
@@ -357,6 +375,32 @@ $(document).ready(function () {
             $(calculatorHeadItem[1]).addClass('active');
         }, 300);
     });
+
+    let stage3Form = $('#stage3-form');
+
+    let stageInputName = document.getElementById('stage-input-name');
+    let stageInputPhone = document.getElementById('stage-input-phone');
+
+    stage3Form.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/context/ms2-mail-calculator.php',
+            data: stage3Form.serialize(),
+            success: function (data) {
+                $(stageInputName).val('');
+                $(stageInputPhone).val('');
+                $(stage3).addClass('visually-hidden');
+                $(stageFinal).removeClass('visually-hidden');
+                yaCounter49417246.reachGoal('context_calculator');
+                yaCounter49417246.reachGoal('common');
+                setTimeout(function () {
+                    $(calculatorHeadItem).removeClass('active');
+                    $(calculatorHeadItem[3]).addClass('active');
+                }, 300);
+            }
+        });
+        ev.preventDefault();
+    });
     /*/calculator*/
 
     /* popupCallbackForm */
@@ -368,12 +412,12 @@ $(document).ready(function () {
     popupCallbackForm.submit(function (ev) {
         $.ajax({
             type: 'POST',
-            url: '/assets/mailphp/context/mail.php',
+            url: '/assets/mailphp/context/ms2-mail.php',
             data: popupCallbackForm.serialize(),
             success: function (data) {
                 $(callbackPopupInputName).val('');
                 $(callbackPopupInputPhone).val('');
-                $(popupCallbackForm).fadeOut(300);
+                $(popupCallback).fadeOut(300);
                 setTimeout(function () {
                     $(popupSuccess).fadeIn(300);
                 }, 290);
@@ -394,7 +438,7 @@ $(document).ready(function () {
     supportForm.submit(function (ev) {
         $.ajax({
             type: 'POST',
-            url: '/assets/mailphp/context/mail.php',
+            url: '/assets/mailphp/context/ms2-mail.php',
             data: supportForm.serialize(),
             success: function (data) {
                 $(supportInputName).val('');
