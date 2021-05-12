@@ -1,0 +1,44 @@
+//global
+@import "normalize.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "scaffolding.scss";
+
+//blocks
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+
+//components
+@import "components/overlay.scss";
+@import "components/main-nav.scss";
+@import "components/callback-popup.scss";
+@import "components/success-popup.scss";
+
+//libs
+@import "libs/owl.carousel/owl.carousel.scss";
+@import "libs/owl.carousel/owl.theme.default.scss";
+@import "libs/jquery.fancybox.min.scss";
+
+/*pages*/
+//context
+@import "pages/context/scroll-context.scss";
+@import "pages/context/first.scss";
+@import "pages/context/intro.scss";
+@import "pages/context/canvas-space-context.scss";
+@import "pages/context/calculate";
+@import "pages/context/steps.scss";
+@import "pages/context/report.scss";
+@import "pages/context/support.scss";
+@import "pages/context/cases.scss";
+@import "pages/context/feedback.scss";
+@import "pages/context/team.scss";
+@import "pages/context/lets.scss";
+//calculator
+@import "pages/context/calculator.scss";
+@import "pages/context/stage.scss";
+@import "pages/context/stage1.scss";
+@import "pages/context/stage2.scss";
+@import "pages/context/stage3.scss";
+@import "pages/context/stage-final.scss";
+/*/pages*/

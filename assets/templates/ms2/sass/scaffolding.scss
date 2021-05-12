@@ -1,0 +1,85 @@
+*,
+input {
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style-type: none;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: $links-color;
+  font-family: $font-main;
+}
+main {
+  overflow: hidden;
+}
+strong {
+  font-weight: 700;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  font-weight: 500;
+  margin: 0;
+  color: $text-color-main;
+  background-color: $main-bg;
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input:focus {
+  outline-width: 0;
+  outline: none;
+}
+button,
+input[type="submit"] {
+  font-family: $font-main;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+button:focus,
+input[type="submit"]:focus {
+  outline-width: 0;
+  outline: none;
+}
+label {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.clearfix::after { 
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}
+.disable {
+  display: none !important;
+}
+.disable-soft {
+  display: none;
+}
+.rub {
+  font-family: arial;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  line-height: 5px;
+  display: inline-block;
+  width: 0.4em;
+}

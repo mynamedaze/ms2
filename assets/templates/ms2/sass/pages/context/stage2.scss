@@ -1,0 +1,285 @@
+.calculator--context {
+  .stage2__title {
+    @include calculator-titles;
+    display: block;
+  }
+  .stage2__title--budget {
+    @media #{$max-mobile-width} {
+      margin-top: 33px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 48px;
+    }
+  }
+  .stage2__inputs {
+    @media #{$min-tablet-width} {
+      display: flex;
+      align-items: flex-end;
+    }
+    .stage2__radio-container:first-of-type {
+      margin-right: 25px;
+    }
+  }
+  .stage2__input-container {
+    display: flex;
+    flex-direction: column;
+    @media #{$max-mobile-width} {
+      margin-top: 25px;
+    }
+    @media #{$min-tablet-width} {
+      width: 20%;
+      flex-grow: 1;
+      margin-top: 28px;
+    }
+  }
+  .stage2__inputs .stage2__input-container:not(:last-of-type) {
+    margin-right: 24px;
+  }
+  .stage2__input {
+    @include common-input;
+    height: 48px;
+    order: 2;
+    @media #{$max-mobile-width} {
+      margin-top: 5px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 5px;
+    }
+  }
+  .stage2__radio-container {
+    @media #{$max-mobile-width} {
+      margin-top: 16px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 24px;
+    }
+  }
+  .stage2__radio {
+    display: none;
+  }
+  .stage2__label--radio {
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 30px;
+    position: relative;
+    @media #{$min-tablet-width} {
+      font-size: 16px;
+    }
+  }
+  .stage2__label--radio {
+    &::before,
+    &::after {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+    &::before {
+      border: 2px solid $radiocheck-color;
+    }
+  }
+  #stage-radio-ready:checked ~ .stage2__label--radio,
+  #stage-radio-not-ready:checked ~ .stage2__label--radio {
+    &::before {
+      background-color: $radiocheck-color;
+    }
+    &::after {
+      background-color: #fff;
+      left: 9px;
+      top: 9px;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+    }
+  }
+  /*scroll*/
+  #slider {
+    @media #{$min-tablet-width} {
+      max-width: 558px;
+      @include centers;
+    }
+  }
+  #custom-handle {
+    cursor: pointer;
+  }
+  .ui-widget.ui-widget-content {
+    height: 2px;
+    background-color: $radiocheck-color;
+    border-radius: 0;
+    border: 0 solid transparent;
+  }
+  #custom-handle {
+    width: 140px;
+    text-align: center;
+    border: 0 solid transparent;
+    background-color: transparent;
+    color: $radiocheck-color;
+    font-size: 40px;
+    line-height: 48px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    outline: none;
+    @media #{$max-mobile-width} {
+      transform: translate(-45px, -60px) !important;
+    }
+    @media #{$min-tablet-width} {
+      transform: translate(-45px, -45px) !important;
+    }
+    &:hover {
+      color: $radiocheck-color;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $radiocheck-color;
+      @media #{$max-mobile-width} {
+        bottom: -33px
+      }
+      @media #{$min-tablet-width} {
+        bottom: -18px;
+      }
+    }
+  }
+  .stage2__scroll-block {
+    @media #{$max-mobile-width} {
+      padding-top: 100px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 82px;
+      padding-bottom: 43px;
+      background-color: #F5F8FE;
+      padding-left: 30px;
+      padding-right: 30px;
+      position: relative;
+      margin-top: 24px;
+      margin-bottom: 85px;
+    }
+  }
+  .stage2__limits {
+    padding-left: 0;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(20, 42, 70, .5);
+    @media #{$min-tablet-width} {
+      max-width: 558px;
+      @include centers;
+    }
+  }
+  .stage2__limit {
+    position: absolute;
+    bottom: -22px;
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 15%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(3) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 25%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(4) {
+      @media #{$max-mobile-width} {
+        display: none;
+      }
+      @media #{$min-tablet-width} {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &:nth-child(5) {
+      @media #{$max-mobile-width} {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+      @media #{$min-tablet-width} {
+        display: none;
+      }
+    }
+  }
+  .stage2__discount-block {
+    @media #{$max-mobile-width} {
+      background-color: $alt2-bg;
+      margin-top: 60px;
+      padding: 24px;
+      color: $text-color-alt;
+      br {
+        display: none;
+      }
+    }
+  }
+  .stage2__discount-notice {
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+  }
+  .stage2__discount-sticker {
+    @media #{$min-tablet-width} {
+      color: $text-color-alt;
+    }
+    @media #{$min-tablet-width} {
+      position: absolute;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      right: -36px;
+      top: -36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms2/images/sticker-bg.svg");
+    }
+  }
+  .stage2__discount {
+    @media #{$max-mobile-width} {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @media #{$min-tablet-width} {
+      text-align: center;
+    }
+  }
+  .stage2__discount-description {
+    @media #{$max-mobile-width} {
+      font-size:  12px;
+      line-height: 17px;
+      color: rgba(255, 255, 255, .6);
+    }
+    @media #{$min-tablet-width} {
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  /*/scroll*/
+}
