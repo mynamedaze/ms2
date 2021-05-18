@@ -66,11 +66,13 @@ $(document).ready(function () {
     });
     /*/nav burger mobile*/
 
+    let scrollContext = document.getElementById('scroll-context');
+
     if (document.documentElement.clientWidth > 767) {
         $('#first').css('height', document.documentElement.clientHeight);
 
-        let firstYMarker = 1 / 5 * $('#scroll-context').outerHeight();
-        let secondYMarker = 2 / 5 * $('#scroll-context').outerHeight();
+        let firstYMarker = 1 / 10 * $(scrollContext).outerHeight();
+        let secondYMarker = 2.5/ 10 * $(scrollContext).outerHeight();
 
         let introItems = document.getElementsByClassName('intro__item');
         introItems = Array.prototype.slice.call(introItems);
@@ -82,8 +84,11 @@ $(document).ready(function () {
             direction:'up'
         }).data('cardslider');
 
+
+
+        $('#scroll-context').css('height', document.documentElement.clientHeight * 1.8);
         $(window).scroll(function () {
-            if ((window.pageYOffset + document.documentElement.clientHeight) >= $('#scroll-context').outerHeight()) {
+            if ((window.pageYOffset + document.documentElement.clientHeight) >= $(scrollContext).outerHeight()) {
                 console.log('more');
                 $('#first').removeClass('fixed');
             } else {
@@ -91,7 +96,7 @@ $(document).ready(function () {
                 $('#first').addClass('fixed');
             }
 
-            if ((window.pageYOffset) + 50 >= $('#scroll-context').outerHeight()) {
+            if ((window.pageYOffset) + 50 >= $(scrollContext).outerHeight()) {
                 $(pageHeader).addClass('white');
             } else {
                 $(pageHeader).removeClass('white');
@@ -101,17 +106,17 @@ $(document).ready(function () {
                 cardslider.changeCardTo(0);
                 $(introItems[1]).hide();
                 $(introItems[2]).hide();
-                $(introItems[0]).fadeIn(300);
+                $(introItems[0]).show();
             } else if (window.pageYOffset > firstYMarker && window.pageYOffset <= secondYMarker) {
                 cardslider.changeCardTo(1);
                 $(introItems[0]).hide();
                 $(introItems[2]).hide();
-                $(introItems[1]).fadeIn(300);
+                $(introItems[1]).show();
             } else if (window.pageYOffset > secondYMarker) {
                 cardslider.changeCardTo(2);
                 $(introItems[0]).hide();
                 $(introItems[1]).hide();
-                $(introItems[2]).fadeIn(300);
+                $(introItems[2]).show();
             }
         });
     }
