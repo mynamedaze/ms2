@@ -25,6 +25,9 @@
     }
   }
 }
+.page-header--secondary {
+  background-color: #000;
+}
 .page-header__wrapper {
   @include paddings;
   display: flex;
