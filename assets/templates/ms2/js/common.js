@@ -12,8 +12,6 @@ $(document).ready(function () {
     let callbackBtn = document.getElementsByClassName('callback-btn');
     let popupCallback = document.getElementsByClassName('callback-popup');
 
-    let pageHeaderSecondary = document.getElementsByClassName('page-header--secondary');
-
     $(callbackBtn).click(function () {
         $(overlay).fadeIn(300);
         setTimeout(function () {
@@ -49,11 +47,14 @@ $(document).ready(function () {
     /*/nav burger mobile*/
 
     /*fixed menu*/
+    let pageHeaderCommon = document.getElementsByClassName('page-header--common');
+    let intro = document.getElementsByClassName('intro');
+
     $(window).scroll(function () {
-        if ((window.pageYOffset) >= 200) {
-            $(pageHeaderSecondary).addClass('white');
+        if ((window.pageYOffset + 50) >= $(intro).outerHeight()) {
+            $(pageHeaderCommon).addClass('white');
         } else {
-            $(pageHeaderSecondary).removeClass('white');
+            $(pageHeaderCommon).removeClass('white');
         }
 
     });
