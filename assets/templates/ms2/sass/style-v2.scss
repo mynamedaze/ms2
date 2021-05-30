@@ -8,6 +8,8 @@
 //blocks
 @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/steps.scss";
+@import "blocks/simple-form.scss";
 
 //components
 @import "components/overlay.scss";
@@ -43,4 +45,6 @@
 @import "pages/context/stage-final.scss";
 //site
 @import "pages/site/intro.scss";
+@import "pages/site/steps.scss";
+@import "pages/site/examples.scss";
 /*/pages*/

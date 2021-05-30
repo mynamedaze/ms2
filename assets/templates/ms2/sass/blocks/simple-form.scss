@@ -1,0 +1,85 @@
+.simple-form {
+  background-color: #F5F8FE;
+  .simple-form__wrapper {
+    @include paddings;
+    @include section-width;
+    @media #{$max-mobile-width} {
+      padding-top: 40px;
+      padding-bottom: 41px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 52px;
+      padding-bottom: 52px;
+    }
+  }
+  .simple-form__title {
+    @include common-title;
+    @media #{$max-mobile-width} {
+      text-align: center;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  .simple-form__form {
+    @include centers;
+    @media #{$max-mobile-width} {
+      max-width: 294px;
+      margin-top: 45px;
+    }
+    @media #{$min-tablet-width} {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 35px;
+      max-width: 918px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 50px;
+    }
+  }
+  .simple-form__input-container {
+    display: flex;
+    flex-direction: column;
+    @media #{$max-mobile-width} {
+      margin-top: 30px;
+    }
+    @media #{$min-tablet-width} {
+      width: 31%;
+    }
+    @media #{$min-desktop-width} {
+      width: 290px;
+    }
+  }
+  .simple-form__input {
+    @include common-input;
+    order: 2;
+  }
+  .simple-form__input-container--submit {
+    @media #{$max-mobile-width} {
+      margin-top: 48px;
+    }
+  }
+  .simple-form__submit {
+    @include main-btn;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  .simple-form__confid {
+    display: block;
+    @include centers;
+    text-align: center;
+    margin-top: 16px;
+    color: #7D81A4;
+    font-size: 14px;
+    line-height: 20px;
+    @media #{$max-mobile-width} {
+      max-width: 294px;
+    }
+    @media #{$min-tablet-width} {
+      max-width: 918px;
+    }
+  }
+}

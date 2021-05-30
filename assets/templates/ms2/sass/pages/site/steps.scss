@@ -1,0 +1,36 @@
+.steps.steps--site {
+  .steps__item {
+    &:nth-child(1) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/templates/ms2/images/site/step-1.svg");
+      }
+      &::before {
+        content: "01.";
+      }
+    }
+    &:nth-child(2) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/templates/ms2/images/site/step-2.svg");
+      }
+      &::before {
+        content: "02.";
+      }
+    }
+    &:nth-child(3) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/templates/ms2/images/site/step-3.svg");
+      }
+      &::before {
+        content: "03.";
+      }
+    }
+    &:nth-child(4) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/templates/ms2/images/site/step-4.svg");
+      }
+      &::before {
+        content: "04.";
+      }
+    }
+  }
+}
