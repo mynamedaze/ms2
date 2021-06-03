@@ -10,12 +10,18 @@
 @import "blocks/page-footer.scss";
 @import "blocks/steps.scss";
 @import "blocks/simple-form.scss";
+@import "blocks/aside-left.scss";
+@import "blocks/aside-right.scss";
 
 //components
 @import "components/overlay.scss";
 @import "components/main-nav.scss";
 @import "components/callback-popup.scss";
 @import "components/success-popup.scss";
+@import "components/tags-cloud.scss";
+@import "components/breadcrumbs.scss";
+@import "components/search.scss";
+@import "components/aside-nav.scss";
 
 //libs
 @import "libs/owl.carousel/owl.carousel.scss";
@@ -47,4 +53,6 @@
 @import "pages/site/intro.scss";
 @import "pages/site/steps.scss";
 @import "pages/site/examples.scss";
+//blog
+@import "pages/blog/blog.scss";
 /*/pages*/

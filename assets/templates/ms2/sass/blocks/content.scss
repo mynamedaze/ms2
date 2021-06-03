@@ -1,0 +1,6 @@
+.content {
+  @media #{$min-tablet-width} {
+    width: 10%;
+    flex-grow: 1;
+  }
+}

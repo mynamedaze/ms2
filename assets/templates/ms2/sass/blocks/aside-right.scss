@@ -1,0 +1,9 @@
+.aside-right {
+  @media #{$tablet-width-only} {
+    display: none;
+  }
+  @media #{$min-desktop-width} {
+    width: 263px;
+    flex-shrink: 0;
+  }
+}

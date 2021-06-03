@@ -1,0 +1,34 @@
+.blog {
+  @include paddings;
+  @include section-width;
+  .blog__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .blog__title {
+    width: 100%;
+    @include common-title;
+  }
+  .blog__breadcrumbs {
+    @media #{$min-tablet-width} {
+      width: 10%;
+      flex-grow: 1;
+    }
+  }
+  .blog__search {
+    @media #{$min-tablet-width} {
+      width: 50%;
+      background-color: red;
+    }
+    .search {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  .blog__tags-cloud {
+    width: 100%;
+  }
+}

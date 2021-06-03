@@ -1,0 +1,6 @@
+.aside-left {
+  @media #{$min-tablet-width} {
+    width: 263px;
+    flex-shrink: 0;
+  }
+}
