@@ -1,27 +1,30 @@
 .blog {
   @include paddings;
   @include section-width;
+  @include section-width--blog;
+  font-weight: 400;
   .blog__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 200px;
+    padding-top: 137px;
     flex-wrap: wrap;
     align-items: flex-start;
   }
   .blog__title {
     width: 100%;
     @include common-title;
+    margin-bottom: 35px;
   }
   .blog__breadcrumbs {
     @media #{$min-tablet-width} {
       width: 10%;
       flex-grow: 1;
+      align-self: center;
     }
   }
   .blog__search {
     @media #{$min-tablet-width} {
       width: 50%;
-      background-color: red;
     }
     .search {
       margin-left: auto;
@@ -30,5 +33,10 @@
   }
   .blog__tags-cloud {
     width: 100%;
+    margin-top: 17px;
+    margin-bottom: 5px;
+  }
+  .aside-nav {
+    margin-bottom: 20px;
   }
 }

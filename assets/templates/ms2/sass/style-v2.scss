@@ -12,6 +12,7 @@
 @import "blocks/simple-form.scss";
 @import "blocks/aside-left.scss";
 @import "blocks/aside-right.scss";
+@import "blocks/content.scss";
 
 //components
 @import "components/overlay.scss";
@@ -22,6 +23,8 @@
 @import "components/breadcrumbs.scss";
 @import "components/search.scss";
 @import "components/aside-nav.scss";
+@import "components/aside-article.scss";
+@import "components/b-article.scss";
 
 //libs
 @import "libs/owl.carousel/owl.carousel.scss";

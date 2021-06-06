@@ -3,6 +3,9 @@
   margin-right: auto;
   max-width: $max-desktop-wrapper;
 }
+@mixin section-width--blog() {
+  max-width: $max-blog-wrapper;
+}
 
 @mixin paddings() {
   @media #{$max-mobile-width} {

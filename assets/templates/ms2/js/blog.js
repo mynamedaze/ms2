@@ -9,4 +9,14 @@ $(document).ready(function () {
             $(pageHeaderSecondary).removeClass('white');
         }
     });
+
+    let asideNavItem = document.getElementsByClassName('aside-nav__item');
+    asideNavItem = Array.prototype.slice.call(asideNavItem);
+    console.log(asideNavItem);
+    asideNavItem.forEach(function (item) {
+        $(item).click(function (event) {
+            event.stopPropagation();
+            event.target.classList.toggle("active");
+        });
+    });
 });
