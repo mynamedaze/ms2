@@ -1,0 +1,19 @@
+.aside-consult {
+  background-color: rgba(245, 248, 254, 1);
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  padding: 19px 22px 29px 22px;
+}
+.aside-consult__title {
+  display: block;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+.aside-consult__description {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+}

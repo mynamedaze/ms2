@@ -1785,6 +1785,25 @@ label {
   .aside-article__list > li.active > ul {
     display: list-item; }
 
+.aside-consult {
+  background-color: #f5f8fe;
+  padding: 19px 22px 29px 22px; }
+  @media (max-width: 767px) {
+    .aside-consult {
+      display: none; } }
+
+.aside-consult__title {
+  display: block;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center; }
+
+.aside-consult__description {
+  display: block;
+  font-size: 14px;
+  line-height: 20px; }
+
 .b-article {
   overflow: hidden;
   height: 350px;
