@@ -1,12 +1,12 @@
 'use strict';
 $(document).ready(function () {
-    let pageHeaderSecondary = document.getElementsByClassName('page-header--secondary');
+    let pageHeaderBlog = document.getElementsByClassName('page-header--blog');
 
     $(window).scroll(function () {
         if ((window.pageYOffset) >= 200) {
-            $(pageHeaderSecondary).addClass('white');
+            $(pageHeaderBlog).addClass('white');
         } else {
-            $(pageHeaderSecondary).removeClass('white');
+            $(pageHeaderBlog).removeClass('white');
         }
     });
 

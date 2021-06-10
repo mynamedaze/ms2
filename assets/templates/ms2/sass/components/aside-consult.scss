@@ -16,4 +16,30 @@
   display: block;
   font-size: 14px;
   line-height: 20px;
+  color: #7D81A4;
+  text-align: center;
+  margin-top: 18px;
+}
+.aside-consult__form {
+  margin-top: 17px;
+}
+.aside-consult__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.aside-consult__input {
+  @include common-input;
+  order: 2;
+}
+.aside-consult__submit {
+  @include main-btn;
+  width: 100%;
+  margin-top: 38px;
+}
+.aside__confid {
+  margin-top: 27px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
 }

@@ -14,8 +14,14 @@
     width: 100%;
     @include common-title;
     margin-bottom: 35px;
+    @media #{$max-mobile-width} {
+      order: -5;
+    }
   }
   .blog__breadcrumbs {
+    @media #{$max-mobile-width} {
+      order: -4;
+    }
     @media #{$min-tablet-width} {
       width: 10%;
       flex-grow: 1;
@@ -23,6 +29,9 @@
     }
   }
   .blog__search {
+    @media #{$max-mobile-width} {
+      width: 100%;
+    }
     @media #{$min-tablet-width} {
       width: 50%;
     }
@@ -35,6 +44,15 @@
     width: 100%;
     margin-top: 17px;
     margin-bottom: 5px;
+    @media #{$max-mobile-width} {
+      order: 2;
+    }
+  }
+  .aside-left {
+    @media #{$max-mobile-width} {
+      order: -3;
+      margin-top: 30px;
+    }
   }
   .aside-nav {
     margin-bottom: 20px;

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<header class="page-header  page-header--secondary">
+<header class="page-header  page-header--blog">
     <div class="page-header__wrapper">
         <a href="/index.html" class="page-header__logo-link">
             <img src="/assets/templates/ms2/images/ms-dark.svg" alt="" class="page-header__logo">
@@ -153,6 +153,22 @@
                             <a href="#" class="aside-article__link">Настройка Яндекс Директ. Самостоятельно или заказать услуги</a>
                         </li>
                     </ul>
+                </article>
+                <article class="aside-consult">
+                    <span class="aside-consult__title">Нужна консультация?</span>
+                    <span class="aside-consult__description">Наш менеджер позвонит вам в течении 20 минут</span>
+                    <form action="" class="aside-consult__form">
+                        <div class="aside-consult__input-container">
+                            <input type="text" id="aside-consult-name" name="d-name" class="aside-consult__input" placeholder="Иван Иванов">
+                            <label for="aside-consult-name" class="aside-consult__label">Ваше имя</label>
+                        </div>
+                        <div class="aside-consult__input-container">
+                            <input type="text" id="aside-consult-phone" name="d-phone" class="aside-consult__input" placeholder="+7 (001) 002-03-04">
+                            <label for="aside-consult-phone" class="aside-consult__label">Номер телефона</label>
+                        </div>
+                        <button class="aside-consult__submit" type="submit">Заказать звонок</button>
+                    </form>
+                    <span class="aside__confid">Отправляя эту форму Вы соглашаетесь с <a href="#" class="aside__confid-link">политикой конфиденциальности</a></span>
                 </article>
             </section>
             <section class="content">
@@ -317,7 +333,7 @@
                     </div>
                 </article>
                 <div class="clearfix"></div>
-                <ul class="pagination__list"><li class="disabled"><span>&laquo;</span></li><li class="active"><a href="/blog/">1</a></li><li><a href="/blog/?page=2">2</a></li><li><a href="/blog/?page=3">3</a></li><li class="control"><a href="/blog/?page=2">&raquo;</a></li></ul>
+                <ul class="pagination"><li class="disabled"><span>&laquo;</span></li><li class="active"><a href="/blog/">1</a></li><li><a href="/blog/?page=2">2</a></li><li><a href="/blog/?page=3">3</a></li><li class="control"><a href="/blog/?page=2">&raquo;</a></li></ul>
             </section>
             <section class="aside-right">
                 <article class="aside-consult">
@@ -325,12 +341,12 @@
                     <span class="aside-consult__description">Наш менеджер позвонит вам в течении 20 минут</span>
                     <form action="" class="aside-consult__form">
                         <div class="aside-consult__input-container">
-                            <label for="aside-consult-name" class="aside-consult__label">Ваше имя</label>
                             <input type="text" id="aside-consult-name" name="d-name" class="aside-consult__input" placeholder="Иван Иванов">
+                            <label for="aside-consult-name" class="aside-consult__label">Ваше имя</label>
                         </div>
                         <div class="aside-consult__input-container">
-                            <label for="aside-consult-phone" class="aside-consult__label">Номер телефона</label>
                             <input type="text" id="aside-consult-phone" name="d-phone" class="aside-consult__input" placeholder="+7 (001) 002-03-04">
+                            <label for="aside-consult-phone" class="aside-consult__label">Номер телефона</label>
                         </div>
                         <button class="aside-consult__submit" type="submit">Заказать звонок</button>
                     </form>
@@ -340,9 +356,9 @@
         </div>
     </section>
 </main>
-<script src="/assets/templates/ms2/js/jquery-3.2.1.min.js"></script>
-<script src="/assets/templates/ms2/js/owl.carousel.min.js"></script>
-<script src="/assets/templates/ms2/js/jquery.inputmask.bundle.js"></script>
+<script src="/assets/libs/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/libs/js/owl.carousel.min.js"></script>
+<script src="/assets/libs/js/jquery.inputmask.bundle.js"></script>
 <script src="/assets/templates/ms2/js/common.js"></script>
 <script src="/assets/templates/ms2/js/blog.js"></script>
 </body>

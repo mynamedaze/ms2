@@ -30,11 +30,11 @@
   position: absolute;
   right: 15px;
   bottom: 15px;
+  @media #{$max-mobile-width} {
+    font-size: 0;
+  }
 }
 .b-article:nth-of-type(n+3) {
-  .b-article__paragraph {
-    display: none;
-  }
   .b-article__author-container {
     display: none;
   }
@@ -137,6 +137,10 @@
     background-size: 16px 17px;
     background-image: url("/assets/templates/ms2/images/read-arrow.svg");
     background-color: $alt-bg;
+    @media #{$max-mobile-width} {
+      width: 38px;
+      background-position: center;
+    }
     &:hover {
       background-color: rgba(66, 63, 217, 1);
       color: $text-color-alt;
@@ -185,6 +189,9 @@
     color: $text-color-alt;
     font-size: 20px;
     line-height: 24px;
+  }
+  .b-article__paragraph {
+    display: none;
   }
 }
 .content .b-article:nth-of-type(6n+4),

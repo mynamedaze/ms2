@@ -1,7 +1,7 @@
 'use strict';
 $(document).ready(function () {
 
-    let pageHeaderPrimary = document.getElementsByClassName('page-header--primary');
+    let pageHeaderContext = document.getElementsByClassName('page-header--context');
 
     let stage2DiscountPercent = document.getElementById('stage2-discount-percent');
 
@@ -36,9 +36,9 @@ $(document).ready(function () {
             }
 
             if ((window.pageYOffset) + 50 >= $(scrollContext).outerHeight()) {
-                $(pageHeaderPrimary).addClass('white');
+                $(pageHeaderContext).addClass('white');
             } else {
-                $(pageHeaderPrimary).removeClass('white');
+                $(pageHeaderContext).removeClass('white');
             }
 
             if (window.pageYOffset <= firstYMarker) {

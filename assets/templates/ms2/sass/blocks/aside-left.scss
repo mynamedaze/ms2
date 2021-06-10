@@ -1,6 +1,17 @@
 .aside-left {
+  @media #{$max-mobile-width} {
+    width: 100%;
+  }
   @media #{$min-tablet-width} {
     width: 263px;
     flex-shrink: 0;
+  }
+  .aside-consult {
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-desktop-width} {
+      display: none;
+    }
   }
 }
