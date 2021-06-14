@@ -10,7 +10,7 @@ $(document).ready(function () {
         }
     });
 
-    let asideNavItem = document.getElementsByClassName('aside-nav__item');
+    let asideNavItem = $('.aside-nav__list li');
     asideNavItem = Array.prototype.slice.call(asideNavItem);
     console.log(asideNavItem);
     asideNavItem.forEach(function (item) {

@@ -1,7 +1,7 @@
-.aside-article {
+.aside-articles {
   box-shadow: 0 0 10px 0 rgba(125, 129, 164, .2);
 }
-.aside-article__title {
+.aside-articles__title {
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 20px;
@@ -10,7 +10,7 @@
   color: $text-color-alt;
   font-size: 24px;
 }
-.aside-article__list {
+.aside-articles__list {
   padding-left: 0;
   li {
     padding-left: 20px;

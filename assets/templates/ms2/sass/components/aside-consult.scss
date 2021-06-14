@@ -26,6 +26,7 @@
 .aside-consult__input-container {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 .aside-consult__input {
   @include common-input;

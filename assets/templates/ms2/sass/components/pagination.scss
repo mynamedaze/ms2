@@ -1,9 +1,18 @@
-.pagination {
+.pagination__list {
   display: flex;
   padding-left: 0;
   justify-content: center;
+  a {
+    color: $text-color-main;
+    &:hover {
+      color: #423fd9;
+    }
+  }
   li {
     margin-right: 10px;
     margin-left: 10px;
+  }
+  .active a {
+    color: #423fd9;
   }
 }

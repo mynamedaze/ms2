@@ -102,6 +102,54 @@ $(document).ready(function () {
         ev.preventDefault();
     });
     /* */
+    /* aside-consult-desktop*/
+    let asideConsultDesktop = $('#aside-consult-form-desktop');
+
+    let asideConsultNameDesktop = document.getElementById('aside-consult-name-desktop');
+    let asideConsultPhoneDesktop = document.getElementById('aside-consult-phone-desktop');
+
+    asideConsultDesktop.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/context/ms2-mail.php',
+            data: asideConsultDesktop.serialize(),
+            success: function (data) {
+                $(asideConsultNameDesktop).val('');
+                $(asideConsultPhoneDesktop).val('');
+                setTimeout(function () {
+                    $(popupSuccess).fadeIn(300);
+                }, 290);
+                yaCounter49417246.reachGoal('blog_callback');
+                yaCounter49417246.reachGoal('common');
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
+    /* aside-consult-desktop*/
+    let asideConsultTablet = $('#aside-consult-form-tablet');
+
+    let asideConsultNameTablet = document.getElementById('aside-consult-name-tablet');
+    let asideConsultPhoneTablet = document.getElementById('aside-consult-phone-tablet');
+
+    asideConsultTablet.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/context/ms2-mail.php',
+            data: asideConsultTablet.serialize(),
+            success: function (data) {
+                $(asideConsultNameTablet).val('');
+                $(asideConsultPhoneTablet).val('');
+                setTimeout(function () {
+                    $(popupSuccess).fadeIn(300);
+                }, 290);
+                yaCounter49417246.reachGoal('blog_callback');
+                yaCounter49417246.reachGoal('common');
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
     /*team*/
     if ($('.team')) {
         let contextTeamCarousel;

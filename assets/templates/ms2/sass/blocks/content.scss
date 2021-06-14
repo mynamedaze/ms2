@@ -1,4 +1,7 @@
 .content {
+  @media #{$max-mobile-width} {
+    width: 100%;
+  }
   @media #{$min-tablet-width} {
     width: 10%;
     flex-grow: 1;
