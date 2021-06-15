@@ -16,6 +16,13 @@
     margin-bottom: 35px;
     @media #{$max-mobile-width} {
       order: -5;
+      text-align: center;
+      font-size: 48px;
+      line-height: 56px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 48px;
+      line-height: 56px;
     }
   }
   .blog__breadcrumbs {
@@ -57,5 +64,11 @@
   }
   .aside-nav {
     margin-bottom: 20px;
+  }
+}
+.blog--article {
+  .blog__breadcrumbs {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }

@@ -1634,35 +1634,42 @@ label {
       margin-top: 10px; } }
 
 .tags-cloud__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding-left: 0;
   font-weight: 500; }
 
-.tags-cloud__item a {
+.tags-cloud__item {
+  float: left; }
+  .tags-cloud__item a {
+    white-space: nowrap;
+    display: block;
+    padding: 7px 15px;
+    border: 1px dashed rgba(66, 63, 217, 0.5);
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    color: #5b5b5b; }
+  .tags-cloud__item:first-child a {
+    border: 0 solid transparent;
+    padding: 0 0;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px dashed rgba(66, 63, 217, 0.5);
+    color: #142a46; }
+
+.blog--article .tags-cloud__item:first-child a {
   display: block;
   padding: 7px 15px;
   border: 1px dashed rgba(66, 63, 217, 0.5);
   border-radius: 30px;
   margin-left: 5px;
   margin-right: 5px;
-  margin-top: 10px;
+  margin-top: 0;
   color: #5b5b5b; }
-
-.tags-cloud__item:first-child a {
-  border: 0 solid transparent;
-  padding: 0 0;
-  border-radius: 0;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-bottom: 1px dashed rgba(66, 63, 217, 0.5);
-  color: #142a46; }
 
 .breadcrumbs {
   display: -webkit-box;
@@ -2259,6 +2266,82 @@ label {
   background-image: url("/assets/templates/ms2/images/icon-fire.png"); }
 
 /*/for first page*/
+@media (max-width: 767px) {
+  .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+.article .article__title {
+  margin-top: 0; }
+  @media (max-width: 767px) {
+    .article .article__title {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center; } }
+
+.article .article__attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767px) {
+    .article .article__attributes {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      margin-top: 20px; } }
+
+@media (max-width: 767px) {
+  .article .article__publication {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .article .article__publication {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%; } }
+
+.article .article__author {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px; }
+
+.article .article__attribute-item {
+  font-size: 18px;
+  line-height: 22px; }
+
+.article .article__tags-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 768px) {
+    .article .article__tags-container {
+      width: 50%; } }
+
+.article .tags__title {
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 10px; }
+
+.article .tags-cloud__list {
+  margin-top: 0; }
+
+.article .tags-cloud__item a {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 12px; }
+
 .pagination__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6061,7 +6144,14 @@ body.compensate-for-scrollbar {
       .blog .blog__title {
         -webkit-box-ordinal-group: -4;
         -ms-flex-order: -5;
-        order: -5; } }
+        order: -5;
+        text-align: center;
+        font-size: 48px;
+        line-height: 56px; } }
+    @media (min-width: 768px) {
+      .blog .blog__title {
+        font-size: 48px;
+        line-height: 56px; } }
   @media (max-width: 767px) {
     .blog .blog__breadcrumbs {
       -webkit-box-ordinal-group: -3;
@@ -6102,5 +6192,9 @@ body.compensate-for-scrollbar {
       margin-top: 30px; } }
   .blog .aside-nav {
     margin-bottom: 20px; }
+
+.blog--article .blog__breadcrumbs {
+  width: 100%;
+  margin-bottom: 30px; }
 
 /*/pages*/

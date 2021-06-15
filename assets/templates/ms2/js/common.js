@@ -119,7 +119,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $(popupSuccess).fadeIn(300);
                 }, 290);
-                yaCounter49417246.reachGoal('blog_callback');
+                yaCounter49417246.reachGoal('aside-consult_callback');
                 yaCounter49417246.reachGoal('common');
             }
         });
@@ -143,7 +143,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $(popupSuccess).fadeIn(300);
                 }, 290);
-                yaCounter49417246.reachGoal('blog_callback');
+                yaCounter49417246.reachGoal('aside-consult_callback');
                 yaCounter49417246.reachGoal('common');
             }
         });
