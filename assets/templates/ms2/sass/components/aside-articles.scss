@@ -1,5 +1,6 @@
 .aside-articles {
   box-shadow: 0 0 10px 0 rgba(125, 129, 164, .2);
+  padding-bottom: 3px;
 }
 .aside-articles__title {
   padding-top: 22px;
@@ -23,6 +24,9 @@
     line-height: 22px;
     a {
       color: $text-color-main;
+      &:hover {
+        color: #423FD9;
+      }
     }
     &.active::before {
       background-image: url("/assets/templates/ms2/images/nav-triangle-active.svg");

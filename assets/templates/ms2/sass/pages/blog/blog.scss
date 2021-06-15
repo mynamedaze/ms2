@@ -31,6 +31,7 @@
   .blog__search {
     @media #{$max-mobile-width} {
       width: 100%;
+      margin-top: 20px;
     }
     @media #{$min-tablet-width} {
       width: 50%;

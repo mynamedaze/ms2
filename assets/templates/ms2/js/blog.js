@@ -19,4 +19,11 @@ $(document).ready(function () {
             event.target.classList.toggle("active");
         });
     });
+
+    /*url check for buy*/
+    let utmUrl = decodeURI(document.location.search);
+    if (!(~utmUrl.indexOf('page='))) {
+        $('.content').addClass('first-page');
+    }
+    /*/url check for buy*/
 });
