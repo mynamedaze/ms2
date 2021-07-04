@@ -6197,4 +6197,81 @@ body.compensate-for-scrollbar {
   width: 100%;
   margin-bottom: 30px; }
 
+.blog {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+  max-width: 1366px;
+  font-weight: 400; }
+  @media (max-width: 767px) {
+    .blog {
+      padding-left: 16px;
+      padding-right: 16px; } }
+  @media (min-width: 768px) {
+    .blog {
+      padding-left: 14px;
+      padding-right: 14px; } }
+  @media (min-width: 1366px) {
+    .blog {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  .blog .blog__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 137px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .blog .blog__title {
+    width: 100%;
+    font-size: 27px;
+    line-height: 32px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 35px; }
+    @media (max-width: 767px) {
+      .blog .blog__title {
+        font-weight: 700; } }
+    @media (min-width: 768px) {
+      .blog .blog__title {
+        font-weight: 600;
+        text-align: center;
+        font-size: 34px; } }
+    @media (min-width: 1366px) {
+      .blog .blog__title {
+        font-size: 48px;
+        line-height: 56px; } }
+    @media (max-width: 767px) {
+      .blog .blog__title {
+        -webkit-box-ordinal-group: -4;
+        -ms-flex-order: -5;
+        order: -5;
+        text-align: center;
+        font-size: 48px;
+        line-height: 56px; } }
+    @media (min-width: 768px) {
+      .blog .blog__title {
+        font-size: 48px;
+        line-height: 56px; } }
+  @media (max-width: 767px) {
+    .blog .blog__breadcrumbs {
+      -webkit-box-ordinal-group: -3;
+      -ms-flex-order: -4;
+      order: -4; } }
+  @media (min-width: 768px) {
+    .blog .blog__breadcrumbs {
+      width: 10%;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -ms-flex-item-align: center;
+      align-self: center; } }
+
 /*/pages*/
