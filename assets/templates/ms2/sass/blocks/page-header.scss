@@ -25,8 +25,12 @@
     }
   }
 }
-.page-header--blog {
+.page-header--blog,
+.page-header--cases {
   background-color: #0E1326;
+  .page-header__nav-burger {
+    background-image: url("/assets/templates/ms2/images/burger-white.svg");
+  }
 }
 .page-header__wrapper {
   @include paddings;

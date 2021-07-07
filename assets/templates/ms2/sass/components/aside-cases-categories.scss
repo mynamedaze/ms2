@@ -1,0 +1,59 @@
+.aside-cases-categories {
+  box-shadow: 0 0 10px 0 rgba(125, 129, 164, .2);
+}
+.aside-cases-categories__title {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  background-color: #423FD9;
+  display: block;
+  color: $text-color-alt;
+  font-size: 24px;
+}
+.aside-cases-categories__container {
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+
+  ul {
+    padding-left: 0;
+
+    li {
+      padding-left: 17px;
+      position: relative;
+      font-weight: 500;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &::before {
+        position: absolute;
+        content: "";
+        left: -10px;
+        top: -3px;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 7px auto;
+        background-image: url("/assets/templates/ms2/images/breadcrumb-triangle.svg");
+      }
+      a {
+        color: $text-color-main;
+        &:hover {
+          color: $text-color-alt2;
+          border-bottom: 1px dashed $text-color-alt2;
+        }
+      }
+    }
+  }
+}
+.case {
+  .aside-cases-categories {
+    @media #{$min-tablet-width} {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}
