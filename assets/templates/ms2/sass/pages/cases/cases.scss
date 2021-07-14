@@ -4,6 +4,7 @@
   @include centers;
   font-weight: 400;
   .cases__wrapper {
+    padding-bottom: 40px;
     @media #{$max-mobile-width} {
       padding-top: 95px;
     }
@@ -30,6 +31,14 @@
     @media #{$min-tablet-width} {
       display: flex;
     }
+    .first {
+      display: flex;
+    }
+    .active > a {
+      background-color: $text-color-alt2;
+      border-image-source: linear-gradient(102.53deg, $text-color-alt2 14.44%, $text-color-alt2 77.68%);
+      color: $text-color-alt;
+    }
   }
   .cases__category-link {
     border: 3px solid;
@@ -44,11 +53,6 @@
       margin-right: 40px;
       display: block;
       height: 100%;
-    }
-    &.active {
-      background-color: $text-color-alt2;
-      border-image-source: linear-gradient(102.53deg, $text-color-alt2 14.44%, $text-color-alt2 77.68%);
-      color: $text-color-alt;
     }
   }
   .cases__list {
