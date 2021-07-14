@@ -27,12 +27,8 @@
   }
   .cases__category-list {
     padding-left: 0;
-    @media #{$max-mobile-width} {
-      margin-top: 20px;
-    }
     @media #{$min-tablet-width} {
       display: flex;
-      margin-top: 50px;
     }
   }
   .cases__category-link {
