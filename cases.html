@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<header class="page-header  page-header--blog">
+<header class="page-header  page-header--cases">
     <div class="page-header__wrapper">
         <a href="/index.html" class="page-header__logo-link">
             <img src="/assets/templates/ms2/images/ms-dark.svg" alt="" class="page-header__logo">
@@ -108,7 +108,7 @@
                         </div>
                         <div class="cases__buttons-container">
                             <a href="#" class="cases__item-link">Подробнее</a>
-                            <button class="cases__item-button">Хочу также</button>
+                            <button class="cases__item-button" value="Ремонт автомобилей">Хочу также</button>
                         </div>
                     </div>
                 </li>
@@ -131,13 +131,46 @@
                         </div>
                         <div class="cases__buttons-container">
                             <a href="#" class="cases__item-link">Подробнее</a>
-                            <button class="cases__item-button">Хочу также</button>
+                            <button class="cases__item-button" value="Выкуп катализаторов">Хочу также</button>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
+    <div class="overlay"></div>
+    <div class="same-case-popup  popup">
+        <button class="same-case-popup__close-btn  close-btn"></button>
+        <span class="same-case-popup__title">Оставить заявку</span>
+        <span class="same-case-popup__description">Наш менеджер перезвонит Вам в течении 20 минут</span>
+        <form class="same-case-popup__form" id="same-case-popup-form">
+            <div class="same-case-popup__inputs">
+                <div class="same-case-popup__input-container">
+                    <input type="text" id="same-case-popup-input-name" name="name" class="same-case-popup__input" placeholder="Иван Иванов">
+                    <label for="same-case-popup-input-name" class="same-case-popup__label">Ваше имя</label>
+                </div>
+                <div class="same-case-popup__input-container">
+                    <input type="tel" id="same-case-popup-input-phone" name="phone" class="same-case-popup__input  validate-phone" placeholder="+7 (001) 002-03-04" required>
+                    <label for="same-case-popup-input-phone" class="same-case-popup__label">Номер телефона</label>
+                </div>
+                <input type="hidden" id="same-case-popup-case" name="case">
+            </div>
+            <div class="same-case-popup__gray-block">
+                <div class="same-case-popup__submit-container">
+                    <button type="submit" class="same-case-popup__submit">Отправить</button>
+                </div>
+                <span class="same-case-popup__confid">Отправляя эту форму Вы соглашаетесь с <a href="[[~18]]" target="_blank" class="same-case-popup__confid-link">политикой конфиденциальности</a></span>
+            </div>
+        </form>
+    </div>
+    <div class="success-popup popup">
+        <button class="success-popup__close-btn  close-btn"></button>
+        <div class="success-popup__img-container">
+            <img src="/assets/templates/ms2/images/calculator-kirill.jpg" alt="Гущин Кирилл" class="success-popup__img">
+        </div>
+        <span class="success-popup__thanks">Спасибо за заявку!</span>
+        <span class="success-popup__description">Наш менеджер перезвонит Вам в течении 20 минут и персонально проконсультирует Вас по всем вопросам</span>
+    </div>
 </main>
 <script src="/assets/libs/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/libs/js/jquery.inputmask.bundle.js"></script>
