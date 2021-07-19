@@ -8,9 +8,11 @@
     @include section-width;
     @media #{$max-mobile-width} {
       padding-top: 160px;
+      padding-bottom: 38px;
     }
     @media #{$min-tablet-width} {
       padding-top: 100px;
+      padding-bottom: 117px;
     }
     @media #{$min-desktop-width} {
       padding-top: 145px;

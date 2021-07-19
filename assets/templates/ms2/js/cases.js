@@ -46,4 +46,25 @@ $(document).ready(function () {
         });
         ev.preventDefault();
     });
+
+    let simpleForm1 = $('#simple-form-1');
+
+    simpleForm1.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/assets/mailphp/cases/ms2-case-discuss.php',
+            data: simpleForm1.serialize(),
+            success: function (data) {
+                $('#simple-form-name-input-1').val('');
+                $('#simple-form-phone-input-1').val('');
+                $(overlay).fadeIn(300);
+                setTimeout(function () {
+                    $(popupSuccess).fadeIn(300);
+                }, 290);
+                yaCounter49417246.reachGoal('cases_discuss');
+                yaCounter49417246.reachGoal('common');
+            }
+        });
+        ev.preventDefault();
+    });
 });

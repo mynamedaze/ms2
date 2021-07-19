@@ -55,6 +55,9 @@
     @media #{$max-mobile-width} {
       order: 2;
     }
+    @media #{$min-tablet-width} {
+      margin-bottom: 30px;
+    }
   }
   .aside-left {
     @media #{$max-mobile-width} {
@@ -70,5 +73,10 @@
   .blog__breadcrumbs {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .article {
+    p {
+      line-height: 150%;
+    }
   }
 }

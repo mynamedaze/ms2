@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/assets/templates/ms2/css/style-v2.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/templates/ms2/css/cardslider.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/templates/ms2/css/fm.revealator.jquery.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/libs/css/cardslider.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/libs/css/fm.revealator.jquery.min.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -76,17 +76,113 @@
             </div>
         </div>
     </section>
+    <section id="scroll-site">
+        <div id="story" class="story">
+            <div class="story__wrapper">
+                <h3 class="story__title">Опыт тысячи бизнесов для одного.<br>Вашего</h3>
+                <span class="story__description">Изначально мы занимались только контекстной рекламой.</span>
+                <ul class="story__list">
+                    <li class="story__item  active">
+                        <article class="exp">
+                            <div class="exp__header  exp__header--1">
+                                <ul class="exp__list">
+                                    <li class="exp__item  active"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                </ul>
+                            </div>
+                            <div class="exp__content">
+                                <p class="exp__description">За 7 лет работы нашей компании мы разработали и запустили более</p>
+                                <span class="exp__title">1100 рекламных кампаний</span>
+                            </div>
+                        </article>
+                        <article class="eximg"></article>
+                    </li>
+                    <li class="story__item">
+                        <article class="exp">
+                            <div class="exp__header  exp__header--2">
+                                <ul class="exp__list">
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item  active"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                </ul>
+                            </div>
+                            <div class="exp__content">
+                                <p class="exp__description">Реклама всегда работает в связке с посадочной страницей. Примерно у половины наших клиентов посадочная страница хорошо обрабатывала трафик  и приносила заявки. У другой половины сайт работал плохо.</p>
+                            </div>
+                        </article>
+                        <article class="eximg"></article>
+                    </li>
+                    <li class="story__item">
+                        <article class="exp">
+                            <div class="exp__header  exp__header--3">
+                                <ul class="exp__list">
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item  active"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                </ul>
+                            </div>
+                            <div class="exp__content">
+                                <p class="exp__description">Постоянный анализ результатов и тестирование новых гипотез привели нас к четкому пониманию, какие сайты работают и приводят клиентов, а какие - нет.</p>
+                            </div>
+                        </article>
+                        <article class="eximg"></article>
+                    </li>
+                    <li class="story__item">
+                        <article class="exp">
+                            <div class="exp__header  exp__header--4">
+                                <ul class="exp__list">
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item  active"></li>
+                                    <li class="exp__item"></li>
+                                </ul>
+                            </div>
+                            <div class="exp__content">
+                                <p class="exp__description">Мы знаем и умеем делать правильные лендинги для бизнеса, знаем, что дает результат. И применяем эти знания при создании лендингов.</p>
+                            </div>
+                        </article>
+                        <article class="eximg"></article>
+                    </li>
+                    <li class="story__item">
+                        <article class="exp">
+                            <div class="exp__header  exp__header--5">
+                                <ul class="exp__list">
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item"></li>
+                                    <li class="exp__item  active"></li>
+                                </ul>
+                            </div>
+                            <div class="exp__content">
+                                <p class="exp__description">Благодаря этому, наши лендинги в среднем дают конверсию в 7-12% с рекламного трафика. Это выше среднерыночной в большинстве тематик и позволяет легко обойти конкурентов.</p>
+                            </div>
+                        </article>
+                        <article class="eximg"></article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <section class="simple-form">
         <div class="simple-form__wrapper">
             <span class="simple-form__title">Обсудить вашу задачу</span>
-            <form class="simple-form__form">
+            <form class="simple-form__form"  id="simple-form-1">
                 <div class="simple-form__input-container">
-                    <input type="text" id="simple-form-name-input" class="simple-form__input" placeholder="Иван Иванов">
-                    <label for="simple-form-name-input" class="simple-form__label">Ваше имя</label>
+                    <input type="text" id="simple-form-name-input-1" class="simple-form__input" placeholder="Иван Иванов">
+                    <label for="simple-form-name-input-1" class="simple-form__label">Ваше имя</label>
                 </div>
                 <div class="simple-form__input-container">
-                    <input type="text" id="simple-form-phone-input" class="simple-form__input" placeholder="+7 (100) 002-03-04">
-                    <label for="simple-form-phone-input" class="simple-form__label">Номер телефона</label>
+                    <input type="text" id="simple-form-phone-input-1" class="simple-form__input" placeholder="+7 (100) 002-03-04">
+                    <label for="simple-form-phone-input-1" class="simple-form__label">Номер телефона</label>
                 </div>
                 <div class="simple-form__input-container  simple-form__input-container--submit">
                     <button class="simple-form__submit" type="submit">Оставить заявку</button>
@@ -123,16 +219,7 @@
             <h2 class="examples__title">Примеры наших лендингов</h2>
             <ul class="examples__list">
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
-                        <img src="/assets/templates/ms2/images/site/case-1.jpg" alt="Математика онлайн обучение" class="examples__item-img">
-                        <div class="examples__item-content">
-                            <span class="examples__item-title">Математика онлайн обучение</span>
-                            <span class="examples__item-description">Лендинг для учителя математики</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-2.jpg" class="examples__item-link"  data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-2.jpg" alt="Асфальтирование площадей" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Асфальтирование площадей</span>
@@ -141,7 +228,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-3.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-3.jpg" alt="Продажа проводов и кабелей по РФ" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Продажа проводов и кабелей по РФ</span>
@@ -150,7 +237,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-4.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-4.jpg" alt="Продажа проводов и кабелей по РФ" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Ремонт цифровой техники</span>
@@ -159,7 +246,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-5.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-5.jpg" alt="Оценка расчета пожарного риска" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Оценка расчета пожарного риска</span>
@@ -168,7 +255,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-6.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-6.jpg" alt="Пластиковые окна и двери" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Пластиковые окна и двери</span>
@@ -177,7 +264,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-7.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-7.jpg" alt="Организация детский праздников" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Организация детский праздников</span>
@@ -186,7 +273,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-8.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-8.jpg" alt="Футбольные мячи" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Футбольные мячи</span>
@@ -195,7 +282,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-9.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-9.jpg" alt="Маски и перчатки оптом" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Футбольные мячи</span>
@@ -204,7 +291,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-10.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-10.jpg" alt="Установка и продажа автосигнализаций" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Установка и продажа автосигнализаций</span>
@@ -213,7 +300,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-11.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-11.jpg" alt="Сертификация, декларирование" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Сертификация, декларирование</span>
@@ -222,7 +309,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-12.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-12.jpg" alt="Металлокаркасные здания и сооружения" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Металлокаркасные здания и сооружения</span>
@@ -231,7 +318,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-13.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-13.jpg" alt="Ремонт стартеров и генераторов" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Ремонт стартеров и генераторов</span>
@@ -240,7 +327,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-14.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-14.jpg" alt="Здания из ЛСТК с доставкой по РФ" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Здания из ЛСТК с доставкой по РФ</span>
@@ -249,7 +336,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-15.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-15.jpg" alt="Юридические услуги" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Юридические услуги</span>
@@ -258,7 +345,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-16.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-16.jpg" alt="Возврат страховок кредитования" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Возврат страховок кредитования</span>
@@ -267,7 +354,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-17.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-17.jpg" alt="Ремонт стиральных машин" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Ремонт стиральных машин</span>
@@ -276,7 +363,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-18.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-18.jpg" alt="Дезинфекция и дезинсекция участков" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Дезинфекция и дезинсекция участков</span>
@@ -285,7 +372,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-19.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-19.jpg" alt="Выкуп катализаторов" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Выкуп катализаторов</span>
@@ -294,7 +381,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-20.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-20.jpg" alt="Банкротство физ. лиц" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Банкротство физ. лиц</span>
@@ -303,7 +390,7 @@
                     </a>
                 </li>
                 <li class="examples__item">
-                    <a href="#" class="examples__item-link">
+                    <a href="/assets/templates/ms2/images/site/site-21.jpg" class="examples__item-link" data-fancybox="group-examples">
                         <img src="/assets/templates/ms2/images/site/case-21.jpg" alt="Центр трансформации бизнеса" class="examples__item-img">
                         <div class="examples__item-content">
                             <span class="examples__item-title">Центр трансформации бизнеса</span>
@@ -311,20 +398,32 @@
                         </div>
                     </a>
                 </li>
+                <li class="examples__item">
+                    <a href="/assets/templates/ms2/images/site/site-1.jpg" class="examples__item-link"  data-fancybox="group-examples">
+                        <img src="/assets/templates/ms2/images/site/case-1.jpg" alt="Математика онлайн обучение" class="examples__item-img">
+                        <div class="examples__item-content">
+                            <span class="examples__item-title">Математика онлайн обучение</span>
+                            <span class="examples__item-description">Лендинг для учителя математики</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
+            <div class="examples__show-more-container">
+                <button class="examples__show-more-btn">Посмотреть еще...</button>
+            </div>
         </div>
     </section>
-    <section class="simple-form">
+    <section class="simple-form"  id="simple-form-2">
         <div class="simple-form__wrapper">
             <span class="simple-form__title">Закажите свой уникальный<br>лендинг</span>
             <form class="simple-form__form">
                 <div class="simple-form__input-container">
-                    <input type="text" id="simple-form-name-input" class="simple-form__input" placeholder="Иван Иванов">
-                    <label for="simple-form-name-input" class="simple-form__label">Ваше имя</label>
+                    <input type="text" id="simple-form-name-input-2" class="simple-form__input" placeholder="Иван Иванов">
+                    <label for="simple-form-name-input-2" class="simple-form__label">Ваше имя</label>
                 </div>
                 <div class="simple-form__input-container">
-                    <input type="text" id="simple-form-phone-input" class="simple-form__input" placeholder="+7 (100) 002-03-04">
-                    <label for="simple-form-phone-input" class="simple-form__label">Номер телефона</label>
+                    <input type="text" id="simple-form-phone-input-2" class="simple-form__input" placeholder="+7 (100) 002-03-04">
+                    <label for="simple-form-phone-input-2" class="simple-form__label">Номер телефона</label>
                 </div>
                 <div class="simple-form__input-container  simple-form__input-container--submit">
                     <button class="simple-form__submit" type="submit">Оставить заявку</button>
@@ -520,15 +619,15 @@
     <span class="success-popup__thanks">Спасибо за заявку!</span>
     <span class="success-popup__description">Наш менеджер перезвонит Вам в течении 20 минут и персонально проконсультирует Вас по всем вопросам</span>
 </div>
-<script src="/assets/templates/ms2/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/libs/js/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="/assets/templates/ms2/js/fm.revealator.jquery.min.js"></script>
-<script src="/assets/templates/ms2/js/owl.carousel.min.js"></script>
-<script src="/assets/templates/ms2/js/jquery.inputmask.bundle.js"></script>
-<script src="/assets/templates/ms2/js/jquery.fancybox.min.js"></script>
-<script src="/assets/templates/ms2/js/jquery.cardslider.min.js"></script>
+<script src="/assets/libs/js/fm.revealator.jquery.min.js"></script>
+<script src="/assets/libs/js/owl.carousel.min.js"></script>
+<script src="/assets/libs/js/jquery.inputmask.bundle.js"></script>
+<script src="/assets/libs/js/jquery.fancybox.min.js"></script>
+<script src="/assets/libs/js/jquery.cardslider.min.js"></script>
 <script src="/assets/templates/ms2/js/common.js"></script>
-<script src="/assets/templates/ms2/js/context.js"></script>
+<script src="/assets/templates/ms2/js/site.js"></script>
 </body>
 
 </html>
