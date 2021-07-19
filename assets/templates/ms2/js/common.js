@@ -95,7 +95,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $(popupSuccess).fadeIn(300);
                 }, 290);
-                yaCounter49417246.reachGoal('context_callback');
+                yaCounter49417246.reachGoal('popup_callback');
                 yaCounter49417246.reachGoal('common');
             }
         });

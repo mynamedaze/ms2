@@ -27,7 +27,7 @@ $(document).ready(function () {
         let storyCoordsTop = getCoords(scrollSite);
         storyCoordsTop = storyCoordsTop.top
         console.log(storyCoordsTop);
-        $(scrollSite).css('height', document.documentElement.clientHeight * 6);
+        $(scrollSite).css('height', document.documentElement.clientHeight * 2.5);
         $(story).css('height', document.documentElement.clientHeight);
         let storyCoordsBottom = storyCoordsTop + $(scrollSite).outerHeight()
         console.log(storyCoordsBottom);

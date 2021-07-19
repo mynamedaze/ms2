@@ -79,4 +79,10 @@
       line-height: 150%;
     }
   }
+  .aside-consult {
+    @media #{$min-desktop-width} {
+      display: block;
+      margin-top: 20px;
+    }
+  }
 }

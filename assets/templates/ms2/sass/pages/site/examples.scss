@@ -4,12 +4,15 @@
     @include paddings;
     @media #{$max-mobile-width} {
       padding-bottom: 38px;
+      padding-top: 30px;
     }
     @media #{$min-tablet-width} {
       padding-bottom: 105px;
+      padding-top: 30px;
     }
     @media #{$min-desktop-width} {
       padding-bottom: 150px;
+      padding-top: 50px;
     }
   }
   .examples__title {
@@ -42,6 +45,9 @@
     &:hover {
       transform: scale(1.2);
       z-index: 2;
+      .examples__item-content {
+        background: linear-gradient(102.53deg, #423FD9 14.44%, #9445FB 77.68%);
+      }
     }
   }
   .examples__item-link {
@@ -51,7 +57,8 @@
     justify-content: space-between;
   }
   .examples__item-content {
-    background-color: rgba(66, 63, 217, 1);
+    transition: all 0.2s ease 0s;
+    background: linear-gradient(102.53deg, #423FD9 14.44%, #423FD9 77.68%);
     min-height: 140px;
     color: $text-color-alt;
     padding: 17px 25px;
@@ -67,7 +74,7 @@
     display: block;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 300 !important;
   }
   .examples__show-more-container {
     @media #{$max-mobile-width} {

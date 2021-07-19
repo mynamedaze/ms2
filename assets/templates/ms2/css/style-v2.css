@@ -6312,25 +6312,42 @@ body.compensate-for-scrollbar {
 
 .intro--site {
   position: relative; }
-  .intro--site .intro__wrapper {
-    position: relative;
-    z-index: 2;
-    color: #fff;
+  @media (min-width: 1366px) {
+    .intro--site {
+      height: 100vh; } }
+  .intro--site .intro__inner {
     margin-left: auto;
     margin-right: auto;
     max-width: 1150px; }
     @media (max-width: 767px) {
-      .intro--site .intro__wrapper {
+      .intro--site .intro__inner {
         padding-left: 16px;
         padding-right: 16px; } }
     @media (min-width: 768px) {
-      .intro--site .intro__wrapper {
+      .intro--site .intro__inner {
         padding-left: 14px;
         padding-right: 14px; } }
     @media (min-width: 1366px) {
-      .intro--site .intro__wrapper {
+      .intro--site .intro__inner {
         padding-left: 20px;
         padding-right: 20px; } }
+    @media (min-width: 1366px) {
+      .intro--site .intro__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%; } }
+  .intro--site .intro__wrapper {
+    position: relative;
+    z-index: 2;
+    color: #fff; }
     @media (max-width: 767px) {
       .intro--site .intro__wrapper {
         padding-top: 160px;
@@ -6341,8 +6358,8 @@ body.compensate-for-scrollbar {
         padding-bottom: 117px; } }
     @media (min-width: 1366px) {
       .intro--site .intro__wrapper {
-        padding-top: 145px;
-        padding-bottom: 168px; } }
+        padding-top: 0;
+        padding-bottom: 0; } }
     .intro--site .intro__wrapper::after {
       position: absolute;
       content: "";
@@ -6444,6 +6461,9 @@ body.compensate-for-scrollbar {
     border-image: linear-gradient(to right, #4340d9 0%, #9344fa 100%);
     -webkit-border-image: -webkit-linear-gradient(left, #4340d9 0%, #9344fa 100%);
     border-image-slice: 1; }
+    .intro--site .intro__button:hover {
+      background-color: #423FD9;
+      border: 3px solid #423FD9; }
 
 @media (min-width: 768px) {
   .steps.steps--site .steps__item:nth-child(1) {
@@ -6491,13 +6511,16 @@ body.compensate-for-scrollbar {
       padding-right: 20px; } }
   @media (max-width: 767px) {
     .examples.examples--site .examples__wrapper {
-      padding-bottom: 38px; } }
+      padding-bottom: 38px;
+      padding-top: 30px; } }
   @media (min-width: 768px) {
     .examples.examples--site .examples__wrapper {
-      padding-bottom: 105px; } }
+      padding-bottom: 105px;
+      padding-top: 30px; } }
   @media (min-width: 1366px) {
     .examples.examples--site .examples__wrapper {
-      padding-bottom: 150px; } }
+      padding-bottom: 150px;
+      padding-top: 50px; } }
 
 .examples.examples--site .examples__title {
   font-size: 27px;
@@ -6552,6 +6575,8 @@ body.compensate-for-scrollbar {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     z-index: 2; }
+    .examples.examples--site .examples__item:hover .examples__item-content {
+      background: linear-gradient(102.53deg, #423FD9 14.44%, #9445FB 77.68%); }
 
 .examples.examples--site .examples__item-link {
   display: -webkit-box;
@@ -6567,7 +6592,9 @@ body.compensate-for-scrollbar {
   justify-content: space-between; }
 
 .examples.examples--site .examples__item-content {
-  background-color: #423fd9;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+  background: linear-gradient(102.53deg, #423FD9 14.44%, #423FD9 77.68%);
   min-height: 140px;
   color: #fff;
   padding: 17px 25px;
@@ -6585,7 +6612,7 @@ body.compensate-for-scrollbar {
   display: block;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 300; }
+  font-weight: 300 !important; }
 
 @media (max-width: 767px) {
   .examples.examples--site .examples__show-more-container {
@@ -6930,6 +6957,11 @@ body.compensate-for-scrollbar {
 
 .blog--article .article p {
   line-height: 150%; }
+
+@media (min-width: 1366px) {
+  .blog--article .aside-consult {
+    display: block;
+    margin-top: 20px; } }
 
 .cases {
   max-width: 1366px;
