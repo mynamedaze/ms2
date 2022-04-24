@@ -1,6 +1,6 @@
 //Подключаем модули галпа
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
