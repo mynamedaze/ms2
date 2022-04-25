@@ -71,14 +71,18 @@
                     <li class="intro__item">Насколько ваш подрядчик честен с вами.</li>
                 </ul>
                 <p class="intro__description">Гарантируем честную и беспристрастную оценку.<br>Покажем пути оптимизации РК.<br>Если все хорошо - так и скажем.</p>
-                <form action="" class="inner__form">
+                <form id="audit-form" class="inner__form">
                     <h2 class="intro__form-title">Оставить заявку на аудит</h2>
                     <span class="intro__form-description">Оставьте контактные данные, мы свяжемся с вами и проведем анализ ваших рекламных кампаний!</span>
                     <div class="intro__inputs">
-                        <label for="intro-input-name" class="intro__label">Ваше имя</label>
-                        <input type="text" class="intro__input  intro__input--name" id="intro-input-name" placeholder="Иван Иванов">
-                        <label for="intro-input-tel" class="intro__label">Номер телефона</label>
-                        <input type="tel" class="intro__input  intro__input--tel" id="intro-input-tel" placeholder="+7 (100) - 002 - 04 -04">
+                        <label for="audit-input-name" class="intro__label  intro__label--name">Ваше имя</label>
+                        <input type="text" class="intro__input  intro__input--name" id="audit-input-name" placeholder="Иван Иванов">
+                        <label for="audit-input-tel" class="intro__label  intro__label--tel">Номер телефона</label>
+                        <input type="tel" class="intro__input  intro__input--tel" id="audit-input-tel" placeholder="+7 (100) - 002 - 04 -04">
+                    </div>
+                    <div class="intro__submit-container">
+                        <input type="submit" class="intro__submit" value="Оставить заявку">
+                        <span class="intro__confid">Оставляя заявку, вы соглашаетесь с <a href="#" class="intro__confid-link">политикой конфиденциальности</a></span>
                     </div>
                 </form>
             </div>
@@ -176,6 +180,7 @@
 <script src="/assets/libs/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/libs/js/jquery.inputmask.bundle.js"></script>
 <script src="/assets/templates/ms2/js/common.js"></script>
+<script src="/assets/templates/ms2/js/audit.js"></script>
 </body>
 
 </html>

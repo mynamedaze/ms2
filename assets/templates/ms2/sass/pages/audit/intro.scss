@@ -6,7 +6,7 @@
   .intro__inner {
     @include paddings;
     @include section-width;
-    @media #{$min-desktop-width} {
+    @media #{$min-tablet-width} {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -18,8 +18,7 @@
     z-index: 2;
     color: $text-color-alt;
     @media #{$max-mobile-width} {
-      padding-top: 160px;
-      padding-bottom: 38px;
+      padding-top: 88px;
     }
     @media #{$min-tablet-width} {
       padding-top: 100px;
@@ -35,21 +34,33 @@
     margin-top: 0;
     position: relative;
     z-index: 3;
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
     @media #{$min-tablet-width} {
       font-size: 45px;
     }
   }
   .intro__6000 {
     position: relative;
+    @media #{$min-tablet-width} {
+      padding-right: 10px;
+    }
     &:after {
       position: absolute;
       content: "";
-      width: 178px;
-      height: 4px;
       background-color: rgba(82, 66, 225, 1);
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%) rotate(-8deg);
+      @media #{$max-mobile-width} {
+        width: 110px;
+        height: 2px;
+      }
+      @media #{$min-tablet-width} {
+        width: 178px;
+        height: 3px;
+      }
     }
   }
   .intro__discount {
@@ -57,6 +68,11 @@
     color: rgba(255, 255, 255, .5);
     text-transform: uppercase;
     font-weight: 600;
+    @media #{$max-mobile-width} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     @media #{$min-tablet-width} {
       font-size: 45px;
     }
@@ -66,10 +82,16 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #4E41DF;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+    }
   }
   .intro__list-title {
     display: block;
     font-size: 18px;
+    @media #{$max-mobile-width} {
+      margin-top: 35px;
+    }
     @media #{$min-tablet-width} {
       font-size: 30px;
       margin-top: 60px;
@@ -77,11 +99,17 @@
   }
   .intro__list {
     padding-left: 0;
+    @media #{$min-tablet-width} {
+      padding-right: 480px;
+    }
   }
   .intro__item {
     font-size: 15px;
     position: relative;
     padding-left: 22px;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+    }
     @media #{$min-tablet-width} {
       font-size: 25px;
       margin-top: 28px;
@@ -94,11 +122,16 @@
       position: absolute;
       content: "";
       left: 0;
-      top: 7px;
-      width: 14px;
-      height: 14px;
       border-radius: 50%;
       background: linear-gradient(63.43deg, #5141E0 8.33%, #9345FD 91.67%);
+      width: 12px;
+      height: 12px;
+      top: 3px;
+      @media #{$min-tablet-width} {
+        top: 7px;
+        width: 14px;
+        height: 14px;
+      }
     }
   }
   .intro__description {
@@ -106,21 +139,66 @@
     line-height: 18px;
     font-weight: 600;
     font-style: italic;
+    margin-top: 33px;
+    @media #{$max-mobile-width} {
+      margin-bottom: 55px;
+    }
     @media #{$min-tablet-width} {
       font-size: 25px;
       line-height: 30px;
       margin-top: 70px;
+      padding-right: 480px;
     }
   }
   .inner__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    margin-left: -16px;
+    margin-right: -16px;
+    @media #{$max-mobile-width} {
+      padding-top: 22px;
+      background-color: #F6F8FD;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
     @media #{$min-tablet-width} {
+      background-color: #fff;
+      margin-left: 0;
+      margin-right: 0;
       position: absolute;
       right: 0;
       top: 50%;
-      transform: translateY(-50%);
-      width: 556px;
-      background: #FFFFFF;
+      transform: translateY(-40%);
+      width: 456px;
       box-shadow: 0 0 50px #6F34BB;
+      padding-top: 20px;
+    }
+  }
+  .intro__form-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    line-height: 34px;
+    @media #{$min-tablet-width} {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  .intro__form-description {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    @media #{$max-mobile-width} {
+      margin-top: 10px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 18px;
+      line-height: 23px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 20px;
     }
   }
   .intro__inputs {
@@ -128,5 +206,75 @@
     @media #{$min-tablet-width} {
       width: 290px;
     }
+  }
+  .intro__label {
+    display: block;
+    color: rgba(66, 63, 217, 1);
+    font-size: 14px;
+    @media #{$min-tablet-width} {
+      font-size: 18px;
+    }
+  }
+  .intro__label--name {
+    @media #{$max-mobile-width} {
+      margin-top: 25px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 30px;
+    }
+  }
+  .intro__label--tel {
+    @media #{$max-mobile-width} {
+      margin-top: 33px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 40px;
+    }
+  }
+  .intro__input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #7D81A4;
+    @media #{$max-mobile-width} {
+      height: 45px;
+      background-color: transparent;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 20px;
+      height: 50px;
+      margin-top: 5px;
+    }
+  }
+  .intro__submit-container {
+    background-color: #F6F8FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include centers;
+    width: 100%;
+    @media #{$max-mobile-width} {
+      margin-top: 5px;
+      padding-bottom: 30px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 20px;
+      padding-bottom: 26px;
+    }
+  }
+  .intro__submit {
+    @include main-btn;
+    width: 290px;
+    margin-top: 26px;
+    @media #{$max-mobile-width} {
+      min-height: 48px;
+    }
+  }
+  .intro__confid {
+    font-size: 10px;
+    color: #7D81A4;
+    width: 185px;
+    margin-top: 10px;
   }
 }
