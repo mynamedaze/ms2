@@ -1,12 +1,12 @@
 .intro--audit {
   position: relative;
-  @media #{$min-desktop-width} {
-    height: 100vh;
-  }
+  height: auto;
   .intro__inner {
     @include paddings;
     @include section-width;
     @media #{$min-tablet-width} {
+      padding-top: 100px;
+      padding-bottom: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -115,7 +115,7 @@
       margin-top: 28px;
     }
     span {
-      color: #5442E2;
+      color: rgb(148, 69, 253);
       font-weight: 600;
     }
     &::after {
@@ -173,7 +173,7 @@
       transform: translateY(-40%);
       width: 456px;
       box-shadow: 0 0 50px #6F34BB;
-      padding-top: 20px;
+      padding-top: 40px;
     }
   }
   .intro__form-title {
@@ -184,6 +184,8 @@
     @media #{$min-tablet-width} {
       font-size: 28px;
       line-height: 38px;
+      width: 270px;
+      text-align: center;
     }
   }
   .intro__form-description {
@@ -204,7 +206,7 @@
   .intro__inputs {
     width: 247px;
     @media #{$min-tablet-width} {
-      width: 290px;
+      width: 320px;
     }
   }
   .intro__label {
@@ -260,15 +262,18 @@
     }
     @media #{$min-tablet-width} {
       margin-top: 20px;
-      padding-bottom: 26px;
+      padding-bottom: 20px;
     }
   }
   .intro__submit {
     @include main-btn;
-    width: 290px;
     margin-top: 26px;
     @media #{$max-mobile-width} {
       min-height: 48px;
+      width: 247px;
+    }
+    @media #{$min-tablet-width} {
+      width: 320px;
     }
   }
   .intro__confid {

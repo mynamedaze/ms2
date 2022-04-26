@@ -9198,11 +9198,7 @@ body.compensate-for-scrollbar {
 
 .intro--audit {
   position: relative;
-}
-@media (min-width: 1366px) {
-  .intro--audit {
-    height: 100vh;
-  }
+  height: auto;
 }
 .intro--audit .intro__inner {
   margin-left: auto;
@@ -9229,6 +9225,8 @@ body.compensate-for-scrollbar {
 }
 @media (min-width: 768px) {
   .intro--audit .intro__inner {
+    padding-top: 100px;
+    padding-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9385,7 +9383,7 @@ body.compensate-for-scrollbar {
   }
 }
 .intro--audit .intro__item span {
-  color: #5442E2;
+  color: rgb(148, 69, 253);
   font-weight: 600;
 }
 .intro--audit .intro__item::after {
@@ -9461,7 +9459,7 @@ body.compensate-for-scrollbar {
     width: 456px;
     -webkit-box-shadow: 0 0 50px #6F34BB;
     box-shadow: 0 0 50px #6F34BB;
-    padding-top: 20px;
+    padding-top: 40px;
   }
 }
 .intro--audit .intro__form-title {
@@ -9474,6 +9472,8 @@ body.compensate-for-scrollbar {
   .intro--audit .intro__form-title {
     font-size: 28px;
     line-height: 38px;
+    width: 270px;
+    text-align: center;
   }
 }
 .intro--audit .intro__form-description {
@@ -9500,7 +9500,7 @@ body.compensate-for-scrollbar {
 }
 @media (min-width: 768px) {
   .intro--audit .intro__inputs {
-    width: 290px;
+    width: 320px;
   }
 }
 .intro--audit .intro__label {
@@ -9578,7 +9578,7 @@ body.compensate-for-scrollbar {
 @media (min-width: 768px) {
   .intro--audit .intro__submit-container {
     margin-top: 20px;
-    padding-bottom: 26px;
+    padding-bottom: 20px;
   }
 }
 .intro--audit .intro__submit {
@@ -9593,7 +9593,6 @@ body.compensate-for-scrollbar {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  width: 290px;
   margin-top: 26px;
 }
 .intro--audit .intro__submit:hover {
@@ -9605,6 +9604,12 @@ body.compensate-for-scrollbar {
 @media (max-width: 767px) {
   .intro--audit .intro__submit {
     min-height: 48px;
+    width: 247px;
+  }
+}
+@media (min-width: 768px) {
+  .intro--audit .intro__submit {
+    width: 320px;
   }
 }
 .intro--audit .intro__confid {
