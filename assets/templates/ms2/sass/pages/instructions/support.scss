@@ -1,0 +1,197 @@
+.support.support--instructions {
+  background-color: $alt2-bg;
+  .support__wrapper {
+    @include section-width;
+    @include paddings;
+    position: relative;
+    @media #{$max-mobile-width} {
+      padding-top: 144px;
+      padding-bottom: 56px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 50px;
+      padding-bottom: 39px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 72px;
+      padding-bottom: 56px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms2/images/stars.svg");
+    }
+    &::before {
+      width: 40px;
+      height: 40px;
+      @media #{$max-mobile-width} {
+        top: 24px;
+        right: 48px;
+      }
+      @media #{$min-tablet-width} {
+        top: 36px;
+        right: -96px;
+      }
+    }
+    &::after {
+      width: 64px;
+      height: 64px;
+      @media #{$max-mobile-width} {
+        bottom: 8px;
+        left: 48px;
+      }
+      @media #{$min-tablet-width} {
+        bottom: 56px;
+        left: -188px;
+      }
+    }
+  }
+  .support__container {
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 20px 50px 0 rgba(111, 52, 187, .5);
+    @media #{$max-mobile-width} {
+      padding-top: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 15px;
+      max-width: 500px;
+      @include centers;
+    }
+    @media #{$min-tablet-width} {
+      padding-left: 72px;
+      padding-right: 350px;
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+    @media #{$min-desktop-width} {
+      padding-left: 96px;
+      padding-right: 400px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+  .support__title {
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
+  }
+  .support__description {
+    @media #{$max-mobile-width} {
+      text-align: center;
+      display: block;
+    }
+  }
+  .support__image {
+    @media #{$max-mobile-width} {
+      background-image: url("/assets/templates/ms2/images/hole-s-5-mobile.png");
+      height: 360px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 100%;
+    }
+    @media #{$min-tablet-width} {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: -70px;
+      transform: translateY(-50%);
+      width: 534px;
+      height: 394px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms2/images/hole-s-5-desktop.png");
+    }
+    @media #{$min-desktop-width} {
+      right: -100px;
+      width: 668px;
+      height: 493px;
+    }
+  }
+  .support__socials {
+    padding-left: 0;
+    @media #{$max-mobile-width} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media #{$min-tablet-width} {
+      display: flex;
+      margin-top: 60px;
+    }
+  }
+  .support__social {
+    @media #{$max-mobile-width} {
+      margin-bottom: 25px;
+      width: 170px;
+      height: 100px;
+    }
+    @media #{$min-tablet-width} {
+      margin-right: 35px;
+      width: 140px;
+      height: 100px;
+    }
+    @media #{$min-desktop-width} {
+      width: 170px;
+      height: 100px;
+    }
+  }
+  .support__social-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 47px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 20px 20px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 14px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 16px;
+    }
+  }
+  .support__social-link--vk {
+    background-color: rgba(39, 135, 245, 1);
+    box-shadow: 0 0 50px rgba(39, 135, 245, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/vk-icon.png");
+    }
+  }
+  .support__social-link--telegram {
+    background-color: rgba(82, 164, 224, 1);
+    box-shadow: 0 0 50px rgba(82, 164, 224, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/telegram-icon.png");
+    }
+  }
+  .support__social-link--mail {
+    background-color: rgba(0, 80, 255, 1);
+    box-shadow: 0 0 50px rgba(82, 164, 224, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/mail-icon.png");
+    }
+  }
+}

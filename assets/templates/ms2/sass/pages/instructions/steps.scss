@@ -1,0 +1,62 @@
+.steps.steps--instructions {
+  .steps__title {
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
+  }
+  .steps__if-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .steps__if {
+    background: linear-gradient(87.02deg, #4D40DF 1.92%, #7B43F2 64.56%, #9445FD 99.35%);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 36px 11px 36px;
+    font-weight: 700;
+    @media #{$max-mobile-width} {
+      font-size: 27px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 34px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 48px;
+    }
+  }
+  .steps__item {
+    background-size: 50px 50px;
+    &:nth-child(1) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/images/smile-1.png");
+      }
+      &::before {
+        content: "01.";
+      }
+    }
+    &:nth-child(2) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/images/smile-2.png");
+      }
+      &::before {
+        content: "02.";
+      }
+    }
+    &:nth-child(3) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/images/smile-3.png");
+      }
+      &::before {
+        content: "03.";
+      }
+    }
+    &:nth-child(4) {
+      @media #{$min-tablet-width} {
+        background-image: url("/assets/images/smile-4.png");
+      }
+      &::before {
+        content: "04.";
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.intro--instructions {
+  position: relative;
+  height: auto;
+  .intro__inner {
+    @include paddings;
+    @include section-width;
+    @media #{$min-tablet-width} {
+      padding-top: 150px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  .intro__wrapper {
+    position: relative;
+    z-index: 2;
+    color: $text-color-alt;
+    @media #{$max-mobile-width} {
+      padding-top: 88px;
+      padding-bottom: 30px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 0;
+      padding-bottom: 50px;
+      padding-right: 300px;
+    }
+  }
+  .intro__title {
+    font-size: 25px;
+    margin-top: 0;
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 45px;
+    }
+    span {
+      background: linear-gradient(45deg, #4E41DF 20%, #9445FD);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #4E41DF;
+    }
+  }
+  .intro__list {
+    padding-left: 0;
+    @media #{$max-mobile-width} {
+      margin-bottom: 0;
+    }
+  }
+  .intro__item {
+    font-size: 15px;
+    position: relative;
+    padding-left: 22px;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 25px;
+      margin-top: 28px;
+    }
+    span {
+      color: rgb(148, 69, 253);
+      font-weight: 600;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      border-radius: 50%;
+      background: linear-gradient(63.43deg, #5141E0 8.33%, #9345FD 91.67%);
+      width: 12px;
+      height: 12px;
+      top: 3px;
+      @media #{$min-tablet-width} {
+        top: 7px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  .intro__img {
+    @media #{$max-mobile-width} {
+      display: block;
+      height: 346px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 140%;
+      background-image: url("/assets/templates/ms2/images/hole-5-mobile.png");
+    }
+    @media #{$min-tablet-width} {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(300px, -60%);
+      width: 953px;
+      height: 693px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/templates/ms2/images/hole-5-desktop.png");
+    }
+    @media #{$min-desktop-width} {
+      transform: translate(400px, -50%);
+      width: 1192px;
+      height: 867px;
+      background-image: url("/assets/templates/ms2/images/hole-5-desktop.png");
+    }
+  }
+  .intro__socials {
+    padding-left: 0;
+    @media #{$max-mobile-width} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media #{$min-tablet-width} {
+      display: flex;
+      margin-top: 60px;
+    }
+  }
+  .intro__social {
+    width: 170px;
+    height: 100px;
+    @media #{$max-mobile-width} {
+      margin-bottom: 25px;
+    }
+    @media #{$min-tablet-width} {
+      margin-right: 35px;
+    }
+  }
+  .intro__social-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 47px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 20px 20px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  .intro__social-link--vk {
+    background-color: rgba(39, 135, 245, 1);
+    box-shadow: 0 0 50px rgba(39, 135, 245, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/vk-icon.png");
+    }
+  }
+  .intro__social-link--telegram {
+    background-color: rgba(82, 164, 224, 1);
+    box-shadow: 0 0 50px rgba(82, 164, 224, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/telegram-icon.png");
+    }
+  }
+  .intro__social-link--mail {
+    background-color: rgba(0, 80, 255, 1);
+    box-shadow: 0 0 50px rgba(82, 164, 224, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.4);
+    &::after {
+      background-image: url("/assets/images/mail-icon.png");
+    }
+  }
+}
