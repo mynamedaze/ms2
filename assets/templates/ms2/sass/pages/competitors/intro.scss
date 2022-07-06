@@ -1,0 +1,58 @@
+.intro--competitors {
+  position: relative;
+  height: auto;
+  .intro__inner {
+    @include paddings;
+    @include section-width;
+    @media #{$min-tablet-width} {
+      padding-top: 100px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  .intro__wrapper {
+    position: relative;
+    z-index: 2;
+    color: $text-color-alt;
+    @media #{$max-mobile-width} {
+      padding-top: 88px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 100px;
+      padding-bottom: 117px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .intro__title {
+    font-size: 25px;
+    margin-top: 0;
+    position: relative;
+    z-index: 3;
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 45px;
+    }
+  }
+  .intro__img {
+    @media #{$max-mobile-width} {
+
+    }
+    @media #{$min-tablet-width} {
+      width: 985px;
+      height: 724px;
+    }
+    @media #{$min-desktop-width} {
+      width: 1408px;
+      height: 1035px;
+    }
+  }
+
+}

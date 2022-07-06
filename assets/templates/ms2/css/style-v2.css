@@ -10359,4 +10359,99 @@ body.compensate-for-scrollbar {
   padding-bottom: 50px;
 }
 
+.intro--competitors {
+  position: relative;
+  height: auto;
+}
+.intro--competitors .intro__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+}
+@media (max-width: 767px) {
+  .intro--competitors .intro__inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__inner {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__inner {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+.intro--competitors .intro__wrapper {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .intro--competitors .intro__wrapper {
+    padding-top: 88px;
+  }
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__wrapper {
+    padding-top: 100px;
+    padding-bottom: 117px;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.intro--competitors .intro__title {
+  font-size: 25px;
+  margin-top: 0;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .intro--competitors .intro__title {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__title {
+    font-size: 45px;
+  }
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__img {
+    width: 985px;
+    height: 724px;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__img {
+    width: 1408px;
+    height: 1035px;
+  }
+}
+
 /*/pages*/
