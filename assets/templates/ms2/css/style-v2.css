@@ -10388,8 +10388,6 @@ body.compensate-for-scrollbar {
 }
 @media (min-width: 768px) {
   .intro--competitors .intro__inner {
-    padding-top: 100px;
-    padding-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10400,12 +10398,26 @@ body.compensate-for-scrollbar {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 100%;
   }
+}
+.intro--competitors .intro__inner {
+  position: relative;
+  z-index: 3;
+}
+.intro--competitors .intro__inner:after {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 1367px;
+  height: 756px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("/assets/images/starline.png");
 }
 .intro--competitors .intro__wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -10416,20 +10428,24 @@ body.compensate-for-scrollbar {
 @media (min-width: 768px) {
   .intro--competitors .intro__wrapper {
     padding-top: 100px;
-    padding-bottom: 117px;
+    padding-bottom: 50px;
+    max-width: 600px;
   }
 }
 @media (min-width: 1366px) {
   .intro--competitors .intro__wrapper {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 230px;
+    padding-bottom: 170px;
+    max-width: 800px;
   }
 }
 .intro--competitors .intro__title {
   font-size: 25px;
   margin-top: 0;
+  margin-bottom: 0;
   position: relative;
   z-index: 3;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .intro--competitors .intro__title {
@@ -10441,17 +10457,113 @@ body.compensate-for-scrollbar {
     font-size: 45px;
   }
 }
+@media (min-width: 1366px) {
+  .intro--competitors .intro__title {
+    line-height: 67px;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__description {
+    margin-top: 43px;
+  }
+}
+.intro--competitors .intro__img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 @media (min-width: 768px) {
   .intro--competitors .intro__img {
+    position: absolute;
+    z-index: 3;
     width: 985px;
     height: 724px;
   }
 }
 @media (min-width: 1366px) {
   .intro--competitors .intro__img {
-    width: 1408px;
-    height: 1035px;
+    right: -290px;
+    bottom: 0;
+    width: 754px;
+    height: 621px;
+    background-image: url("/assets/templates/ms2/images/lead-book.png");
   }
+}
+.intro--competitors .intro__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .intro--competitors .intro__socials {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__socials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 577px;
+    margin-top: 75px;
+  }
+}
+@media (min-width: 1366px) {
+  .intro--competitors .intro__social {
+    width: 276px;
+  }
+}
+.intro--competitors .intro__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 60px;
+  border-radius: 60px;
+  background: linear-gradient(269.76deg, #423FD9 29.59%, rgba(66, 63, 217, 0) 99.8%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intro--competitors .intro__social-link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.intro--competitors .intro__social-link span {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.intro--competitors .intro__social-link--telegram::before {
+  background-image: url("/assets/images/telegram-icon-with-bg.png");
+}
+.intro--competitors .intro__social-link--vk::before {
+  background-image: url("/assets/images/vk-icon-with-bg.png");
 }
 
 /*/pages*/

@@ -5,54 +5,142 @@
     @include paddings;
     @include section-width;
     @media #{$min-tablet-width} {
-      padding-top: 100px;
-      padding-bottom: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
+    }
+  }
+  .intro__inner {
+    position: relative;
+    z-index: 3;
+    &:after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      width: 1367px;
+      height: 756px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/assets/images/starline.png");
     }
   }
   .intro__wrapper {
     position: relative;
-    z-index: 2;
+    z-index: 4;
     color: $text-color-alt;
     @media #{$max-mobile-width} {
       padding-top: 88px;
     }
     @media #{$min-tablet-width} {
       padding-top: 100px;
-      padding-bottom: 117px;
+      padding-bottom: 50px;
+      max-width: 600px;
     }
     @media #{$min-desktop-width} {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 230px;
+      padding-bottom: 170px;
+      max-width: 800px;
     }
   }
   .intro__title {
     font-size: 25px;
     margin-top: 0;
+    margin-bottom: 0;
     position: relative;
     z-index: 3;
+    text-transform: uppercase;
     @media #{$max-mobile-width} {
       text-align: center;
     }
     @media #{$min-tablet-width} {
       font-size: 45px;
     }
+    @media #{$min-desktop-width} {
+      line-height: 67px;
+    }
+  }
+  .intro__description {
+    @media #{$min-desktop-width} {
+      margin-top: 43px;
+    }
   }
   .intro__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     @media #{$max-mobile-width} {
 
     }
     @media #{$min-tablet-width} {
+      position: absolute;
+      z-index: 3;
       width: 985px;
       height: 724px;
     }
     @media #{$min-desktop-width} {
-      width: 1408px;
-      height: 1035px;
+      right: -290px;
+      bottom: 0;
+      width: 754px;
+      height: 621px;
+      background-image: url("/assets/templates/ms2/images/lead-book.png");
     }
   }
-
+  .intro__socials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    @media #{$min-tablet-width} {
+      justify-content: space-between;
+    }
+    @media #{$min-desktop-width} {
+      flex-direction: row;
+      width: 577px;
+      margin-top: 75px;
+    }
+  }
+  .intro__social {
+    @media #{$min-desktop-width} {
+      width: 276px;
+    }
+  }
+  .intro__social-link {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    border-radius: 60px;
+    background: linear-gradient(269.76deg, #423FD9 29.59%, rgba(66, 63, 217, 0) 99.8%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    span {
+      transform: translateX(20px);
+    }
+  }
+  .intro__social-link--telegram {
+    &::before {
+      background-image: url('/assets/images/telegram-icon-with-bg.png');
+    }
+  }
+  .intro__social-link--vk {
+    &::before {
+      background-image: url("/assets/images/vk-icon-with-bg.png");
+    }
+  }
 }
